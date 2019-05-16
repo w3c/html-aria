@@ -62,8 +62,8 @@ values that match the <a>implicit ARIA semantics</a> defined in the table.</p>
 element. This is not allowed, because the `button` element has default
 characteristics that conflict with the heading role.
 <pre>
-      &lt;button role="heading"&gt;search&lt;/button&gt;
-      </pre>
+&lt;button role="heading"&gt;search&lt;/button&gt;
+</pre>
 <details>
 <summary>Example document for conformance checking</summary>
 <p>If you <a href=
@@ -1440,23 +1440,23 @@ properties would end up being rendered by screen readers as a nonsensical
 string of punctuation characters. Using the features described in this section,
 one can instead make the ATs skip the ASCII art and just read the caption:</p>
 <pre>
-        &lt;figure&gt;
-          &lt;pre role="img"&gt;
-          o           .'`/
-            '      /  (
-          O    .-'` ` `'-._      .')
-              _/ (o)        '.  .' /
-              )       )))     &gt;&lt;  &lt;
-              `\  |_\      _.'  '. \
-                '-._  _ .-'       '.)
-            jgs     `\__\
-          &lt;/pre&gt;
-          &lt;figcaption <strong>id="fish-caption"</strong>&gt;
-            Joan G. Stark, "&lt;cite&gt;fish&lt;/cite&gt;".
-            October 1997. ASCII on electrons. 28×8.
-          &lt;/figcaption&gt;
-        &lt;/figure&gt;
-        </pre>
+&lt;figure&gt;
+  &lt;pre role="img"&gt;
+  o           .'`/
+    '      /  (
+  O    .-'` ` `'-._      .')
+      _/ (o)        '.  .' /
+      )       )))     &gt;&lt;  &lt;
+      `\  |_\      _.'  '. \
+        '-._  _ .-'       '.)
+    jgs     `\__\
+  &lt;/pre&gt;
+  &lt;figcaption <strong>id="fish-caption"</strong>&gt;
+    Joan G. Stark, "&lt;cite&gt;fish&lt;/cite&gt;".
+    October 1997. ASCII on electrons. 28×8.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+</pre>
 <!-- source: http://www.geocities.com/SoHo/7373/aquatic.htm#fish --></aside>
 </section>
 <section>
@@ -1470,19 +1470,20 @@ as tokens</a>.</p>
 <aside class="example">
 <p><strong>Correct (conforming) examples:</strong></p>
 <pre>
-          &lt;div <mark>role="radiogroup"</mark>&gt;...&lt;/div&gt;
+  &lt;div <mark>role="radiogroup"</mark>&gt;...&lt;/div&gt;
 
-          &lt;a href="home/" <mark>aria-current="page"</mark>&gt;home&lt;/a&gt;
-        </pre>
+  &lt;a href="home/" <mark>aria-current="page"</mark>&gt;home&lt;/a&gt;
+</pre>
 <p><strong>Incorrect (non-conforming) examples:</strong></p>
 <pre>
-          &lt;!-- DO NOT DO THIS --&gt;
-          &lt;div <mark>role="radioGroup"</mark>&gt;...&lt;/div&gt;
+&lt;!-- DO NOT DO THIS --&gt;
+&lt;div <mark>role="radioGroup"</mark>&gt;...&lt;/div&gt;
 
-          &lt;div <mark>role="RADIOGROUP"</mark>&gt;...&lt;/div&gt;
+&lt;div <mark>role="RADIOGROUP"</mark>&gt;...&lt;/div&gt;
 
-          &lt;a href="home/" <mark>aria-current="Page"</mark>&gt;home&lt;/a&gt;
-        </pre></aside>
+&lt;a href="home/" <mark>aria-current="Page"</mark>&gt;home&lt;/a&gt;
+</pre>
+</aside>
 </section>
 <section>
 <h2>Allowed ARIA roles, states and properties</h2>
@@ -1507,20 +1508,21 @@ any elements with role values that are in the interactive content category
 <div class="example" id="bad-descendents"><strong>Examples of non-conforming
 descendants</strong>
 <pre>
-          &lt;!-- conformance checkers will report an error --&gt;
+&lt;!-- conformance checkers will report an error --&gt;
 
-          <mark>&lt;button&gt;</mark>
-          &lt;div <mark>role="button"</mark>&gt;...&lt;/div&gt;
-          &lt;/button&gt;
+<mark>&lt;button&gt;</mark>
+&lt;div <mark>role="button"</mark>&gt;...&lt;/div&gt;
+&lt;/button&gt;
 
-          &lt;div <mark>role="button"</mark>&gt;
-          &lt;button&gt;...&lt;/button&gt;
-          &lt;/div&gt;
+&lt;div <mark>role="button"</mark>&gt;
+&lt;button&gt;...&lt;/button&gt;
+&lt;/div&gt;
 
-          &lt;div <mark>role="link"</mark>&gt;
-          &lt;textarea&gt;...&lt;/textarea&gt;
-          &lt;/div&gt;
-        </pre></div>
+&lt;div <mark>role="link"</mark>&gt;
+&lt;textarea&gt;...&lt;/textarea&gt;
+&lt;/div&gt;
+</pre>
+</div>
 <p class="note">The <span class="new-feature">(new)</span> and <span class=
 "changed-feature">(changed)</span> markers in the following table indicate new
 (in ARIA 1.1) or changed (between ARIA 1.0/1.1) ARIA roles, states and
@@ -2954,7 +2956,7 @@ those indicated in the second column, which SHOULD NOT be used.</p>
 </section>
 </section>
 <section id="conformance"></section>
-<script src="details-summary/jquery.details.min.js"></script> 
+<script src="details-summary/jquery.details.min.js"></script>
 <script>
 
 
