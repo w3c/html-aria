@@ -1,4 +1,5 @@
 char-encoding: utf8
-wrap: 80
-tidy-mark: no
+indent: yes
 newline: LF
+tidy-mark: no
+wrap: 80
