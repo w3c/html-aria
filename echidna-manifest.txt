@@ -1,4 +1,4 @@
-index.html?specStatus=WD&shortName=html-aria respec
+index.html?specStatus=WD respec
 rightArrow.png
 examples/nonconforming1.html
 makeup.css
