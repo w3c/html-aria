@@ -3907,7 +3907,7 @@
                 <li><a data-cite="wai-aria-1.2#aria-rowindextext">`aria-rowindextext`</a></li>
                 <li><a data-cite="wai-aria-1.1#aria-selected">`aria-selected` (state)</a></li>
               </ul>
-              <p>Also, if child of `role=treegrid`:</p>
+              <p>Only if child of `role=treegrid`:</p>
               <ul>
                 <li><a data-cite="wai-aria-1.1#aria-expanded">`aria-expanded` (state)</a></li>
                 <li><a data-cite="wai-aria-1.1#aria-level">`aria-level`</a></li>
@@ -3953,22 +3953,26 @@
               none
             </td>
             <td>
+              <p>If descendant of `role=grid`, `table` or `treegrid`:</p>
               <ul>
                 <li><a data-cite="wai-aria-1.1#aria-colindex">`aria-colindex`</a></li>
                 <li><a data-cite="wai-aria-1.2#aria-colindextext">`aria-colindextext`</a></li>
                 <li><a data-cite="wai-aria-1.1#aria-colspan">`aria-colspan`</a></li>
                 <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
                 <li><a data-cite="wai-aria-1.1#aria-errormessage">`aria-errormessage`</a></li>
-                <li><a data-cite="wai-aria-1.1#aria-expanded">`aria-expanded` (state)</a></li>
                 <li><a data-cite="wai-aria-1.1#aria-haspopup">`aria-haspopup`</a></li>
                 <li><a data-cite="wai-aria-1.1#aria-invalid">`aria-invalid` (state)</a></li>
-                <li><a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly`</a></li>
-                <li><a data-cite="wai-aria-1.1#aria-required">`aria-required`</a></li>
                 <li><a data-cite="wai-aria-1.1#aria-rowindex">`aria-rowindex`</a></li>
                 <li><a data-cite="wai-aria-1.2#aria-rowindextext">`aria-rowindextext`</a></li>
                 <li><a data-cite="wai-aria-1.1#aria-rowspan">`aria-rowspan`</a></li>
                 <li><a data-cite="wai-aria-1.1#aria-selected">`aria-selected` (state)</a></li>
                 <li><a data-cite="wai-aria-1.1#aria-sort">`aria-sort`</a></li>
+              </ul>
+              <p>Only if child of `role=grid` or `treegrid`:</p>
+              <ul>
+                <li><a data-cite="wai-aria-1.1#aria-expanded">`aria-expanded` (state)</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-required">`aria-required`</a></li>
               </ul>
             </td>
             <td>
