@@ -186,12 +186,16 @@
         <tbody>
           <tr id="el-a" tabindex="-1">
             <td>
-              [^a^] with <a data-cite="html/links.html#attr-hyperlink-href">`href`</a>
+              [^a^]
             </td>
             <td>
-              <code>role=<a href="#index-aria-link">link</a></code>
+              <p>
+                If element has an <a data-cite="html/links.html#attr-hyperlink-href">`href`</a> attribute: <code>role=<a href="#index-aria-link">link</a></code>.
+              </p>
+              <p>Otherwise, <a>no corresponding role</a>.
             </td>
             <td>
+              <p>If the element has an `href` attribute:</p>
               <p>
                 Roles:
                 <a href="#index-aria-button">`button`</a>,
@@ -212,21 +216,8 @@
                 <a data-cite="dpub-aria-1.0#doc-glossref">`doc-glossref`</a>,
                 <a data-cite="dpub-aria-1.0#doc-noteref">`doc-noteref`</a>
               </p>
-              <p>
-                <a href="#index-aria-global">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles and
-                implied role (if any).
-              </p>
-            </td>
-          </tr>
-          <tr id="el-a-no-href" tabindex="-1">
-            <td>
-              [^a^] without <a data-cite="html/links.html#attr-hyperlink-href">`href`</a>
-            </td>
-            <td>
-              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn">No corresponding role</a>
-            </td>
-            <td>
+
+              <p>If the element has no `href` attribute:</p>
               <p>
                 <a><strong>Any</strong> `role`</a>
               </p>
@@ -275,19 +266,23 @@
           </tr>
           <tr id="el-area" tabindex="-1">
             <td>
-              [^area^] with <a data-cite="html/links.html#attr-hyperlink-href">`href`</a>
+              [^area^]
             </td>
             <td>
-              <code>role=<a href="#index-aria-link">link</a></code>
+              <p>
+                If element has an <a data-cite="html/links.html#attr-hyperlink-href">`href`</a> attribute: <code>role=<a href="#index-aria-link">link</a></code>.
+              </p>
+              <p>Otherwise, <a>no corresponding role</a>.
             </td>
             <td>
               <p>
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a href="#index-aria-global">Global `aria-*` attributes</a> and
+                <a href="#index-aria-global">
+                Global `aria-*` attributes</a> and
                 any `aria-*` attributes applicable to the <a href=
-                "#index-aria-link">`link`</a> role.
+                "#index-aria-link">`link`</a> role, if the element is exposed as a `link`.
               </p>
             </td>
           </tr>
