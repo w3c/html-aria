@@ -2539,11 +2539,19 @@
               [^tbody^]
             </td>
             <td>
-              <code>role=<a href="#index-aria-rowgroup">rowgroup</a></code>
+              <p>
+                If the ancestor `table` element is exposed as a `role=table`, `grid` or `treegrid` then:
+                <code><a href="#index-aria-rowgroup">`role=rowgroup`</a></code>
+              </p>
+              <p>
+                If the ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid` then: <a>no corresponding role</a>.
+              </p>
             </td>
             <td>
               <p>
-                <a><strong>Any</strong> `role`</a>
+                <strong class="nosupport">No `role`</strong> if the ancestor `table`
+                element has `role=table`, `grid`, or `treegrid`; otherwise
+                <a><strong>any</strong> `role`</a>.
               </p>
               <p>
                 <a href="#index-aria-global">Global `aria-*` attributes</a> and
@@ -2585,11 +2593,19 @@
               [^tfoot^]
             </td>
             <td>
-              <code>role=<a href="#index-aria-rowgroup">rowgroup</a></code>
+              <p>
+                If the ancestor `table` element is exposed as a `role=table`, `grid` or `treegrid` then:
+                <code><a href="#index-aria-rowgroup">`role=rowgroup`</a></code>
+              </p>
+              <p>
+                If the ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid` then: <a>no corresponding role</a>.
+              </p>
             </td>
             <td>
               <p>
-                <a><strong>Any</strong> `role`</a>
+                <strong class="nosupport">No `role`</strong> if the ancestor `table`
+                element has `role=table`, `grid`, or `treegrid`; otherwise
+                <a><strong>any</strong> `role`</a>.
               </p>
               <p>
                 <a href="#index-aria-global">Global `aria-*` attributes</a> and
@@ -2603,11 +2619,19 @@
               [^thead^]
             </td>
             <td>
-              <code>role=<a href="#index-aria-rowgroup">rowgroup</a></code>
+              <p>
+                If the ancestor `table` element is exposed as a `role=table`, `grid` or `treegrid` then:
+                <code><a href="#index-aria-rowgroup">`role=rowgroup`</a></code>
+              </p>
+              <p>
+                If the ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid` then: <a>no corresponding role</a>.
+              </p>
             </td>
             <td>
               <p>
-                <a><strong>Any</strong> `role`</a>
+                <strong class="nosupport">No `role`</strong> if the ancestor `table`
+                element has `role=table`, `grid`, or `treegrid`; otherwise
+                <a><strong>any</strong> `role`</a>.
               </p>
               <p>
                 <a href="#index-aria-global">Global `aria-*` attributes</a> and
@@ -2651,12 +2675,13 @@
             </td>
             <td>
               <p>
-                <code>role=<a href="#index-aria-cell">cell</a></code> if the ancestor
-                `table` element is exposed as a `role=table`.
+                If the ancestor `table` element is exposed as a `role=table` then: <code>role=<a href="#index-aria-cell">cell</a></code>.
               </p>
               <p>
-                <code>role=<a href="#index-aria-gridcell">gridcell</a></code> if the ancestor
-                `table` element is exposed as a `role=grid` or `treegrid`.
+                If the ancestor `table` element is exposed as a `role=grid` or `treegrid` then: <code>role=<a href="#index-aria-cell">gridcell</a></code>.
+              </p>
+              <p>
+                If the ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid` then: <a>no corresponding role</a>.
               </p>
             </td>
             <td>
@@ -2678,20 +2703,21 @@
             </td>
             <td>
               <p>
-                If the ancestor `table` element is exposed as a `role=table`: <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
-                <a href="#index-aria-rowheader">`rowheader`</a> or <a href="#index-aria-rowheader">`cell`</a> according to
-                <a data-cite="html-aam-1.0#html-element-role-mappings">HTML AAM</a>.
-             </p>
+                If the ancestor `table` element is exposed as a `role=table` then: <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
+                <a href="#index-aria-rowheader">`rowheader`</a> or <a href="#index-aria-rowheader">`cell`</a>.
+              </p>
               <p>
-                If the ancestor `table` element is exposed as a `role=grid` or `treegrid`: <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
-                <a href="#index-aria-rowheader">`rowheader`</a> or <a href="#index-aria-rowheader">`gridcell`</a> according to
-                <a data-cite="html-aam-1.0#html-element-role-mappings">HTML AAM</a>.
-             </p>
+                If the ancestor `table` element is exposed as a `role=grid` or `treegrid` then: <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
+                <a href="#index-aria-rowheader">`rowheader`</a> or <a href="#index-aria-rowheader">`gridcell`</a>.
+              </p>
+              <p>
+                If the ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid` then: <a>no corresponding role</a>.
+              </p>
             </td>
             <td>
               <p>
                 <strong class="nosupport">No `role`</strong> if the ancestor `table`
-                element has `role=table`, `grid`, or `treegrid`; otherwise
+                element is exposed as a `role=table`, `grid`, or `treegrid`; otherwise
                 <a><strong>any</strong> `role`</a>.
               </p>
               <p>
@@ -2706,7 +2732,13 @@
               [^tr^]
             </td>
             <td>
-              <a href="#index-aria-row">`role=row`</a>
+              <p>
+                If the ancestor `table` element is exposed as a `role=table`, `grid` or `treegrid` then:
+                <code><a href="#index-aria-row">`role=row`</a></code>
+              </p>
+              <p>
+                If the ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid` then: <a>no corresponding role</a>.
+              </p>
             </td>
             <td>
               <p>
@@ -2894,7 +2926,11 @@
         Document conformance requirements for use of ARIA attributes with HTML attributes
       </h3>
       <p>
-        Unless otherwise stated, authors MAY use `aria-*` attributes in place of their HTML equivalents on HTML elements where the `aria-*` semantics would be expected. For example, authors MAY use `aria-disabled=true` on a `button` rather than the `disabled` attribute. However, authors SHOULD NOT use both the native HTML attribute and the `aria-*` attribute together. As stated in <a data-cite="wai-aria-1.1#host_general_conflict">WAI-ARIA's Conflicts with Host Language Semantics</a>, user agents MUST ignore WAI-ARIA attributes and use the host language (HTML) attribute with the same <a>implicit ARIA semantics</a>.
+        Unless otherwise stated, authors MAY use `aria-*` attributes in place of their HTML equivalents on HTML elements where 
+        the `aria-*` semantics would be expected. For example, authors MAY use `aria-disabled=true` on a `button` rather than the 
+        `disabled` attribute. However, authors SHOULD NOT use both the native HTML attribute and the `aria-*` attribute together. 
+        As stated in <a data-cite="wai-aria-1.1#host_general_conflict">WAI-ARIA's Conflicts with Host Language Semantics</a>, 
+        user agents MUST ignore WAI-ARIA attributes and use the host language (HTML) attribute with the same <a>implicit ARIA semantics</a>.
       </p>
       <p>
         The following table represents HTML elements and their attributes which have `aria-*` attribute parity.
@@ -2902,7 +2938,8 @@
       <p>
         Each language feature (element and attribute) in a cell in the first column implies the
         ARIA semantics (states, and properties) given in the cell in the second column
-        of the same row. The third cell in each row defines how authors can use the native HTML feature, along with requirements for using the `aria-*` attributes that supply the same <a>implicit ARIA semantics</a>.
+        of the same row. The third cell in each row defines how authors can use the native HTML feature, along with requirements for 
+        using the `aria-*` attributes that supply the same <a>implicit ARIA semantics</a>.
       </p>
       <table class="simple">
         <caption>
@@ -3004,7 +3041,8 @@
                 `placeholder` attribute</a> in HTML.
               </p>
               <p>
-                Authors MAY use the `aria-placeholder` attribute on any element that is allowed the `placeholder` attribute in HTML, or any element with a WAI-ARIA role which allows the <a data-cite="wai-aria-1.1#aria-placeholder">`aria-placeholder` attribute</a>.
+                Authors MAY use the `aria-placeholder` attribute on any element that is allowed the `placeholder` attribute in HTML, 
+                or any element with a WAI-ARIA role which allows the <a data-cite="wai-aria-1.1#aria-placeholder">`aria-placeholder` attribute</a>.
               </p>
               <p>
                 Authors MUST NOT use the `aria-placeholder` attribute on any element which also has a `placeholder` attribute.
@@ -3022,7 +3060,8 @@
             <td>
               <p>
                 Use the `max` attribute on any element that is
-                <a data-cite="html/input.html#attr-input-max">allowed the `max` attribute</a> in HTML. It is NOT RECOMMENDED to use the <a data-cite="wai-aria-1.1#aria-valuemax">`aria-valuemax` attribute</a> on these elements.
+                <a data-cite="html/input.html#attr-input-max">allowed the `max` attribute</a> in HTML. 
+                It is NOT RECOMMENDED to use the <a data-cite="wai-aria-1.1#aria-valuemax">`aria-valuemax` attribute</a> on these elements.
               </p>
               <p>
                 Authors MAY use the `aria-valuemax` attribute on any other element with a WAI-ARIA role which allows the  attribute.
