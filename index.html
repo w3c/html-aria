@@ -3238,39 +3238,6 @@
       </table>
     </section>
     <section>
-      <h2 id="case-sensitivity">
-        Case requirements for ARIA role, state and property attributes
-      </h2>
-      <p>
-        Developers MUST use <a data-cite=
-        "html/infrastructure.html#lowercase-ascii-letters">lowercase ASCII
-        letters</a> for all `role` token values and any state or property
-        attributes (`aria-*`) whose values are <a data-cite=
-        "wai-aria-1.1#propcharacteristic_value">defined as tokens</a>.
-      </p>
-      <aside class="example">
-        <p>
-          <strong>Correct (conforming) examples:</strong>
-        </p>
-        <pre>
-  &lt;div <mark>role="radiogroup"</mark>&gt;...&lt;/div&gt;
-
-  &lt;a href="home/" <mark>aria-current="page"</mark>&gt;home&lt;/a&gt;
-</pre>
-        <p>
-          <strong>Incorrect (non-conforming) examples:</strong>
-        </p>
-        <pre>
-&lt;!-- DO NOT DO THIS --&gt;
-&lt;div <mark>role="radioGroup"</mark>&gt;...&lt;/div&gt;
-
-&lt;div <mark>role="RADIOGROUP"</mark>&gt;...&lt;/div&gt;
-
-&lt;a href="home/" <mark>aria-current="Page"</mark>&gt;home&lt;/a&gt;
-</pre>
-      </aside>
-    </section>
-    <section>
       <h2>
         Allowed ARIA roles, states and properties
       </h2>
