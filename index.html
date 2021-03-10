@@ -190,7 +190,6 @@
         MUST NOT overwrite the implicit ARIA semantics, or native semantics
         of the HTML element.
       </p>
-
       <p class="note" id="aria-usage-note">
         While setting an ARIA `role` and/or `aria-*` attribute that matches the
         <span>implicit ARIA semantics</span> is NOT RECOMMENDED, in some
@@ -198,7 +197,10 @@
         For instance, in user agents which lack exposing specific implicit
         ARIA semantics.
       </p>
-
+      <p>
+        When setting an ARIA `role` and/or `aria-*` attribute, it is RECOMMENDED
+        that the attribute's values be in [=ascii lowercase=] form.
+      </p>
       <table class="simple">
         <caption>
           Rules of ARIA attribute usage by HTML element
