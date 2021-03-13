@@ -1310,11 +1310,9 @@
                 implied role (if any).
               </p>
               <p class="note">
-                The HTML
-                [^input/checked^]
-                attribute can be used instead of the `aria-checked`
-                attribute for `menuitemcheckbox`, `option` or `switch`
-                when used on `type=checkbox`.
+                The HTML [^input/checked^] attribute can be used instead of
+                the `aria-checked` attribute for `menuitemcheckbox`, `option`
+                or `switch` roles when used on `type=checkbox`.
               </p>
             </td>
           </tr>
@@ -1507,11 +1505,10 @@
                 Otherwise, any <a href="#index-aria-global">global `aria-*` attributes</a> and any `aria-*` attributes applicable to the
                 exposed role.
               </p>
-              <p>
-                <strong>Note:</strong> the HTML <a data-cite=
-                "html/input.html#attr-input-checked">`checked`</a>
-                attribute can be used instead of the `aria-checked` attribute
-                for `menuitemradio` when used on `type=radio`.
+              <p class="note">
+                The HTML [^input/checked^] attribute can be used instead of
+                the `aria-checked` attribute for the `menuitemradio` role
+                when used on `type=radio`.
               </p>
             </td>
           </tr>
@@ -1753,7 +1750,7 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a href="#index-aria-global">global `aria-*` attributes</a>
+                <a href="#index-aria-global">Global `aria-*` attributes</a>
               </p>
             </td>
           </tr>
@@ -1769,7 +1766,7 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a href="#index-aria-global">global `aria-*` attributes</a>
+                <a href="#index-aria-global">Global `aria-*` attributes</a>
               </p>
             </td>
           </tr>
@@ -3007,7 +3004,7 @@
             </td>
             <td>
               <p>
-                Developers MAY use the `aria-hidden` attribute on any HTML element that allows <a href="#index-aria-global">global `aria-*` attributes</a>, with the following exceptions:
+                Developers MAY use the `aria-hidden` attribute on any HTML element that allows <a href="#index-aria-global">global `aria-*` attributes</a>, with the following exception:
               </p>
               <p>
                 Developers SHOULD NOT use the `aria-hidden="true"` attribute on any element which also has a `hidden` attribute.
@@ -3044,7 +3041,7 @@
           </tr>
           <tr id="att-max" tabindex="-1">
             <th>
-              Any element where the `max` attribute is allowed: `meter` [^meter/max^], `progress` [^progress/max^], and `input` [^input/max^].
+              Any element where the `max` attribute is allowed: `meter` [^meter/max^], `progress` [^progress/max^], and `input` [^input/max^]
             </th>
             <td>
               `aria-valuemax="..."`
@@ -3052,7 +3049,7 @@
             <td>
               <p>
                 Use the `max` attribute on any element that is
-                allowed the `max` attribute in HTML. It is NOT RECOMMENDED to use the <a data-cite="wai-aria-1.1#aria-valuemax">`aria-valuemax` attribute</a> on these elements.
+                allowed the `max` attribute in HTML.
               </p>
               <p>
                 Developers MAY use the `aria-valuemax` attribute on any other element with a WAI-ARIA role which allows the  attribute.
@@ -3075,7 +3072,7 @@
             <td>
               <p>
                 Use the `min` attribute on any element that is
-                allowed the `min` attribute in HTML. It is NOT RECOMMENDED to use the <a data-cite="wai-aria-1.1#aria-valuemin">`aria-valuemin` attribute</a> on these elements.
+                allowed the `min` attribute in HTML.
               </p>
               <p>
                 Developers MAY use the `aria-valuemin` attribute on any other element with a WAI-ARIA role which allows the  attribute.
@@ -3099,7 +3096,7 @@
             <td>
               <p>
                 Use the `readonly` attribute on any element that is
-                allowed the `readonly` attribute in HTML. It is NOT RECOMMENDED to use `aria-readonly` on these elements.
+                allowed the `readonly` attribute in HTML.
               </p>
               <p>
                 Developers MAY use the `aria-readonly` attribute on any element with a WAI-ARIA role which allows the <a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly` attribute</a>.
