@@ -2963,7 +2963,7 @@
             <td>
               <p>
                 Use the `checked` attribute on any element that is
-                <a data-cite="html/input.html#attr-input-checked">allowed the `checked` attribute</a> in HTML.
+                allowed the `checked` attribute in HTML.
               </p>
               <p>
                 Developers SHOULD NOT use the `aria-checked` attribute on any element where the <a data-cite="html/form-control-infrastructure.html#concept-fe-checked">checkedness</a> of the element can be in opposition to the current value of the  <a data-cite="wai-aria-1.1#aria-checked">`aria-checked` attribute</a>.
@@ -2975,15 +2975,17 @@
           </tr>
           <tr id="att-disabled" tabindex="-1">
             <th>
-              Any element where the
-              <a data-cite="html/form-control-infrastructure.html#attr-fe-disabled">`disabled`</a> attribute is allowed
+              Any element where the [^input/disabled^]
+               attribute is allowed, including
+              `option` [^option/disabled^] and
+              `optgroup` [^optgroup/disabled^]
             </th>
             <td>
               `aria-disabled="true"`
             </td>
             <td>
               <p>
-                Use the `disabled` attribute on any element that is <a data-cite="html/form-control-infrastructure.html#attr-fe-disabled">allowed the `disabled` attribute</a> in HTML.
+                Use the `disabled` attribute on any element that is allowed the `disabled` attribute in HTML.
               </p>
               <p>
                 Developers MAY use the `aria-disabled` attribute on any element that is allowed the `disabled` attribute in HTML, or any element with a WAI-ARIA role which allows the <a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled` attribute</a>.
@@ -3022,15 +3024,15 @@
           </tr>
           <tr id="att-placeholder" tabindex="-1">
             <th>
-              Any element where the <a data-cite="html/input.html#the-placeholder-attribute">`placeholder`</a> attribute is allowed
+              Any element where the [^input/placeholder^] attribute is allowed
             </th>
             <td>
               `aria-placeholder="..."`
             </td>
             <td>
               <p>
-                Use the `placeholder` attribute on any element that is <a data-cite="html/input.html#the-placeholder-attribute">allowed the
-                `placeholder` attribute</a> in HTML.
+                Use the `placeholder` attribute on any element that is allowed the
+                `placeholder` attribute in HTML.
               </p>
               <p>
                 Developers MAY use the `aria-placeholder` attribute on any element that is allowed the `placeholder` attribute in HTML, or any element with a WAI-ARIA role which allows the <a data-cite="wai-aria-1.1#aria-placeholder">`aria-placeholder` attribute</a>.
@@ -3088,7 +3090,8 @@
           </tr>
           <tr id="att-readonly" tabindex="-1">
             <th>
-              Any [^input^] element which allows the [^input/readonly^] attribute, or <a>form-associated custom element</a> which allows the [^face/readonly^] attribute.
+              Any element which allows the `readonly` attribute:
+              `input` [^input/readonly^], `textarea` [^textarea/readonly^] and <a>form-associated custom element</a> which allows the [^face/readonly^]
             </th>
             <td>
               `aria-readonly="true"`
@@ -3096,7 +3099,7 @@
             <td>
               <p>
                 Use the `readonly` attribute on any element that is
-                <a data-cite="html/input.html#attr-input-readonly">allowed the `readonly` attribute</a> in HTML. It is NOT RECOMMENDED to use `aria-readonly` on these elements.
+                allowed the `readonly` attribute in HTML. It is NOT RECOMMENDED to use `aria-readonly` on these elements.
               </p>
               <p>
                 Developers MAY use the `aria-readonly` attribute on any element with a WAI-ARIA role which allows the <a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly` attribute</a>.
@@ -3112,8 +3115,7 @@
           <tr id="att-contenteditable" tabindex="-1">
             <th>
               <p>
-                Element with <code><a data-cite=
-                "html/interaction.html#attr-contenteditable">contenteditable</a>="true"</code>;
+                Element with [^html-global/contenteditable^]`=true`
                 or<br>
                 Element without `contenteditable` attribute whose closest
                 ancestor with a `contenteditable` attribute has
@@ -3134,8 +3136,7 @@
           </tr>
           <tr id="att-required" tabindex="-1">
             <th>
-              Any element where the
-              <a data-cite="html/input.html#attr-input-required">`required`</a> attribute is allowed
+              Any element where the `required` attribute is allowed: `input` [^input/required^], `textarea` [^textarea/required^], and `select` [^select/required^]
             </th>
             <td>
               `aria-required="true"`
@@ -3143,8 +3144,7 @@
             <td>
               <p>
                 Use the `required` attribute on any element
-                that is <a data-cite="html/input.html#attr-input-required">allowed the
-                `required` attribute</a> in HTML.
+                that is allowed the `required` attribute in HTML.
               </p>
               <p>
                 Developers MAY use the `aria-required` attribute on any element that is allowed the `required` attribute in HTML, or any element with a WAI-ARIA role which allows the <a data-cite="wai-aria-1.1#aria-required">`aria-required` attribute</a>.
@@ -3159,8 +3159,7 @@
           </tr>
           <tr id="att-colspan" tabindex="-1">
             <th>
-              Any element where the <a data-cite="html/tables.html#attr-tdth-colspan">`colspan`</a>
-              attribute is allowed
+              Any element where the [^th/colspan^] attribute is allowed: `td` and `th`
             </th>
             <td>
               `aria-colspan="..."`
@@ -3168,7 +3167,7 @@
             <td>
               <p>
                 Use the `colspan` attribute on any element that is
-                <a data-cite="html/tables.html#attr-tdth-colspan">allowed the `colspan` attribute</a> in HTML.
+                allowed the `colspan` attribute in HTML.
               </p>
               <p>
                 Developers MAY use the `aria-colspan` attribute on any element that is allowed the `colspan` attribute in HTML, or any element with a WAI-ARIA role which allows the <a data-cite="wai-aria-1.1#aria-colspan">`aria-colspan` attribute</a>.
@@ -3183,7 +3182,8 @@
           </tr>
           <tr id="att-rowspan" tabindex="-1">
             <th>
-              `td` [^td/rowspan^] and `th` [^th/rowspan^]
+              Any element where the [^th/rowspan^] attribute is allowed:
+              `td` and `th`
             </th>
             <td>
               `aria-rowspan="..."`
@@ -3191,7 +3191,7 @@
             <td>
               <p>
                 Use the `rowspan` attribute on any element that is
-                <a data-cite="html/tables.html#attr-tdth-rowspan">allowed the `rowspan` attribute</a> in HTML.
+                allowed the `rowspan` attribute in HTML.
               </p>
               <p>
                 Developers MAY use the `aria-rowspan` attribute on any element that is allowed the `rowspan` attribute in HTML, or any element with a WAI-ARIA role which allows the <a data-cite="wai-aria-1.1#aria-rowspan">`aria-rowspan` attribute</a>.
