@@ -4048,10 +4048,10 @@
               <a data-cite="wai-aria-1.2#heading">`heading`</a>
             </th>
             <td>
-              none
+              <a data-cite="wai-aria-1.2#aria-level">`aria-level`</a>
             </td>
             <td>
-              <a data-cite="wai-aria-1.2#aria-level">`aria-level`</a> (required)
+              Global `aria-*` only
             </td>
             <td>
               [=Heading content=]
@@ -4304,10 +4304,10 @@
             <td>
               <ul>
                 <li>
-                  <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
+                  <a data-cite="wai-aria-1.2#aria-activedescendant">`aria-activedescendant`</a>
                 </li>
                 <li>
-                  <a data-cite="wai-aria-1.2#aria-activedescendant">`aria-activedescendant`</a>
+                  <a data-cite="wai-aria-1.2#aria-disabled">`aria-disabled`</a>
                 </li>
                 <li>
                   <a data-cite="wai-aria-1.2#aria-orientation">`aria-orientation`</a>
@@ -4335,12 +4335,11 @@
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-posinset">`aria-posinset`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-setsize">`aria-setsize`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-expanded">`aria-expanded`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-haspopup">`aria-haspopup`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-posinset">`aria-posinset`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-setsize">`aria-setsize`</a></li>
               </ul>
             </td>
             <td>
@@ -4360,12 +4359,11 @@
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-posinset">`aria-posinset`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-setsize">`aria-setsize`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-expanded">`aria-expanded`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-haspopup">`aria-haspopup`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-posinset">`aria-posinset`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-setsize">`aria-setsize`</a></li>
               </ul>
             </td>
             <td>
@@ -4385,12 +4383,15 @@
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-posinset">`aria-posinset`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-setsize">`aria-setsize`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-errormessage">`aria-errormessage`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-expanded">`aria-expanded`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-haspopup">`aria-haspopup`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-invalid">`aria-invalid`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-posinset">`aria-posinset`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-required">`aria-required`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-setsize">`aria-setsize`</a></li>
               </ul>
             </td>
             <td>
@@ -4439,7 +4440,7 @@
               none
             </td>
             <td>
-              <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
+              Global `aria-*` only
             </td>
             <td>
               [=Flow content=]
@@ -4455,7 +4456,11 @@
             <td>
               none
             </td>
-            <td>&nbsp;
+            <td>
+              Global `aria-*` only, except prohibited `aria-label`, and `aria-labelledby`
+              <p class="note">
+                Use of global `aria-*` attributes on an element with `role=none` will negate the role, re-exposing the element's implicit ARIA role, if any.
+              </p>
             </td>
             <td>
               [=Flow content=]
@@ -4472,7 +4477,7 @@
               none
             </td>
             <td>
-              <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
+              Global `aria-*` only
             </td>
             <td>
               [=Flow content=]
@@ -4486,22 +4491,14 @@
               <a data-cite="wai-aria-1.2#option">`option`</a>
             </th>
             <td>
-              none
+              <a data-cite="wai-aria-1.2#aria-selected">`aria-selected`</a>
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-checked">`aria-checked`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-posinset">`aria-posinset`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-selected">`aria-selected`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-setsize">`aria-setsize`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-checked">`aria-checked`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-posinset">`aria-posinset`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-setsize">`aria-setsize`</a></li>
               </ul>
             </td>
             <td>
@@ -4512,6 +4509,23 @@
               [=interactive content=] descendants.
             </td>
           </tr>
+          <!-- <tr>
+            <th tabindex="-1" id="index-aria-paragraph">
+              <a data-cite="wai-aria-1.2#paragraph">`paragraph`</a>
+            </th>
+            <td>
+              none
+            </td>
+            <td>
+              Global `aria-*` only, except prohibited `aria-label`, and `aria-labelledby`
+            </td>
+            <td>
+              TODO
+            </td>
+            <td>
+              TODO
+            </td>
+          </tr> -->
           <tr>
             <th tabindex="-1" id="index-aria-presentation">
               <a data-cite="wai-aria-1.2#presentation">`presentation`</a>
@@ -4519,7 +4533,12 @@
             <td>
               none
             </td>
-            <td></td>
+            <td>
+              Global `aria-*` only, except prohibited `aria-label`, and `aria-labelledby`
+              <p class="note">
+                Use of global `aria-*` attributes on an element with `role=presentation` will negate the role, re-exposing the element's implicit ARIA role, if any.
+              </p>
+            </td>
             <td>
               [=Flow content=]
             </td>
@@ -4567,10 +4586,10 @@
             <td>
               <ul>
                 <li>
-                  <a data-cite="wai-aria-1.2#aria-posinset">`aria-posinset`</a>
+                  <a data-cite="wai-aria-1.2#aria-disabled">`aria-disabled`</a>
                 </li>
                 <li>
-                  <a data-cite="wai-aria-1.2#aria-selected">`aria-selected`</a>
+                  <a data-cite="wai-aria-1.2#aria-posinset">`aria-posinset`</a>
                 </li>
                 <li>
                   <a data-cite="wai-aria-1.2#aria-setsize">`aria-setsize`</a>
@@ -4594,18 +4613,13 @@
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-required">`aria-required`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-activedescendant">`aria-activedescendant`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-orientation">`aria-orientation`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-activedescendant">`aria-activedescendant`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-errormessage">`aria-errormessage`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-invalid">`aria-invalid`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-orientation">`aria-orientation`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-required">`aria-required`</a></li>
               </ul>
             </td>
             <td>
@@ -4623,7 +4637,7 @@
               none
             </td>
             <td>
-              <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
+              Global `aria-*` only
             </td>
             <td>
               [=Flow content=]
@@ -4640,39 +4654,22 @@
               none
             </td>
             <td>
-              <p>
-                If child of `role=grid`, `rowgroup`, `table` or `treegrid`:
-              </p>
+              <p>If child of `role=grid`, `rowgroup`, `table` or `treegrid`:</p>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-colindex">`aria-colindex`</a>
-                </li>
-                <li>
-                  <a title="aria-rowindex" data-cite="wai-aria-1.2#aria-rowindex">`aria-rowindex`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-selected">`aria-selected`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-activedescendant">`aria-activedescendant`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-activedescendant">`aria-activedescendant`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-colindex">`aria-colindex`</a></li>
+                <li><a data-cite="wai-aria-1.2#aria-colindextext">`aria-colindextext`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-rowindex">`aria-rowindex`</a></li>
+                <li><a data-cite="wai-aria-1.2#aria-rowindextext">`aria-rowindextext`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-selected">`aria-selected`</a></li>
               </ul>
-              <p>
-                Also, if child of `role=treegrid`:
-              </p>
+              <p>Only if child of `role=treegrid`:</p>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-level">`aria-level`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-posinset">`aria-posinset`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-setsize">`aria-setsize`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-expanded">`aria-expanded`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-level">`aria-level`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-posinset">`aria-posinset`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-setsize">`aria-setsize`</a></li>
               </ul>
             </td>
             <td>
@@ -4689,7 +4686,7 @@
             <td>
               none
             </td>
-            <td></td>
+            <td>Global `aria-*` only</td>
             <td>
               none
             </td>
@@ -4705,31 +4702,26 @@
               none
             </td>
             <td>
+              <p>If descendant of `role=grid`, `table` or `treegrid`:</p>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-readonly">`aria-readonly`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-required">`aria-required`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-selected">`aria-selected`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-colspan">`aria-colspan`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-colindex">`aria-colindex`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-rowindex">`aria-rowindex`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-rowspan">`aria-rowspan`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-colindex">`aria-colindex`</a></li>
+                <li><a data-cite="wai-aria-1.2#aria-colindextext">`aria-colindextext`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-colspan">`aria-colspan`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-errormessage">`aria-errormessage`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-haspopup">`aria-haspopup`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-invalid">`aria-invalid`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-rowindex">`aria-rowindex`</a></li>
+                <li><a data-cite="wai-aria-1.2#aria-rowindextext">`aria-rowindextext`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-rowspan">`aria-rowspan`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-selected">`aria-selected`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-sort">`aria-sort`</a></li>
+              </ul>
+              <p>Only if child of `role=grid` or `treegrid`:</p>
+              <ul>
+                <li><a data-cite="wai-aria-1.1#aria-expanded">`aria-expanded`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-required">`aria-required`</a></li>
               </ul>
             </td>
             <td>
@@ -4745,31 +4737,17 @@
             </th>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-controls">`aria-controls`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-orientation">`aria-orientation`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuemax">`aria-valuemax`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuemin">`aria-valuemin`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuenow">`aria-valuenow`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-controls">`aria-controls`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-valuenow">`aria-valuenow`</a></li>
               </ul>
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuetext">`aria-valuetext`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-orientation">`aria-orientation`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-valuemax">`aria-valuemax`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-valuemin">`aria-valuemin`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-valuetext">`aria-valuetext`</a></li>
               </ul>
             </td>
             <td>
@@ -4792,7 +4770,7 @@
               none
             </td>
             <td>
-              <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
+              Global `aria-*` only
             </td>
             <td>
               [=Flow content=]
@@ -4810,24 +4788,16 @@
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-activedescendant">`aria-activedescendant`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-autocomplete">`aria-autocomplete`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-multiline">`aria-multiline`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-placeholder">`aria-placeholder`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-readonly">`aria-readonly`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-required">`aria-required`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-activedescendant">`aria-activedescendant`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-autocomplete">`aria-autocomplete`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-errormessage">`aria-errormessage`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-haspopup">`aria-haspopup`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-invalid">`aria-invalid`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-multiline">`aria-multiline`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-placeholder">`aria-placeholder`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-required">`aria-required`</a></li>
               </ul>
             </td>
             <td>
@@ -4843,26 +4813,15 @@
               <a data-cite="wai-aria-1.2#separator">`separator`</a>
             </th>
             <td>
-              <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuemax">`aria-valuemax`</a> (if focusable)
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuemin">`aria-valuemin`</a> (if focusable)
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuenow">`aria-valuenow`</a> (if focusable)
-                </li>
-              </ul>
+              <a data-cite="wai-aria-1.2#aria-valuenow">`aria-valuenow`</a> (if focusable)
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuetext">`aria-valuetext`</a> (if focusable)
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-orientation">`aria-orientation`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a> (if focusable)</li>
+                <li><a data-cite="wai-aria-1.1#aria-orientation">`aria-orientation`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-valuemax">`aria-valuemax`</a> (if focusable)</li>
+                <li><a data-cite="wai-aria-1.1#aria-valuemin">`aria-valuemin`</a> (if focusable)</li>
+                <li><a data-cite="wai-aria-1.1#aria-valuetext">`aria-valuetext`</a> (if focusable)</li>
               </ul>
             </td>
             <td>
@@ -4877,26 +4836,19 @@
               <a data-cite="wai-aria-1.2#slider">`slider`</a>
             </th>
             <td>
-              <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuemax">`aria-valuemax`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuemin">`aria-valuemin`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuenow">`aria-valuenow`</a>
-                </li>
-              </ul>
+              <a data-cite="wai-aria-1.2#aria-valuenow">`aria-valuenow`</a>
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-orientation">`aria-orientation`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuetext">`aria-valuetext`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-errormessage">`aria-errormessage`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-haspopup">`aria-haspopup`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-invalid">`aria-invalid`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-orientation">`aria-orientation`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-valuemax">`aria-valuemax`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-valuemin">`aria-valuemin`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-valuetext">`aria-valuetext`</a></li>
               </ul>
             </td>
             <td>
@@ -4911,29 +4863,20 @@
               <a data-cite="wai-aria-1.2#spinbutton">`spinbutton`</a>
             </th>
             <td>
-              <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuemax">`aria-valuemax`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuemin">`aria-valuemin`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuenow">`aria-valuenow`</a>
-                </li>
-              </ul>
+              none
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-required">`aria-required`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-readonly">`aria-readonly`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-valuetext">`aria-valuetext`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-activedescendant">`aria-activedescendant`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-errormessage">`aria-errormessage`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-invalid">`aria-invalid`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-required">`aria-required`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-valuemax">`aria-valuemax`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-valuemin">`aria-valuemin`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-valuenow">`aria-valuenow`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-valuetext">`aria-valuetext`</a></li>
               </ul>
             </td>
             <td>
@@ -4956,7 +4899,7 @@
               none
             </td>
             <td>
-              <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
+              Global `aria-*` only
             </td>
             <td>
               [=Flow content=]
@@ -4965,6 +4908,57 @@
               [=Flow content=]
             </td>
           </tr>
+          <!-- <tr>
+            <th tabindex="-1" id="index-aria-strong">
+              <a data-cite="wai-aria-1.2#strong">`strong`</a>
+            </th>
+            <td>
+              none
+            </td>
+            <td>
+              Global `aria-*` only, except prohibited `aria-label`, and `aria-labelledby`
+            </td>
+            <td>
+              TODO
+            </td>
+            <td>
+              TODO
+            </td>
+          </tr> -->
+          <!-- <tr>
+            <th tabindex="-1" id="index-aria-subscript">
+              <a data-cite="wai-aria-1.2#subscript">`subscript`</a>
+            </th>
+            <td>
+              none
+            </td>
+            <td>
+              Global `aria-*` only, except prohibited `aria-label`, and `aria-labelledby`
+            </td>
+            <td>
+              TODO
+            </td>
+            <td>
+              TODO
+            </td>
+          </tr> -->
+          <!-- <tr>
+            <th tabindex="-1" id="index-aria-superscript">
+              <a data-cite="wai-aria-1.2#superscript">`superscript`</a>
+            </th>
+            <td>
+              none
+            </td>
+            <td>
+              Global `aria-*` only, except prohibited `aria-label`, and `aria-labelledby`
+            </td>
+            <td>
+              TODO
+            </td>
+            <td>
+              TODO
+            </td>
+          </tr> -->
           <tr>
             <th tabindex="-1" id="index-aria-switch">
               <a data-cite="wai-aria-1.2#switch">`switch`</a>
@@ -4973,7 +4967,14 @@
               <a data-cite="wai-aria-1.2#aria-checked">`aria-checked`</a>
             </td>
             <td>
-              <a data-cite="wai-aria-1.2#aria-readonly">`aria-readonly`</a>
+              <ul>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-errormessage">`aria-errormessage`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-expanded">`aria-expanded`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-invalid">`aria-invalid`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-required">`aria-required`</a></li>
+              </ul>
             </td>
             <td>
               [=Interactive content=]
@@ -4992,18 +4993,12 @@
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-selected">`aria-selected`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-posinset">`aria-posinset`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-setsize">`aria-setsize`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-expanded">`aria-expanded`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-haspopup">`aria-haspopup`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-posinset">`aria-posinset`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-selected">`aria-selected`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-setsize">`aria-setsize`</a></li>
               </ul>
             </td>
             <td>
@@ -5047,18 +5042,10 @@
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-level">`aria-level`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-activedescendant">`aria-activedescendant`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-orientation">`aria-orientation`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-multiselectable">`aria-multiselectable`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-activedescendant">`aria-activedescendant`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-multiselectable">`aria-multiselectable`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-orientation">`aria-orientation`</a></li>
               </ul>
             </td>
             <td>
@@ -5076,9 +5063,7 @@
               none
             </td>
             <td>
-              <p>
-                <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
-              </p>
+              Global `aria-*` only
             </td>
             <td>
               [=Flow content=]
@@ -5095,7 +5080,7 @@
               none
             </td>
             <td>
-              <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
+              Global `aria-*` only
             </td>
             <td>
               [=Phrasing content=]
@@ -5113,24 +5098,16 @@
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-activedescendant">`aria-activedescendant`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-autocomplete">`aria-autocomplete`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-multiline">`aria-multiline`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-placeholder">`aria-placeholder`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-readonly">`aria-readonly`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-required">`aria-required`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-activedescendant">`aria-activedescendant`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-autocomplete">`aria-autocomplete`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-errormessage">`aria-errormessage`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-haspopup">`aria-haspopup`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-invalid">`aria-invalid`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-multiline">`aria-multiline`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-placeholder">`aria-placeholder`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-required">`aria-required`</a></li>
               </ul>
             </td>
             <td>
@@ -5149,7 +5126,7 @@
               none
             </td>
             <td>
-              <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
+              Global `aria-*` only
             </td>
             <td>
               [=Flow content=]
@@ -5167,15 +5144,9 @@
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-activedescendant">`aria-activedescendant`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-orientation">`aria-orientation`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-activedescendant">`aria-activedescendant`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-orientation">`aria-orientation`</a></li>
               </ul>
             </td>
             <td>
@@ -5193,7 +5164,7 @@
               none
             </td>
             <td>
-              <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
+              Global `aria-*` only
             </td>
             <td>
               [=Flow content=]
@@ -5204,28 +5175,20 @@
           </tr>
           <tr>
             <th tabindex="-1" id="index-aria-tree">
-              <code><a data-cite="wai-aria-1.2#tree">tree</a></code>
+              <a data-cite="wai-aria-1.2#tree">`tree`</a>
             </th>
             <td>
               none
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-multiselectable">`aria-multiselectable`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-required">`aria-required`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-activedescendant">`aria-activedescendant`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-orientation">`aria-orientation`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-activedescendant">`aria-activedescendant`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-errormessage">`aria-errormessage`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-invalid">`aria-invalid`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-multiselectable">`aria-multiselectable`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-orientation">`aria-orientation`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-required">`aria-required`</a></li>
               </ul>
             </td>
             <td>
@@ -5244,33 +5207,16 @@
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-level">`aria-level`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-multiselectable">`aria-multiselectable`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-readonly">`aria-readonly`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-activedescendant">`aria-activedescendant`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-required">`aria-required`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-orientation">`aria-orientation`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-colcount">`aria-colcount`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-rowcount">`aria-rowcount`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-activedescendant">`aria-activedescendant`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-colcount">`aria-colcount`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-errormessage">`aria-errormessage`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-disabled">`aria-disabled`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-invalid">`aria-invalid`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-multiselectable">`aria-multiselectable`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-orientation">`aria-orientation`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-readonly">`aria-readonly`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-required">`aria-required`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-rowcount">`aria-rowcount`</a></li>
               </ul>
             </td>
             <td>
@@ -5285,28 +5231,16 @@
               <a data-cite="wai-aria-1.2#treeitem">`treeitem`</a>
             </th>
             <td>
-              none
+              <a data-cite="wai-aria-1.1#aria-selected">`aria-selected`</a>
             </td>
             <td>
               <ul>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-level">`aria-level`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-posinset">`aria-posinset`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-setsize">`aria-setsize`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-expanded">`aria-expanded`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-checked">`aria-checked`</a>
-                </li>
-                <li>
-                  <a data-cite="wai-aria-1.2#aria-selected">`aria-selected`</a>
-                </li>
+                <li><a data-cite="wai-aria-1.1#aria-checked">`aria-checked`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-expanded">`aria-expanded`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-haspopup">`aria-haspopup`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-level">`aria-level`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-posinset">`aria-posinset`</a></li>
+                <li><a data-cite="wai-aria-1.1#aria-setsize">`aria-setsize`</a></li>
               </ul>
             </td>
             <td>
