@@ -2623,9 +2623,7 @@
             </td>
             <td>
               <p>
-                <strong class="nosupport">No `role`</strong> if the ancestor `table`
-                element has `role=table`, `grid`, or `treegrid`; otherwise
-                <a><strong>any</strong> `role`</a>.
+                <a><strong>Any</strong> `role`</a>
               </p>
               <p>
                 <a href="#index-aria-global">Global `aria-*` attributes</a> and
@@ -2639,21 +2637,19 @@
             </th>
             <td>
               <p>
-                If the ancestor `table` element is exposed as a `role=table`: <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
-                <a href="#index-aria-rowheader">`rowheader`</a> or <a href="#index-aria-rowheader">`cell`</a> according to
-                <a data-cite="html-aam-1.0#html-element-role-mappings">HTML AAM</a>.
+                <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
+                <a href="#index-aria-rowheader">`rowheader`</a> or <a href="#index-aria-rowheader">`cell`</a> if the ancestor
+                `table` element is exposed as a `role=table`.
               </p>
               <p>
-                If the ancestor `table` element is exposed as a `role=grid` or `treegrid`: <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
-                <a href="#index-aria-rowheader">`rowheader`</a> or <a href="#index-aria-rowheader">`gridcell`</a> according to
-                <a data-cite="html-aam-1.0#html-element-role-mappings">HTML AAM</a>.
+                <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
+                <a href="#index-aria-rowheader">`rowheader`</a> or <a href="#index-aria-rowheader">`gridcell`</a> if the ancestor
+                `table` element is exposed as a `role=grid` or `treegrid`.
              </p>
             </td>
             <td>
               <p>
-                <strong class="nosupport">No `role`</strong> if the ancestor `table`
-                element has `role=table`, `grid`, or `treegrid`; otherwise
-                <a><strong>any</strong> `role`</a>.
+                <a><strong>Any</strong> `role`</a>
               </p>
               <p>
                 <a href="#index-aria-global">Global `aria-*` attributes</a> and
@@ -2666,13 +2662,12 @@
               [^tr^]
             </th>
             <td>
-              <a href="#index-aria-row">`role=row`</a>
+              <code>role=<a href="#index-aria-row">row</a></code> if the ancestor
+              `table` element is exposed as a `role=table`, `grid` or `treegrid`.
             </td>
             <td>
               <p>
-                <strong class="nosupport">No `role`</strong> if the ancestor `table`
-                element has `role=table`, `grid`, or `treegrid`; otherwise
-                <a><strong>any</strong> `role`</a>.
+                <a><strong>Any</strong> `role`</a>
               </p>
               <p>
                 <a href="#index-aria-global">Global `aria-*` attributes</a> and
