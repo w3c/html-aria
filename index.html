@@ -1222,7 +1222,7 @@
             <td>
               <p>
                 If no accessible name is provided via other <a data-cite=
-              "html-aam-1.0#img-element-accessible-name-computation">`img` naming methods</a>: <strong class="nosupport">No `role`</strong>, and
+              "html-aam-1.0#img-element-accessible-name-computation">`img` naming methods</a> (e.g., `aria-labelledby`, `aria-label`): <strong class="nosupport">No `role`</strong>, and
                 <strong>no `aria-*` attributes</strong> except `aria-hidden="true"`.
               </p>
               <p>
@@ -2620,6 +2620,10 @@
                 <code>role=<a href="#index-aria-gridcell">gridcell</a></code> if the ancestor
                 `table` element is exposed as a `role=grid` or `treegrid`.
               </p>
+              <p>
+                <a>No corresponding role</a> if the ancestor `table` element is not exposed
+                as a `role=table`, `grid` or `treegrid`.
+              </p>
             </td>
             <td>
               <p>
@@ -2639,15 +2643,19 @@
             </th>
             <td>
               <p>
-                If the ancestor `table` element is exposed as a `role=table`: <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
-                <a href="#index-aria-rowheader">`rowheader`</a> or <a href="#index-aria-rowheader">`cell`</a> according to
-                <a data-cite="html-aam-1.0#html-element-role-mappings">HTML AAM</a>.
+                <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
+                <a href="#index-aria-rowheader">`rowheader`</a> or <a href="#index-aria-rowheader">`cell`</a> if the ancestor
+                `table` element is exposed as a `role=table`.
               </p>
               <p>
-                If the ancestor `table` element is exposed as a `role=grid` or `treegrid`: <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
-                <a href="#index-aria-rowheader">`rowheader`</a> or <a href="#index-aria-rowheader">`gridcell`</a> according to
-                <a data-cite="html-aam-1.0#html-element-role-mappings">HTML AAM</a>.
+                <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
+                <a href="#index-aria-rowheader">`rowheader`</a> or <a href="#index-aria-rowheader">`gridcell`</a> if the ancestor
+                `table` element is exposed as a `role=grid` or `treegrid`.
              </p>
+              <p>
+                <a>No corresponding role</a> if the ancestor `table` element is not exposed
+                as a `role=table`, `grid` or `treegrid`.
+              </p>
             </td>
             <td>
               <p>
@@ -2666,7 +2674,7 @@
               [^tr^]
             </th>
             <td>
-              <a href="#index-aria-row">`role=row`</a>
+              <code>role=<a href="#index-aria-row">row</a></code>
             </td>
             <td>
               <p>
