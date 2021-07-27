@@ -2858,8 +2858,7 @@
         <p>
           As stated in
           <a data-cite="wai-aria-1.1#host_general_conflict">WAI-ARIA's Conflicts with Host Language Semantics</a>,
-          user agents MUST ignore WAI-ARIA attributes and use the host language
-          (HTML) attribute with the same <a>implicit ARIA semantics</a>. For this reason, authors SHOULD NOT specify both the native HTML attribute and the equivalent `aria-*` attribute on an element. Please review each attribute for any further author specific requirements.
+          when HTML elements use <em>both</em> `aria-*` attributes and their host language (HTML) equivalents, user agents MUST ignore the WAI-ARIA attributes – the native HTML attributes with the same <a>implicit ARIA semantics</a> take precedence. For this reason, authors SHOULD NOT specify both the native HTML attribute and the equivalent `aria-*` attribute on an element. Please review each attribute for any further author specific requirements.
         </p>
         <p>
           The following table represents HTML elements and their attributes which have `aria-*` attribute parity.
