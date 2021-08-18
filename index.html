@@ -3107,14 +3107,18 @@
                   Use the `colspan` attribute on any element that is
                   allowed the `colspan` attribute in HTML.
                 </p>
+                <!--
+                  Removing per issue #338
+                  Revised rules to be re-added
                 <p>
-                  Authors MAY use the `aria-colspan` attribute on any element that is allowed the `colspan` attribute in HTML, or any element with a WAI-ARIA role which allows the <a data-cite="wai-aria-1.1#aria-colspan">`aria-colspan` attribute</a>.
+                  Authors MAY use the <a data-cite="wai-aria-1.1#aria-colspan">`aria-colspan`</a> attribute on any element with an explicit WAI-ARIA role which allows the `aria-colspan` attribute.
+                </p>
+                -->
+                <p>
+                  Authors SHOULD NOT use the `aria-colspan` attribute on any element which allows the `colspan` attribute. Use the `colspan` attribute instead.
                 </p>
                 <p>
-                  Authors SHOULD NOT use the `aria-colspan` attribute on any element which also has a `colspan` attribute.
-                </p>
-                <p>
-                  Authors MUST NOT use `aria-colspan` on any element which also has a `colspan` attribute, and the values of each attribute do not match.
+                  Authors MUST NOT use `aria-colspan` on any element which also has a `colspan` attribute and the values of each attribute do not match.
                 </p>
               </td>
             </tr>
@@ -3131,14 +3135,18 @@
                   Use the `rowspan` attribute on any element that is
                   allowed the `rowspan` attribute in HTML.
                 </p>
+                <!--
+                  Removing per issue #338
+                  Revised rules to be re-added
                 <p>
-                  Authors MAY use the `aria-rowspan` attribute on any element that is allowed the `rowspan` attribute in HTML, or any element with a WAI-ARIA role which allows the <a data-cite="wai-aria-1.1#aria-rowspan">`aria-rowspan` attribute</a>.
+                  Authors MAY use the <a data-cite="wai-aria-1.1#aria-rowspan">`aria-rowspan`</a> attribute on any element with an explicit WAI-ARIA role which allows the `aria-rowspan` attribute.
+                </p>
+                -->
+                <p>
+                  Authors SHOULD NOT use the `aria-rowspan` attribute on any element which allows the `rowspan` attribute. Use the `rowspan` attribute instead.
                 </p>
                 <p>
-                  Authors SHOULD NOT use the `aria-rowspan` attribute on any element which also has a `rowspan` attribute.
-                </p>
-                <p>
-                  Authors MUST NOT use `aria-rowspan` on any element which also has a `rowspan` attribute, and the values of each attribute do not match.
+                  Authors MUST NOT use `aria-rowspan` on any element which also has a `rowspan` attribute and the values of each attribute do not match.
                 </p>
               </td>
             </tr>
