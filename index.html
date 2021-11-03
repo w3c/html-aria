@@ -1752,11 +1752,6 @@
                 or <a href="#index-aria-treeitem">`treeitem`</a>
               </p>
               <p>
-                DPub Roles:
-                <a data-cite="dpub-aria-1.0#doc-biblioentry">`doc-biblioentry`</a>,
-                <a data-cite="dpub-aria-1.0#doc-endnote">`doc-endnote`</a>.
-              </p>
-              <p>
                 <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
                 any `aria-*` attributes applicable to the allowed roles.
               </p>
@@ -4167,7 +4162,7 @@
         A conformance checker MAY define their own terminology, and level or levels of
         severity, when surfacing document failures to conform to this specification.
       </p>
-</section>
+    </section>
     <section id="priv-sec" class="informative">
       <h2>
         Privacy and security considerations
@@ -4189,6 +4184,10 @@
       <h3>Substantive changes since the last published Recommendation</h3>
 
       <ol reversed>
+        <li>
+          02-Nov-2021:
+          Remove `doc-biblioentry` and `doc-endnote` from `li` element allowances. These roles are deprecated in [[[dpub-aria-1.1]]].
+        </li>
         <li>
           26-Oct-2021:
           Allow `aria-hidden` attribute on the `picture` element. 
