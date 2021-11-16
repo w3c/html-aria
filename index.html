@@ -1762,6 +1762,16 @@
                 <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
                 any `aria-*` attributes applicable to the allowed roles.
               </p>
+              <div class="addition proposal">
+                <p>Authors SHOULD NOT use the following DPub Roles:
+                  <a data-cite="dpub-aria-1.0#doc-biblioentry">`doc-biblioentry`</a>,
+                  <a data-cite="dpub-aria-1.0#doc-endnote">`doc-endnote`</a>.
+                </p>
+                <div class="note">
+                  <p>The `doc-biblioentry` and `doc-endnote` roles are not valid children of an element with an implict or explicit role of `list`. 
+                    Authors can use standard `li` elements without the need for these roles.</p>
+                </div>
+              </div>
             </td>
           </tr>
           <tr id="el-link" tabindex="-1">
