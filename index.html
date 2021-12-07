@@ -955,11 +955,11 @@
                 <a href="#index-aria-document">`document`</a>,
                 <a href="#index-aria-img">`img`</a>,
                 <a href="#index-aria-presentation">`presentation`</a>
-                or <a href="#index-aria-none">`none`</a>
+                or <a href="#index-aria-none">`none`</a>.
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
-                and any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
+                any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
@@ -1275,11 +1275,11 @@
                 <a href="#index-aria-document">`document`</a>,
                 <a href="#index-aria-img">`img`</a>,
                 <a href="#index-aria-none">`none`</a>
-                or <a href="#index-aria-presentation">`presentation`</a>
+                or <a href="#index-aria-presentation">`presentation`</a>.
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
-                and any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
+                any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
@@ -1377,14 +1377,12 @@
               </p>
             </td>
           </tr>
-          <tr id="el-input-checkbox" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-checkbox" tabindex="-1">
               <a data-cite="html/input.html#checkbox-state-(type=checkbox)">`input type=checkbox`</a>
             </th>
             <td>
-              <p>
-                <code>role=<a href="#index-aria-checkbox">checkbox</a></code>
-              </p>
+              <code>role=<a href="#index-aria-checkbox">checkbox</a></code>
             </td>
             <td>
               <p>
@@ -1392,7 +1390,7 @@
                 <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
                 <a href="#index-aria-option">`option`</a>
                 or <a href="#index-aria-switch">`switch`</a>;
-                <a href="#index-aria-button">`button` if used with `aria-pressed`</a>.
+                <a href="#index-aria-button">`button` if used with `aria-pressed`</a>
               </p>
               <p>
                 Authors <a href="#att-checked">SHOULD NOT use the `aria-checked` attribute on `input type=checkbox` elements</a>.
@@ -1408,8 +1406,8 @@
               </p>
             </td>
           </tr>
-          <tr id="el-input-color" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-color" tabindex="-1">
               <a data-cite="html/input.html#color-state-(type=color)">`input type=color`</a>
             </th>
             <td>
@@ -1420,12 +1418,12 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>.
               </p>
             </td>
           </tr>
-          <tr id="el-input-date" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-date" tabindex="-1">
               <a data-cite="html/input.html#date-state-(type=date)">`input type=date`</a>
             </th>
             <td>
@@ -1441,8 +1439,8 @@
               </p>
             </td>
           </tr>
-          <tr id="el-input-datetime-local" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-datetime-local" tabindex="-1">
               <a data-cite="html/input.html#local-date-and-time-state-(type=datetime-local)">`input type=datetime-local`</a>
             </th>
             <td>
@@ -1458,8 +1456,8 @@
               </p>
             </td>
           </tr>
-          <tr id="el-input-email" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-email" tabindex="-1">
               <a data-cite="html/input.html#e-mail-state-(type=email)">`input type=email`</a>
               with no [^input/list^] attribute
             </th>
@@ -1471,13 +1469,13 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the `textbox` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
           </tr>
-          <tr id="el-input-file" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-file" tabindex="-1">
               <a data-cite="html/input.html#file-upload-state-(type=file)">`input type=file`</a>
             </th>
             <td>
@@ -1488,23 +1486,25 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>.
               </p>
             </td>
           </tr>
-          <tr id="el-input-hidden" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-hidden" tabindex="-1">
               <a data-cite="html/input.html#hidden-state-(type=hidden)">`input type=hidden`</a>
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              <p>
+                <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              </p>
             </td>
           </tr>
-          <tr id="el-input-image" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-image" tabindex="-1">
               <a data-cite="html/input.html#image-button-state-(type=image)">`input type=image`</a>
             </th>
             <td>
@@ -1518,16 +1518,16 @@
                 <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
                 <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
                 <a href="#index-aria-radio">`radio`</a>
-                or <a href="#index-aria-switch">`switch`</a>.
+                or <a href="#index-aria-switch">`switch`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-input-month" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-month" tabindex="-1">
               <a data-cite="html/input.html#month-state-(type=month)">`input type=month`</a>
             </th>
             <td>
@@ -1538,12 +1538,13 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and any `aria-*` attributes applicable to the `textbox` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
           </tr>
-          <tr id="el-input-number" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-number" tabindex="-1">
               <a data-cite="html/input.html#number-state-(type=number)">`input type=number`</a>
             </th>
             <td>
@@ -1554,13 +1555,13 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the `spinbutton` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `spinbutton` role.
               </p>
             </td>
           </tr>
-          <tr id="el-input-password" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-password" tabindex="-1">
               <a data-cite="html/input.html#password-state-(type=password)">`input type=password`</a>
             </th>
             <td>
@@ -1571,14 +1572,14 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and any `aria-*` attributes applicable to the `textbox` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
           </tr>
-          <tr id="el-input-radio" tabindex="-1">
-            <th>
-              <a data-cite=
-              "html/input.html#radio-button-state-(type=radio)">`input type=radio`</a>
+          <tr>
+            <th id="el-input-radio" tabindex="-1">
+              <a data-cite="html/input.html#radio-button-state-(type=radio)">`input type=radio`</a>
             </th>
             <td>
               <code>role=<a href="#index-aria-radio">radio</a></code>
@@ -1603,8 +1604,8 @@
               </p>
             </td>
           </tr>
-          <tr id="el-input-range" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-range" tabindex="-1">
               <a data-cite="html/input.html#range-state-(type=range)">`input type=range`</a>
             </th>
             <td>
@@ -1615,16 +1616,18 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                Authors SHOULD NOT use the <a href="#att-max">`aria-valuemax`</a> or <a href="#att-min">`aria-valuemin`</a> attributes on `input type=range`.
+                Authors SHOULD NOT use the <a href="#att-max">`aria-valuemax`</a> or 
+                <a href="#att-min">`aria-valuemin`</a> attributes on `input type=range`.
               </p>
               <p>
-                Otherwise, any <a data-cite="wai-aria-1.1#global_states">global `aria-*` attributes</a> and any other `aria-*` attributes applicable
-                to the `slider` role.
+                Otherwise, any 
+                <a data-cite="wai-aria-1.1#global_states">global `aria-*` attributes</a> 
+                and any other `aria-*` attributes applicable to the `slider` role.
               </p>
             </td>
           </tr>
-          <tr id="el-input-reset" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-reset" tabindex="-1">
               <a data-cite="html/input.html#reset-button-state-(type=reset)">`input type=reset`</a>
             </th>
             <td>
@@ -1635,13 +1638,13 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the `button` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `button` role.
               </p>
             </td>
           </tr>
-          <tr id="el-input-search" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-search" tabindex="-1">
               <a data-cite="html/input.html#text-(type=text)-state-and-search-state-(type=search)">`input type=search`</a>,
               with no [^input/list^] attribute
             </th>
@@ -1653,13 +1656,13 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the `searchbox` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `searchbox` role.
               </p>
             </td>
           </tr>
-          <tr id="el-input-submit" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-submit" tabindex="-1">
               <a data-cite="html/input.html#submit-button-state-(type=submit)">`input type=submit`</a>
             </th>
             <td>
@@ -1670,14 +1673,15 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the `button` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `button` role.
               </p>
             </td>
           </tr>
-          <tr id="el-input-tel" tabindex="-1">
-            <th>
-              <a data-cite="html/input.html#telephone-state-(type=tel)">`input type=tel`</a>, with no [^input/list^] attribute
+          <tr>
+            <th id="el-input-tel" tabindex="-1">
+              <a data-cite="html/input.html#telephone-state-(type=tel)">`input type=tel`</a>, 
+              with no [^input/list^] attribute
             </th>
             <td>
               <code>role=<a href="#index-aria-textbox">textbox</a></code>
@@ -1687,13 +1691,13 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the `textbox` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
           </tr>
-          <tr id="el-input-text" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-text" tabindex="-1">
               <a data-cite="html/input.html#text-(type=text)-state-and-search-state-(type=search)">`input type=text`</a>
               or with a missing or invalid `type`, with no [^input/list^] attribute
             </th>
@@ -1705,16 +1709,16 @@
                 Roles:
                 <a href="#index-aria-combobox">`combobox`</a>,
                 <a href="#index-aria-searchbox">`searchbox`</a>
-                or <a href="#index-aria-spinbutton">`spinbutton`</a>.
+                or <a href="#index-aria-spinbutton">`spinbutton`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-input-text-list" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-text-list" tabindex="-1">
               <a data-cite="html/input.html#text-(type=text)-state-and-search-state-(type=search)">`input type=text`</a>,
               <a data-cite="html/input.html#text-(type=text)-state-and-search-state-(type=search)">`search`</a>,
               <a data-cite="html/input.html#telephone-state-(type=tel)">`tel`</a>,
@@ -1734,13 +1738,13 @@
               </p>
               <p>
                 Otherwise, any
-                <a data-cite="wai-aria-1.1#global_states">global `aria-*` attributes</a> and
-                any other `aria-*` attributes applicable to the `combobox` role.
+                <a data-cite="wai-aria-1.1#global_states">global `aria-*` attributes</a> 
+                and any other `aria-*` attributes applicable to the `combobox` role.
               </p>
             </td>
           </tr>
-          <tr id="el-input-time" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-time" tabindex="-1">
               <a data-cite="html/input.html#time-state-(type=time)">`input type=time`</a>
             </th>
             <td>
@@ -1751,15 +1755,15 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and any `aria-*` attributes applicable to the `textbox` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
           </tr>
-          <tr id="el-input-url" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-url" tabindex="-1">
               <a data-cite="html/input.html#url-state-(type=url)">`input type=url`</a>
-              with no
-              [^input/list^] attribute
+              with no [^input/list^] attribute
             </th>
             <td>
               <code>role=<a href="#index-aria-textbox">textbox</a></code>
@@ -1769,13 +1773,13 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the `textbox` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
           </tr>
-          <tr id="el-input-week" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-input-week" tabindex="-1">
               <a data-cite="html/input.html#week-state-(type=week)">`input type=week`</a>
             </th>
             <td>
@@ -1786,12 +1790,13 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and any `aria-*` attributes applicable to the `textbox` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
           </tr>
-          <tr id="el-ins" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-ins" tabindex="-1">
               [^ins^]
             </th>
             <td>
@@ -1802,13 +1807,13 @@
                 <a><strong>Any</strong> `role`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-kbd" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-kbd" tabindex="-1">
               [^kbd^]
             </th>
             <td>
@@ -1819,13 +1824,13 @@
                 <a><strong>Any</strong> `role`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-label" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-label" tabindex="-1">
               [^label^]
             </th>
             <td>
@@ -1836,12 +1841,12 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>.
               </p>
             </td>
           </tr>
-          <tr id="el-legend" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-legend" tabindex="-1">
               [^legend^]
             </th>
             <td>
@@ -1852,12 +1857,12 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>.
               </p>
             </td>
           </tr>
-          <tr id="el-li" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-li" tabindex="-1">
               [^li^]
             </th>
             <td>
@@ -1880,27 +1885,29 @@
               <p>
                 DPub Roles:
                 <a data-cite="dpub-aria-1.0#doc-biblioentry">`doc-biblioentry`</a>,
-                <a data-cite="dpub-aria-1.0#doc-endnote">`doc-endnote`</a>.
+                <a data-cite="dpub-aria-1.0#doc-endnote">`doc-endnote`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-link" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-link" tabindex="-1">
               [^link^]
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              <p>
+                <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              </p>
             </td>
           </tr>
-          <tr id="el-main" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-main" tabindex="-1">
               [^main^]
             </th>
             <td>
@@ -1911,24 +1918,26 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the `main` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `main` role.
               </p>
             </td>
           </tr>
-          <tr id="el-map" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-map" tabindex="-1">
               [^map^]
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              <p>
+                <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              </p>
             </td>
           </tr>
-          <tr id="el-mark" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-mark" tabindex="-1">
               [^mark^]
             </th>
             <td>
@@ -1939,13 +1948,13 @@
                 <a><strong>Any</strong> `role`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-math" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-math" tabindex="-1">
               <a data-cite="html/embedded-content-other.html#mathml">`math`</a>
             </th>
             <td>
@@ -1956,13 +1965,13 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the `math` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `math` role.
               </p>
             </td>
           </tr>
-          <tr id="el-menu" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-menu" tabindex="-1">
               [^menu^]
             </th>
             <td>
@@ -1981,27 +1990,29 @@
                 <a href="#index-aria-radiogroup">`radiogroup`</a>,
                 <a href="#index-aria-tablist">`tablist`</a>,
                 <a href="#index-aria-toolbar">`toolbar`</a>
-                or <a href="#index-aria-tree">`tree`</a>.
+                or <a href="#index-aria-tree">`tree`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-meta" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-meta" tabindex="-1">
               [^meta^]
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              <p>
+                <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              </p>
             </td>
           </tr>
-          <tr id="el-meter" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-meter" tabindex="-1">
               [^meter^]
             </th>
             <td>
@@ -2012,15 +2023,17 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                Authors SHOULD NOT use the <a href="#att-max">`aria-valuemax`</a> or <a href="#att-min">`aria-valuemin`</a> attributes on `meter` elements.
+                Authors SHOULD NOT use the <a href="#att-max">`aria-valuemax`</a> or 
+                <a href="#att-min">`aria-valuemin`</a> attributes on `meter` elements.
               </p>
               <p>
-                Otherwise, any <a data-cite="wai-aria-1.1#global_states">global `aria-*` attributes</a>.
+                Otherwise, any 
+                <a data-cite="wai-aria-1.1#global_states">global `aria-*` attributes</a>.
               </p>
             </td>
           </tr>
-          <tr id="el-nav" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-nav" tabindex="-1">
               [^nav^]
             </th>
             <td>
@@ -2031,33 +2044,35 @@
                 Roles:
                 <a href="#index-aria-menu">`menu`</a>,
                 <a href="#index-aria-menubar">`menubar`</a>
-                or <a href="#index-aria-tablist">`tablist`</a>.
+                or <a href="#index-aria-tablist">`tablist`</a>
               </p>
               <p>
                 DPub Roles:
                 <a data-cite="dpub-aria-1.0#doc-index">`doc-index`</a>,
                 <a data-cite="dpub-aria-1.0#doc-pagelist">`doc-pagelist`</a>,
-                <a data-cite="dpub-aria-1.0#doc-toc">`doc-toc`</a>.
+                <a data-cite="dpub-aria-1.0#doc-toc">`doc-toc`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-noscript" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-noscript" tabindex="-1">
               [^noscript^]
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              <p>
+                <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              </p>
             </td>
           </tr>
-          <tr id="el-object" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-object" tabindex="-1">
               [^object^]
             </th>
             <td>
