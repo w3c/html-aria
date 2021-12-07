@@ -285,10 +285,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr id="el-a" tabindex="-1">
-            <th>
-              [^a^] with
-              [^a/href^]
+          <tr>
+            <th id="el-a" tabindex="-1">
+              [^a^] with [^a/href^]
             </th>
             <td>
               <code>role=<a href="#index-aria-link">link</a></code>
@@ -317,17 +316,19 @@
               <p>
                 <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
                 any `aria-*` attributes applicable to the allowed roles.
+              </p>
               <p>
                 It is NOT RECOMMENDED to use `aria-disabled="true"` on an
                 `a` element with an `href` attribute.
               </p>
               <div class="note">
-                If a link needs to be "disabled", <a href="#example-communicate-a-disabled-link-with-aria">remove the `href` attribute</a>.
+                If a link needs to be programmatically communicated as "disabled", 
+                <a href="#example-communicate-a-disabled-link-with-aria">remove the `href` attribute</a>.
               </div>
             </td>
           </tr>
-          <tr id="el-a-no-href" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-a-no-href" tabindex="-1">
               [^a^] without [^a/href^]
             </th>
             <td>
@@ -338,13 +339,13 @@
                 <a><strong>Any</strong> `role`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-abbr" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-abbr" tabindex="-1">
               [^abbr^]
             </th>
             <td>
@@ -360,8 +361,8 @@
               </p>
             </td>
           </tr>
-          <tr id="el-address" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-address" tabindex="-1">
               [^address^]
             </th>
             <td>
@@ -372,13 +373,13 @@
                 <a><strong>Any</strong> `role`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-area" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-area" tabindex="-1">
               [^area^] with [^area/href^]
             </th>
             <td>
@@ -389,32 +390,33 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the <a href=
-                "#index-aria-link">`link`</a> role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the 
+                <a href="#index-aria-link">`link`</a> role.
               </p>
             </td>
           </tr>
-          <tr id="el-area-no-href" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-area-no-href" tabindex="-1">
               [^area^] without [^area/href^]
             </th>
             <td><a>No corresponding role</a></td>
             <td>
               <div class="addition proposed">
-                <p>Roles:
+                <p>
+                  Roles:
                   <a href="#index-aria-button">`button`</a>
                   or <a href="#index-aria-link">`link`</a>
                 </p>
                 <p>
-                  <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                  any `aria-*` attributes applicable to the allowed roles.
+                  <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                  and any `aria-*` attributes applicable to the allowed roles.
                 </p>
               </div>
             </td>
           </tr>
-          <tr id="el-article" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-article" tabindex="-1">
               [^article^]
             </th>
             <td>
@@ -432,13 +434,13 @@
                 or <a href="#index-aria-region">`region`</a>.
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-aside" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-aside" tabindex="-1">
               [^aside^]
             </th>
             <td>
@@ -463,13 +465,13 @@
                 or <a data-cite="dpub-aria-1.0#doc-tip">`doc-tip`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-audio" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-audio" tabindex="-1">
               [^audio^]
             </th>
             <td>
@@ -481,14 +483,14 @@
                 <a href="#index-aria-application">`application`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the <a href=
-                "#index-aria-application">`application`</a> role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the 
+                <a href="#index-aria-application">`application`</a> role.
               </p>
             </td>
           </tr>
-          <tr id="el-autonomous-custom-element" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-autonomous-custom-element" tabindex="-1">
               <a>autonomous custom element</a>
             </th>
             <td>
@@ -496,74 +498,87 @@
               Otherwise <a>no corresponding role</a>.
             </td>
             <td>
-              <p>If role defined by `ElementInternals`, <strong class="nosupport">no `role`</strong>.</p>
+              <p>
+                If role defined by `ElementInternals`, 
+                <strong class="nosupport">no `role`</strong>.
+              </p>
               <p>
                 Otherwise, <a><strong>any</strong> `role`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-b" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-b" tabindex="-1">
               [^b^]
             </th>
             <td>
-              <a>No corresponding role</a>
+              <p>
+                <a>No corresponding role</a>
+              </p>
             </td>
             <td>
-              <a><strong>Any</strong> `role`</a>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a><strong>Any</strong> `role`</a>
+              </p>
+              <p>
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-base" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-base" tabindex="-1">
               [^base^]
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              <p>
+                <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              </p>
             </td>
           </tr>
-          <tr id="el-bdi" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-bdi" tabindex="-1">
               [^bdi^]
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <a><strong>Any</strong> `role`</a>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a><strong>Any</strong> `role`</a>
+              </p>
+              <p>
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-bdo" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-bdo" tabindex="-1">
               [^bdo^]
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <a><strong>Any</strong> `role`</a>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a><strong>Any</strong> `role`</a>
+              </p>
+              <p>
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-blockquote" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-blockquote" tabindex="-1">
               [^blockquote^]
             </th>
             <td>
@@ -574,13 +589,13 @@
                 <a><strong>Any</strong> `role`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-body" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-body" tabindex="-1">
               [^body^]
             </th>
             <td>
@@ -591,14 +606,12 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>
-                and any `aria-*` attributes applicable to the
-                <a href="#index-aria-document">`document`</a> role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>.
               </p>
             </td>
           </tr>
-          <tr id="el-br" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-br" tabindex="-1">
               [^br^]
             </th>
             <td>
@@ -611,13 +624,12 @@
                 or <a href="#index-aria-none">`none`</a>.
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>.
               </p>
             </td>
           </tr>
-          <tr id="el-button" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-button" tabindex="-1">
               [^button^]
             </th>
             <td>
@@ -637,13 +649,13 @@
                 or <a href="#index-aria-tab">`tab`</a>.
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-canvas" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-canvas" tabindex="-1">
               [^canvas^]
             </th>
             <td>
@@ -654,13 +666,13 @@
                 <a><strong>Any</strong> `role`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-caption" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-caption" tabindex="-1">
               [^caption^]
             </th>
             <td>
@@ -671,79 +683,89 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>.
               </p>
             </td>
           </tr>
-          <tr id="el-cite" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-cite" tabindex="-1">
               [^cite^]
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <a><strong>Any</strong> `role`</a>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a><strong>Any</strong> `role`</a>
+              </p>
+              <p>
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-code" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-code" tabindex="-1">
               [^code^]
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <a><strong>Any</strong> `role`</a>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a><strong>Any</strong> `role`</a>
+              </p>
+              <p>
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-col" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-col" tabindex="-1">
               [^col^]
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              <p>
+                <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              </p>
             </td>
           </tr>
-          <tr id="el-colgroup" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-colgroup" tabindex="-1">
               [^colgroup^]
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              <p>
+                <strong class="nosupport">No `role` or `aria-*` attributes</strong>
+              </p>
             </td>
           </tr>
-          <tr id="el-data" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-data" tabindex="-1">
               [^data^]
             </th>
             <td>
               <a>No corresponding role</a>
             </td>
             <td>
-              <a><strong>Any</strong> `role`</a>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a><strong>Any</strong> `role`</a>
+              </p>
+              <p>
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-datalist" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-datalist" tabindex="-1">
               [^datalist^]
             </th>
             <td>
@@ -760,8 +782,8 @@
               </p>
             </td>
           </tr>
-          <tr id="el-dd" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-dd" tabindex="-1">
               [^dd^]
             </th>
             <td>
@@ -772,13 +794,13 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the `definition` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `definition` role.
               </p>
             </td>
           </tr>
-          <tr id="el-del" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-del" tabindex="-1">
               [^del^]
             </th>
             <td>
@@ -789,13 +811,13 @@
                 <a><strong>Any</strong> `role`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the allowed roles.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
-          <tr id="el-details" tabindex="-1">
-            <th>
+          <tr>
+            <th id="el-details" tabindex="-1">
               [^details^]
             </th>
             <td>
@@ -806,8 +828,8 @@
                 <strong class="nosupport">No `role`</strong>
               </p>
               <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> and
-                any `aria-*` attributes applicable to the `group` role.
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `group` role.
               </p>
             </td>
           </tr>
