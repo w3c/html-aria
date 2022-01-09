@@ -3362,13 +3362,13 @@
           Requirements for use of deprecated ARIA roles and attributes in HTML
         </h2>
         <p>
-          The ARIA Specification's <a data-cite="wai-aria-1.1#deprecated>Deprecated Requirements</a> section indicates that if an ARIA feature is marked as deprecated then authors are recommended to not use said feature for new content.
+          The ARIA Specification's <a data-cite="wai-aria-1.1#deprecated">Deprecated Requirements</a> section indicates that if an ARIA feature is marked as deprecated then authors are recommended to not use said feature for new content.
         </p>
         <p>
-          The following roles and attributes are deprecated features of ARIA and DPub ARIA. Authors SHOULD NOT use these features.
+          The following roles and attributes are deprecated features of ARIA and DPub ARIA. Conformance checkers MUST warn authors about the deprecated status of these features.
         </p>
 
-        <h4>Deprecated ARIA roles</h4>
+        <h3>Deprecated ARIA roles</h3>
         <ul>  
           <li><a data-cite="wai-aria-1.2#directory">`directory`</a></li>
         </ul>
@@ -3376,16 +3376,16 @@
           <p>The `directory` role is marked for deprecation in [[wai-aria-1.2|WAI-ARIA 1.2]]. In reality, the `directory` role had no functional difference to an element with an implicit or explicit `list` role. Authors are advised to use one of HTML's native list elements, or an ARIA `list` instead.</p>
         </div>
 
-        <h4>Deprecated DPub ARIA roles</h4>
+        <h3>Deprecated DPub ARIA roles</h3>
         <ul>
           <li><a data-cite="dpub-aria-1.1#doc-biblioentry">`doc-biblioentry`</a></li>
           <li><a data-cite="dpub-aria-1.1#doc-endnote">`doc-endnote`</a></li>
         </ul>
         <div class="note">
-          <p>The `doc-biblioentry` and `doc-endnote` roles are marked for deprecation in [[[dpub-aria-1.1]]], as they are not valid children for an element with an implicit or explicit role of `list`. Authors can use standard `li` elements without the need for these roles.</p>
+          <p>The `doc-biblioentry` and `doc-endnote` roles are marked for deprecation in [[[dpub-aria-1.1]]], as they are not valid children for an element with an implicit or explicit role of `list`. Authors can use standard list and child `li` elements without the need for these roles.</p>
         </div>
 
-        <h4>Deprecated ARIA attributes</h4>
+        <h3>Deprecated ARIA attributes</h3>
         <ul>
           <li><a data-cite="wai-aria-1.1#aria-dropeffect">`aria-dropeffect`</a></li>
           <li><a data-cite="wai-aria-1.1#aria-grabbed">`aria-grabbed`</a></li>
@@ -3395,14 +3395,14 @@
         </div>
       </section>
       <section>
-      <h2 id="case-sensitivity">
-        Case requirements for ARIA role, state and property attributes
-      </h2>
-      <p>
-        Authors SHOULD use [=ASCII lowercase=] for all `role` token values
-        and any state or property attributes (`aria-*`) whose values are
-        <a data-cite="wai-aria-1.1#propcharacteristic_value">defined as tokens</a>.
-      </p>
+        <h2 id="case-sensitivity">
+          Case requirements for ARIA role, state and property attributes
+        </h2>
+        <p>
+          Authors SHOULD use [=ASCII lowercase=] for all `role` token values
+          and any state or property attributes (`aria-*`) whose values are
+          <a data-cite="wai-aria-1.1#propcharacteristic_value">defined as tokens</a>.
+        </p>
 
       <div class="note">
         <p>
