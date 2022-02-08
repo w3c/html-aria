@@ -168,15 +168,16 @@
       </section>
       <section class="informative">
         <h3>
-          Don't add redundant roles
+          Avoid specifying redundant roles
         </h3>
         <p>
-          The following uses a `role=button` on a [^button^] element. This is
-          unnecessary, as "button" is already exposed as the implicit role for
-          the element. In practice this redundancy will likely not have any
-          unforeseen side effects, other than unnecessarily making the markup
-          more verbose, and incorrectly signaling to other authors that this
-          practice is useful.
+          The following example illustrates a [^button^] element which has also been
+          provided an explicit `role=button`. Specifying this role is unnecessary, as a "button" 
+          element is already exposed with an implicit `button` role. In practice this particular
+          instance of redundancy will likely not have unforeseen side effects, other than 
+          unnecessarily making the markup more verbose, and incorrectly signaling to other authors 
+          that this practice is useful. Please review the section ["Be cautious of side effects"](#side-effects)
+          for an example of where specifying unnecessary roles can be problematic.
         </p>
         <pre class="example HTML" title="Redundant role on button">
           &lt;!-- Avoid doing this! -->
@@ -184,9 +185,10 @@
         </pre>
         <p>
           Similarly, the following uses a `role=group` on a [^fieldset^] element, and a `role=Main` on a [^main^] element.
-          This is unnecessary, because the `fieldset` element is implicitly
-          exposed as a `role=group`, as is the `main` element implicitly exposed as a `role=main`. Again, in practice this will likely not
-          have any unforeseen side effects to users of assistive technology, as long as the declaration of the `role` value uses [=ASCII lowercase=]. Please see [[[#case-sensitivity]]] for more information.
+          This is unnecessary, because the `fieldset` element is implicitly exposed as a `role=group`, as is the `main` element 
+          implicitly exposed as a `role=main`. Again, in practice this will likely not have any unforeseen side effects to users 
+          of assistive technology, as long as the declaration of the `role` value uses [=ASCII lowercase=]. 
+          Please see [[[#case-sensitivity]]] for more information.
         </p>
         <pre class="HTML example" title="Redundant role on fieldset and main">
           &lt;!-- Avoid doing this! -->
@@ -208,7 +210,7 @@
         </pre>
       </section>
       <section class="informative">
-        <h3>
+        <h3 id="side-effects">
           Be cautious of side effects
         </h3>
         <p>
@@ -224,6 +226,34 @@
             &lt;summary role="button"&gt;more information&lt;/summary&gt;
             ...
           &lt;/details&gt;
+        </pre>
+      </section>
+      <section class="informative">
+        <h3>Adhere to the rules of ARIA</h3>
+        <p>
+          [[[wai-aria-1.2]]] defines a number of roles which are not meant to be used
+          by authors. Many of these roles are defined as <a data-cite="wai-aria-1.2#isAbstract">Abstract Roles</a>
+          and are absolutely not to be used by authors. The following example illustrates the invalid use of an
+          abstract `select` role, where an author likely should have used a `combobox` role instead.
+        </p>
+        <pre class="HTML example" title="Abstract roles are not for authors">
+          &lt!-- Avoid doing this! -->
+          &lt;div role="select" ...&gt;...n&lt;/div&gt;
+        </pre>
+        <p>
+          ARIA also defines a <a data-cite="wai-aria-1.2#generic">`generic` role</a> which is meant to provide
+          feature parity with a number of HTML elements which have no strong implicit ARIA semantics of their
+          own. For instance, HTML's [^div^] and [^span^] elements, among others. ARIA discourages authors from
+          using the `generic` role as its intended purpose is for use by implementors of user agents.
+        </p>
+        <p>
+          In the following example, rather than using a `generic` role, authors are advised to either
+          use a `div` instead of the `article` element. Or, if changing the HTML element is not possible,
+          use a `presentation` or `none` role instead.
+        </p>
+        <pre class="HTML example" title="Do not specify elements as generic">
+          &lt!-- Avoid doing this! -->
+          &lt;article role="generic" ...&gt;...n&lt;/article&gt;
         </pre>
       </section>
     </section>
@@ -245,15 +275,14 @@
         a cell in the third column includes the term
         <dfn><strong>Any</strong> `role`</dfn> it indicates that any `role`
         value apart from the <a>implicit ARIA semantics</a> `role` value,
-        MAY be used, <span class="proposed addition">unless it is a role
-        <a href="#docconformance-deprecated">deprecated by ARIA</a>. 
+        MAY be used, <span class="proposed addition">unless it is the `generic` role
+        or a role <a href="#docconformance-deprecated">deprecated by ARIA</a>. 
         Deprecated roles SHOULD NOT be used by authors</span>. 
         If a cell in the third column includes the term
         <dfn><strong>No `role`</strong></dfn> it indicates that authors
         MUST NOT overwrite the implicit ARIA semantics, or native semantics
         of the HTML element.
       </p>
-
       <p class="note" id="aria-usage-note">
         While setting an ARIA `role` and/or `aria-*` attribute that matches the
         <span>implicit ARIA semantics</span> is NOT RECOMMENDED, in some
@@ -262,7 +291,8 @@
         ARIA semantics.
       </p>
        <p class="note" id="dpub-usage-note">
-        While it is conforming to use [[[dpub-aria-1.0]]] `role` values as outlined in the following table, the current support for exposing the semantics of these values to users of assistive technology is close to non-existent.
+        While it is conforming to use [[[dpub-aria-1.0]]] `role` values as outlined in the following table, 
+         the current support for exposing the semantics of these values to users of assistive technology is close to non-existent.
       </p>
       <table class="simple">
         <caption>
