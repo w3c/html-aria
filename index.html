@@ -232,17 +232,17 @@
         <h3>Adhere to the rules of ARIA</h3>
         <p>
           [[[wai-aria-1.2]]] defines a number of roles which are not meant to be used
-          by authors. Many of these roles are defined as <a data-cite="wai-aria-1.2#isAbstract">Abstract Roles</a>
+          by authors. Many of these roles are categorized as <a data-cite="wai-aria-1.2#isAbstract">Abstract Roles</a>
           and are absolutely not to be used by authors. The following example illustrates the invalid use of an
           abstract `select` role, where an author likely should have used a `combobox` role instead.
         </p>
         <pre class="HTML example" title="Abstract roles are not for authors">
-          &lt!-- Avoid doing this! -->
+          &lt!-- Do not do this! -->
           &lt;div role="select" ...&gt;...n&lt;/div&gt;
         </pre>
         <p>
           ARIA also defines a <a data-cite="wai-aria-1.2#generic">`generic` role</a> which is meant to provide
-          feature parity with a number of HTML elements which have no strong implicit ARIA semantics of their
+          feature parity with a number of HTML elements that do not have more specific ARIA semantics of their
           own. For instance, HTML's [^div^] and [^span^] elements, among others. ARIA discourages authors from
           using the `generic` role as its intended purpose is for use by implementors of user agents.
         </p>
