@@ -1514,8 +1514,25 @@
             </td>
           </tr>
           <tr>
-            <th id="el-input-image" tabindex="-1">
-              <a data-cite="html/input.html#image-button-state-(type=image)">`input type=image`</a>
+            <th id="el-button-input-image-reset-submit-form" tabindex="-1">
+             [^button^] with a missing or invalid [^button/type^], <a data-cite="html/input.html#image-button-state-(type=image)">`input type=image`</a>, <a data-cite="html/input.html#submit-button-state-(type=submit)">`input type=submit`</a>, and <a data-cite="html/input.html#reset-button-state-(type=reset)">`input type=reset`</a> , if a descendant of a [^form^] element.
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-button">button</a></code>
+            </td>
+            <td>
+              <p>
+                <a><strong class="nosupport">No `role`</strong></a>
+              </p>
+              <p>
+                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the `button` role.
+              </p>
+            </td>
+          </tr>
+		  <tr>
+            <th id="el-input-image-reset-submit-noform" tabindex="-1">
+              <a data-cite="html/input.html#image-button-state-(type=image)">`input type=image`</a>, <a data-cite="html/input.html#reset-button-state-(type=reset)">`input type=reset`</a>, and <a data-cite="html/input.html#submit-button-state-(type=submit)">`input type=submit`</a>, if not a descendant of a [^form^] element.
             </th>
             <td>
               <code>role=<a href="#index-aria-button">button</a></code>
@@ -1523,18 +1540,21 @@
             <td>
               <p>
                 Roles:
+                <span class="proposed correction"><a href="#index-aria-checkbox">`checkbox`</a>,</span>
+                <span class="proposed addition"><a href="#index-aria-combobox">`combobox`</a>,</span>
                 <a href="#index-aria-link">`link`</a>,
                 <a href="#index-aria-menuitem">`menuitem`</a>,
                 <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
                 <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
-                <a href="#index-aria-radio">`radio`</a>
-                or <a href="#index-aria-switch">`switch`</a>
+                <a href="#index-aria-option">`option`</a>,
+                <a href="#index-aria-radio">`radio`</a>,
+                <a href="#index-aria-switch">`switch`</a>
+                or <a href="#index-aria-tab">`tab`</a>
               </p>
               <p>
                 <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
-            </td>
           </tr>
           <tr>
             <th id="el-input-month" tabindex="-1">
@@ -1637,23 +1657,6 @@
             </td>
           </tr>
           <tr>
-            <th id="el-input-reset" tabindex="-1">
-              <a data-cite="html/input.html#reset-button-state-(type=reset)">`input type=reset`</a>
-            </th>
-            <td>
-              <code>role=<a href="#index-aria-button">button</a></code>
-            </td>
-            <td>
-              <p>
-                <a><strong class="nosupport">No `role`</strong></a>
-              </p>
-              <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
-                and any `aria-*` attributes applicable to the `button` role.
-              </p>
-            </td>
-          </tr>
-          <tr>
             <th id="el-input-search" tabindex="-1">
               <a data-cite="html/input.html#text-(type=text)-state-and-search-state-(type=search)">`input type=search`</a>,
               with no [^input/list^] attribute
@@ -1668,23 +1671,6 @@
               <p>
                 <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
                 and any `aria-*` attributes applicable to the `searchbox` role.
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <th id="el-input-submit" tabindex="-1">
-              <a data-cite="html/input.html#submit-button-state-(type=submit)">`input type=submit`</a>
-            </th>
-            <td>
-              <code>role=<a href="#index-aria-button">button</a></code>
-            </td>
-            <td>
-              <p>
-                <a><strong class="nosupport">No `role`</strong></a>
-              </p>
-              <p>
-                <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a> 
-                and any `aria-*` attributes applicable to the `button` role.
               </p>
             </td>
           </tr>
