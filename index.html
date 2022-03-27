@@ -1905,14 +1905,20 @@
               [^li^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-listitem">listitem</a></code>
+              <p>
+                If the `li` is not a child of a list element 
+                (<a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, 
+                <a href="#el-menu">`menu`</a>)
+                <code>role=<a href="#index-aria-listitem">listitem</a></code>.
+              </p>
+              <p>
+                Otherwise, <code>role=<a href="#index-aria-generic">generic</a></code>.
+              </p>
             </td>
             <td>
               <div class="proposed correction">
                 <p>
-                  If the `li` is not a child of a list element 
-                  (<a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, 
-                  <a href="#el-menu">`menu`</a>), or the list element's implicit `list` role 
+                  If the `li` is not a child of a list element, or the list element's implicit `list` role 
                   has been overwritten, then <a><strong>any `role`</strong></a>.
                 </p>
                 <p>
