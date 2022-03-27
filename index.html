@@ -1908,20 +1908,17 @@
               <code>role=<a href="#index-aria-listitem">listitem</a></code>
             </td>
             <td>
-              <p>
-                Roles:
-                <a href="#index-aria-menuitem">`menuitem`</a>,
-                <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
-                <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
-                <a href="#index-aria-option">`option`</a>,
-                <a href="#index-aria-none">`none`</a>,
-                <a href="#index-aria-presentation">`presentation`</a>,
-                <a href="#index-aria-radio">`radio`</a>,
-                <a href="#index-aria-separator">`separator`</a>,
-                <a href="#index-aria-tab">`tab`</a>
-                or <a href="#index-aria-treeitem">`treeitem`</a>
-              </p>
-              <p>
+              <div class="proposed correction">
+                <p>
+                  If the `li` is not a child of a list element (`ul`, `ol`, `menu`), or the 
+                  list element's implicit `list` role has been overwritten, then 
+                  <a><strong>any `role`</strong></a> that is an allowed child of the parent element.
+                </p>
+                <p>
+                  If the `li` is a child of a `ul`, `ol`, or `menu` with no explicit `role`: 
+                  <strong class="nosupport"><a>No `role`</a></strong>.
+                </p>
+              </div>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
                 and any `aria-*` attributes applicable to the allowed roles.
