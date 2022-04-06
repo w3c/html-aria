@@ -1943,7 +1943,7 @@
             </th>
             <td>
               <p>
-                If the `li` is not a child of a list element 
+                If the `li` is a child of a list element 
                 (<a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, 
                 <a href="#el-menu">`menu`</a>)
                 <code>role=<a href="#index-aria-listitem">listitem</a></code>.
@@ -1955,11 +1955,13 @@
             <td>
               <div class="proposed correction">
                 <p>
-                  If the `li` is not a child of a list element, or the list element's implicit `list` role 
-                  has been overwritten, then <a><strong>any `role`</strong></a>.
+                  <strong class="nosupport"><a>No `role`</a></strong> if the parent list element has an implicit 
+                  or explicit `list` role.
                 </p>
                 <p>
-                  Otherwise, <strong class="nosupport"><a>no `role`</a></strong>.
+                  Otherwise, <a><strong>any `role`</strong></a> that is an allowed child of the parent list element's
+                  explicit ARIA role.  See <a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, and
+                  <a href="#el-menu">`menu`</a> for allowed roles for these list elements.
                 </p>
               </div>
               <p>
