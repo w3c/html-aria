@@ -2884,13 +2884,21 @@
               </div>
             </td>
             <td>
-              <p>
-                <a><strong class="nosupport">No `role`</strong></a>
-              </p>
-              <p class="proposed correction">
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>, 
-                `aria-disabled`, and `aria-haspopup` attributes.
-              </p>
+              <div class="proposed correction">
+                <p>
+                  <a><strong class="nosupport">No `role`</strong></a> if the `summary` element is a 
+                  <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a>.
+                </p>
+                <p class="proposed correction">
+                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>, 
+                  `aria-disabled`, and `aria-haspopup` attributes.
+                </p>
+                <p>
+                  Otherwise, authors MAY specifiy <a><strong>Any `role`</strong></a>, and any 
+                  <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                  and any `aria-*` attributes applicable to the allowed roles.
+                </p>
+               </div>
             </td>
           </tr>
           <tr>
