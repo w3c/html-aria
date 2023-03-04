@@ -220,7 +220,7 @@
         and using `aria-disabled=true` would communicate the hyperlink as being disabled to 
         assistive technologies, but would not actually disable the element. The most effective way 
         to both communicate and actually disable a hyperlink would be to remove the `href` from 
-        the [^a^] element, creating a placeholder. Then, use ARIA can be applied to this
+        the [^a^] element, creating a placeholder. Then, ARIA can be applied to this
         placeholder link to communicate the element's intended role and state.
       </p>
       <pre class="HTML example" title="Communicate a disabled link with ARIA">
@@ -274,7 +274,7 @@
           &lt;button role="button"&gt;...&lt;/button&gt;
         </pre>
         <p>
-          Similarly, the following uses a `role=group` on a [^fieldset^] element, and a `role=Main` on a [^main^] element.
+          Similarly, the following uses a `role=group` on a [^fieldset^] element, and a `role=main` on a [^main^] element.
           This is unnecessary, because the `fieldset` element is implicitly exposed as a `role=group`, as is the `main` element 
           implicitly exposed as a `role=main`. Again, in practice this will likely not have any unforeseen side effects to users 
           of assistive technology, as long as the declaration of the `role` value uses [=ASCII lowercase=]. 
@@ -284,7 +284,7 @@
           &lt;!-- Avoid doing this! -->
           &lt;fieldset role="group"&gt;...&lt;/fieldset&gt;
           &lt;!-- or this! -->
-          &lt;main role="Main">...&lt;/main>
+          &lt;main role="main">...&lt;/main>
         </pre>
         <p>
           The following uses a `role=list` on an [^ul^] element. This is
