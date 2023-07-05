@@ -11,7 +11,8 @@
           name: "Steve Faulkner",
           company: "TPGi",
           companyURL: "https://www.tpgi.com/",
-          w3cid: "35007"
+          w3cid: "35007",
+          retiredDate: "2023-04-28"
         },
         {
           name: "Scott O'Hara",
@@ -64,6 +65,24 @@
       </p>
       <ul>
         <li>
+          <a href="https://github.com/w3c/html-aria/pull/469">5 July 2023 - Addition:</a>
+          Update the <a href="#el-button">`button`</a>, <a href="#el-input-button">`input type=button`</a>, <a href="#el-input-image">`input type=image`</a>
+          <a href="#el-input-reset">`input type=reset`</a>, and <a href="#el-input-submit">`input type=submit`</a> elements to align their allowed roles.
+        </li>
+        <li>
+          <a href="https://github.com/w3c/html-aria/pull/469">29 June 2023 - Addition:</a>
+          Update the <a href="#el-s">`s`</a> element allowed roles to indicate use of `role=deletion` on the element would be considered redundnat.
+        </li>
+        <li>
+          <a href="https://github.com/w3c/html-aria/pull/435">31 May 2023 - Correction:</a>
+          Conditionally revise allowed `aria-*` attributes and roles on <a href="#el-summary">`summary`</a> element.
+        </li>
+        <li>
+          <a href="https://github.com/w3c/html-aria/pull/410">31 May 2023 - Correction:</a>
+          Update <a href="#el-li">`li`</a> element role allowances in context to the element's ancestral relationship, or lack of, 
+          to a list element parent.
+        </li>
+        <li>
           <a href="https://github.com/w3c/html-aria/pull/401">24 March 2023 - Addition:</a>
           The <a href="#el-search">`search`</a> element has been added.
         </li>
@@ -73,7 +92,7 @@
         </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/415">13 February 2023 - Addition:</a>
-           Update `figure` element role allowances to include `doc-example`.
+          Update `figure` element role allowances to include `doc-example`.
         </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/437">07 November 2022 - Correction:</a>
@@ -469,7 +488,7 @@
               </p>
             </th>
             <th>
-              ARIA roles, states and properties which MAY be used
+              ARIA role, state and property allowances
             </th>
           </tr>
         </thead>
@@ -521,11 +540,11 @@
               [^a^] without [^a/href^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -592,14 +611,14 @@
               [^area^] without [^area/href^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <div class="addition">
                 <p>
                   Roles:
                   <a href="#index-aria-button">`button`</a>
-                  or <a href="#index-aria-link">`link`</a>. (<code><a href="#index-aria-generic">`generic`</a></code> is also allowed, but SHOULD NOT BE USED.)
+                  or <a href="#index-aria-link">`link`</a>. (<code><a href="#index-aria-generic">generic</a></code> is also allowed, but SHOULD NOT BE USED.)
                 </p>
                 <p><a>Naming Prohibited</a></p>
                 <p>
@@ -693,7 +712,7 @@
                 Role exposed from author defined {{ElementInternals}}
               </p>
               <p>
-                Otherwise <code>role=<a href="#index-aria-generic">`generic`</a></code>
+                Otherwise <code>role=<a href="#index-aria-generic">generic</a></code>
               </p>
             </td>
             <td>
@@ -702,7 +721,7 @@
                 <a><strong class="nosupport">no `role`</strong></a>
               </p>
               <p>
-                Otherwise, <a><strong>any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                Otherwise, <a><strong>any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition">
                 <a>Naming Prohibited</a> if exposed as the `generic` role, or if exposed
@@ -719,11 +738,11 @@
               [^b^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -750,11 +769,11 @@
               [^bdi^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -768,11 +787,11 @@
               [^bdo^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -803,11 +822,11 @@
               [^body^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-generic">`generic`</a></code>, which SHOULD NOT be used.
+                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-generic">generic</a></code>, which SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -849,14 +868,18 @@
                 Roles:
                 <a href="#index-aria-checkbox">`checkbox`</a>,
                 <span class="addition"><a href="#index-aria-combobox">`combobox`</a></span>,
+                <span class="proposed addition"><a href="#index-aria-gridcell">`gridcell`</a></span>,
                 <a href="#index-aria-link">`link`</a>,
                 <a href="#index-aria-menuitem">`menuitem`</a>,
                 <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
                 <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
                 <a href="#index-aria-option">`option`</a>,
                 <a href="#index-aria-radio">`radio`</a>,
-                <a href="#index-aria-switch">`switch`</a>
-                or <a href="#index-aria-tab">`tab`</a>. (<code><a href="#index-aria-button">button</a></code> is also allowed, but NOT RECOMMENDED.)
+                <span class="proposed addition"><a href="#index-aria-slider">`slider`</a></span>,
+                <a href="#index-aria-switch">`switch`</a>,
+                <a href="#index-aria-tab">`tab`</a>,
+                or <span class="proposed addition"><a href="#index-aria-treeitem">`treeitem`</a></span>.
+                (<code><a href="#index-aria-button">button</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
@@ -965,11 +988,11 @@
               [^data^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -1088,14 +1111,14 @@
               [^div^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p class="addition">
                 If a direct child of a [^dl^] element,
                 only <a href="#index-aria-presentation">`presentation`</a>
                 or <a href="#index-aria-none">`none`</a>. Otherwise,
-                <a><strong>any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -1264,7 +1287,7 @@
                 then <code>role=<a href="#index-aria-contentinfo">contentinfo</a></code>
               </p>
               <p>
-                Otherwise, <code>role=<a href="#index-aria-generic">`generic`</a></code>
+                Otherwise, <code>role=<a href="#index-aria-generic">generic</a></code>
               </p>
             </td>
             <td>
@@ -1278,7 +1301,7 @@
                 `main`, `navigation` or `region`,
                 then <code>role=<a href="#index-aria-contentinfo">contentinfo</a></code>
                 is also allowed, but NOT RECOMMENDED.
-                Otherwise, <code>role=<a href="#index-aria-generic">`generic`</a></code>
+                Otherwise, <code>role=<a href="#index-aria-generic">generic</a></code>
                 is also allowed, but SHOULD NOT be used.)
               </p>
               <p>
@@ -1326,7 +1349,7 @@
                 Role exposed from author defined {{ElementInternals}}
               </p>
               <p>
-                Otherwise <code>role=<a href="#index-aria-generic">`generic`</a></code>
+                Otherwise <code>role=<a href="#index-aria-generic">generic</a></code>
               </p>
             </td>
             <td>
@@ -1348,7 +1371,7 @@
                 <a href="#index-aria-slider">`slider`</a>,
                 <a href="#index-aria-spinbutton">`spinbutton`</a>,
                 <a href="#index-aria-switch">`switch`</a>
-                or <a href="#index-aria-textbox">`textbox`</a>. (<code><a href="#index-aria-generic">`generic`</a></code> is also allowed, but SHOULD NOT be used.)
+                or <a href="#index-aria-textbox">`textbox`</a>. (<code><a href="#index-aria-generic">generic</a></code> is also allowed, but SHOULD NOT be used.)
               </p>
               <p class="addition">
                 <a>Naming Prohibited</a> if exposed as the `generic` role.
@@ -1409,7 +1432,7 @@
                 <code>role=<a href="#index-aria-banner">banner</a></code>
               </p>
               <p>
-                Otherwise, <code>role=<a href="#index-aria-generic">`generic`</a></code>
+                Otherwise, <code>role=<a href="#index-aria-generic">generic</a></code>
               </p>
             </td>
             <td>
@@ -1423,7 +1446,7 @@
                 `main`, `navigation` or `region`,
                 then <code>role=<a href="#index-aria-contentinfo">contentinfo</a></code>
                 is also allowed, but NOT RECOMMENDED.
-                Otherwise, <code>role=<a href="#index-aria-generic">`generic`</a></code>
+                Otherwise, <code>role=<a href="#index-aria-generic">generic</a></code>
                 is also allowed, but SHOULD NOT be used.)
               </p>
               <p class="addition"><a>Naming Prohibited</a> if exposed as `generic`.</p>
@@ -1438,11 +1461,11 @@
               [^hgroup^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -1495,11 +1518,11 @@
               [^i^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -1620,14 +1643,18 @@
                 Roles:
                 <span class="correction"><a href="#index-aria-checkbox">`checkbox`</a>,</span>
                 <span class="addition"><a href="#index-aria-combobox">`combobox`</a>,</span>
+                <span class="proposed addition"><a href="#index-aria-gridcell">`gridcell`</a>,</span>
                 <a href="#index-aria-link">`link`</a>,
                 <a href="#index-aria-menuitem">`menuitem`</a>,
                 <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
                 <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
                 <a href="#index-aria-option">`option`</a>,
                 <a href="#index-aria-radio">`radio`</a>,
-                <a href="#index-aria-switch">`switch`</a>
-                or <a href="#index-aria-tab">`tab`</a>. (<code><a href="#index-aria-button">button</a></code> is also allowed, but NOT RECOMMENDED.)
+                <span class="proposed addition"><a href="#index-aria-slider">`slider`</a>,</span>
+                <a href="#index-aria-switch">`switch`</a>,
+                <a href="#index-aria-tab">`tab`</a>,
+                or <span class="addition proposed"><a href="#index-aria-treeitem">`treeitem`</a></span>. 
+                (<code><a href="#index-aria-button">button</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
@@ -1676,7 +1703,7 @@
                 <a><strong class="nosupport">No `role`</strong></a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>.
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> and `aria-disabled` attribute.
               </p>
             </td>
           </tr>
@@ -1744,7 +1771,8 @@
                 <a><strong class="nosupport">No `role`</strong></a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>.
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>, 
+                `aria-disabled`, `aria-invalid` and `aria-required` attributes.
               </p>
             </td>
           </tr>
@@ -1769,19 +1797,28 @@
               <code>role=<a href="#index-aria-button">button</a></code>
             </td>
             <td>
-              <p>
-                Roles:
-                <a href="#index-aria-link">`link`</a>,
-                <a href="#index-aria-menuitem">`menuitem`</a>,
-                <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
-                <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
-                <a href="#index-aria-radio">`radio`</a>
-                or <a href="#index-aria-switch">`switch`</a>. (<code><a href="#index-aria-button">button</a></code> is also allowed, but NOT RECOMMENDED.)
-              </p>
-              <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
-                and any `aria-*` attributes applicable to the allowed roles.
-              </p>
+              <div class="proposed addition">
+                <p>
+                  Roles:
+                  <a href="#index-aria-button">`button`</a>,
+                  <a href="#index-aria-checkbox">`checkbox`</a>,
+                  <a href="#index-aria-gridcell">`gridcell`</a>,
+                  <a href="#index-aria-link">`link`</a>,
+                  <a href="#index-aria-menuitem">`menuitem`</a>,
+                  <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
+                  <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
+                  <a href="#index-aria-option">`option`</a>,
+                  <a href="#index-aria-radio">`radio`</a>,
+                  <a href="#index-aria-slider">`slider`</a>,
+                  <a href="#index-aria-switch">`switch`</a>,
+                  <a href="#index-aria-tab">`tab`</a>
+                  or <a href="#index-aria-treeitem">`treeitem`</a>. 
+                </p>
+                <p>
+                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                  and any `aria-*` attributes applicable to the allowed roles.
+                </p>
+              </div>
             </td>
           </tr>
           <tr>
@@ -1892,13 +1929,32 @@
               <code>role=<a href="#index-aria-button">button</a></code>
             </td>
             <td>
-              <p>
-                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-button">button</a></code>, which is NOT RECOMMENDED.
-              </p>
-              <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
-                and any `aria-*` attributes applicable to the `button` role.
-              </p>
+              <div class="proposed addition">
+                <p>
+                  The following roles are allowed, but are NOT RECOMMENDED:
+                  <a href="#index-aria-button">`button`</a>,
+                  <a href="#index-aria-checkbox">`checkbox`</a>,
+                  <a href="#index-aria-combobox">`combobox`</a>,
+                  <a href="#index-aria-gridcell">`gridcell`</a>,
+                  <a href="#index-aria-link">`link`</a>,
+                  <a href="#index-aria-menuitem">`menuitem`</a>,
+                  <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
+                  <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
+                  <a href="#index-aria-option">`option`</a>,
+                  <a href="#index-aria-radio">`radio`</a>,
+                  <a href="#index-aria-slider">`slider`</a>,
+                  <a href="#index-aria-switch">`switch`</a>,
+                  <a href="#index-aria-tab">`tab`</a>
+                  or <a href="#index-aria-treeitem">`treeitem`</a>.
+                </p>
+                <p>
+                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                  and any `aria-*` attributes applicable to the allowed roles.
+                </p>
+                <p>
+                  If possible, authors SHOULD consider using a different HTML element which allows the specified role.
+                </p>
+              </div>
             </td>
           </tr>
           <tr>
@@ -1927,13 +1983,32 @@
               <code>role=<a href="#index-aria-button">button</a></code>
             </td>
             <td>
-              <p>
-                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-button">button</a></code>, which is NOT RECOMMENDED.
-              </p>
-              <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
-                and any `aria-*` attributes applicable to the `button` role.
-              </p>
+              <div class="proposed addition">
+                <p>
+                  The following roles are allowed, but are NOT RECOMMENDED:
+                  <a href="#index-aria-button">`button`</a>,
+                  <a href="#index-aria-checkbox">`checkbox`</a>,
+                  <a href="#index-aria-combobox">`combobox`</a>,
+                  <a href="#index-aria-gridcell">`gridcell`</a>,
+                  <a href="#index-aria-link">`link`</a>,
+                  <a href="#index-aria-menuitem">`menuitem`</a>,
+                  <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
+                  <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
+                  <a href="#index-aria-option">`option`</a>,
+                  <a href="#index-aria-radio">`radio`</a>,
+                  <a href="#index-aria-slider">`slider`</a>,
+                  <a href="#index-aria-switch">`switch`</a>,
+                  <a href="#index-aria-tab">`tab`</a>
+                  or <a href="#index-aria-treeitem">`treeitem`</a>.
+                </p>
+                <p>
+                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                  and any `aria-*` attributes applicable to the allowed roles.
+                </p>
+                <p>
+                  If possible, authors SHOULD consider using a different HTML element which allows the specified role.
+                </p>
+              </div>
             </td>
           </tr>
           <tr>
@@ -2128,23 +2203,31 @@
               [^li^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-listitem">listitem</a></code>
-            </td>
-            <td>
               <p>
-                Roles:
-                <a href="#index-aria-menuitem">`menuitem`</a>,
-                <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
-                <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
-                <a href="#index-aria-option">`option`</a>,
-                <a href="#index-aria-none">`none`</a>,
-                <a href="#index-aria-presentation">`presentation`</a>,
-                <a href="#index-aria-radio">`radio`</a>,
-                <a href="#index-aria-separator">`separator`</a>,
-                <a href="#index-aria-tab">`tab`</a>
-                or <a href="#index-aria-treeitem">`treeitem`</a>. (<code><a href="#index-aria-listitem">listitem</a></code> is also allowed, but NOT RECOMMENDED.)
+                If the `li` is a child of a list element 
+                (<a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, 
+                <a href="#el-menu">`menu`</a>)
+                <code>role=<a href="#index-aria-listitem">listitem</a></code>.
               </p>
               <p>
+                Otherwise, if the `li` is not a child of a list element it is exposed as 
+                a <code>role=<a href="#index-aria-generic">generic</a></code>.
+              </p>
+            </td>
+            <td>
+              <div class="proposed correction">
+                <p>
+                  <strong class="nosupport"><a>No `role`</a></strong> other than <code><a href="#index-aria-listitem">listitem</a></code>, which is NOT RECOMMENDED,
+                  if the parent list element has an implicit or explicit `list` role.
+                </p>
+                <p>
+                  Otherwise, <a><strong>any `role`</strong></a> if the parent list item does nto expose an implicit or explicit `list` role.
+                </p>
+                <p class="note">
+                  See <a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, or
+                  <a href="#el-menu">`menu`</a> for allowed roles for list elements.
+                </p>
+              </div>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
                 and any `aria-*` attributes applicable to the allowed roles.
@@ -2503,11 +2586,11 @@
               [^pre^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -2543,11 +2626,11 @@
               [^q^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -2613,11 +2696,11 @@
               [^s^]
             </th>
             <td>
-              <a>No corresponding role</a>
+              <code>role=<a href="#index-aria-deletion">`deletion`</a></code>
             </td>
             <td>
-              <p>
-                <a><strong>Any `role`</strong></a>
+              <p class="proposed addition">
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-deletion">`deletion`</a></code> is NOT RECOMMENDED.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -2631,11 +2714,11 @@
               [^samp^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -2695,7 +2778,7 @@
                 <a data-cite="accname-1.2/#dfn-accessible-name">accessible name</a>
               </p> 
               <p>
-                Otherwise, <a>no corresponding role</a>
+                Otherwise, <code>role=<a href="#index-aria-generic">generic</a></code>
               </p>
             </td>
             <td>
@@ -2721,9 +2804,8 @@
                 <a href="#index-aria-search">`search`</a>,
                 <a href="#index-aria-status">`status`</a>
                 or <a href="#index-aria-tabpanel">`tabpanel`</a>.
-                (If the [^section^] element has an
-                <a data-cite="accname-1.2/#dfn-accessible-name">accessible name</a>,
-                <code>role=<a href="#index-aria-region">region</a></code> is also allowed, but NOT RECOMMENDED.)
+                (<code>role=<a href="#index-aria-region">region</a></code> is also allowed, 
+                but NOT RECOMMENDED. <code>role=<a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.)
               </p>
               <p>
                 DPub Roles:
@@ -2824,11 +2906,11 @@
               [^small^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -2855,11 +2937,11 @@
               [^span^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -2926,18 +3008,26 @@
                 <a>No corresponding role</a>
               </p>
               <div class="note">
-                Many, but not all, user agents expose the `summary` element with an implicit ARIA <code>role=<a href="#index-aria-button">button</a></code>
-                role.
+                Many, but not all, user agents expose the `summary` element with an implicit ARIA 
+                <code>role=<a href="#index-aria-button">button</a></code>.
               </div>
             </td>
             <td>
-              <p>
-                <a><strong class="nosupport">No `role`</strong></a>
-              </p>
-              <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
-                and any `aria-*` attributes applicable to the `button` role.
-              </p>
+              <div class="proposed correction">
+                <p>
+                  <a><strong class="nosupport">No `role`</strong></a> if the `summary` element is a 
+                  <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a>.
+                </p>
+                <p>
+                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>, 
+                  `aria-disabled`, and `aria-haspopup` attributes.
+                </p>
+                <p>
+                  Otherwise, authors MAY specifiy <a><strong>Any `role`</strong></a>, and any 
+                  <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                  and any `aria-*` attributes applicable to the allowed roles.
+                </p>
+               </div>
             </td>
           </tr>
           <tr>
@@ -2945,11 +3035,11 @@
               [^sup^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-superscript">`superscript`</a></code>
+              <code>role=<a href="#index-aria-superscript">superscript</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-superscript">`superscript`</a></code> is NOT RECOMMENDED.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-superscript">superscript</a></code> is NOT RECOMMENDED.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -3079,11 +3169,11 @@
               [^time^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-time">`time`</a></code>
+              <code>role=<a href="#index-aria-time">time</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-time">`time`</a></code> is NOT RECOMMENDED.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-time">time</a></code> is NOT RECOMMENDED.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -3241,11 +3331,11 @@
               [^u^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">`generic`</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">`generic`</a></code> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p class="addition"><a>Naming Prohibited</a></p>
               <p>
@@ -3441,12 +3531,15 @@
           Requirements for use of ARIA attributes in place of equivalent HTML attributes
         </h3>
         <p>
-          Unless otherwise stated, authors MAY use `aria-*` attributes in place of their HTML equivalents on HTML elements where the `aria-*` semantics would be expected. For example, authors MAY specify `aria-disabled=true` on a [^button^] element, while also implementing the necessary scripting to functionally disable the `button`, rather than the use `disabled` attribute.
+          Unless otherwise stated, authors MAY use `aria-*` attributes in place of their HTML equivalents on HTML elements where the `aria-*` semantics would 
+          be expected. For example, authors MAY specify `aria-disabled=true` on a [^button^] element, while also implementing the necessary scripting to functionally 
+          disable the `button`, rather than the use `disabled` attribute.
         </p>
         <p>
-          As stated in
-          <a data-cite="wai-aria-1.2#host_general_conflict">WAI-ARIA's Conflicts with Host Language Semantics</a>,
-          when HTML elements use <em>both</em> `aria-*` attributes and their host language (HTML) equivalents, user agents MUST ignore the WAI-ARIA attributes – the native HTML attributes with the same <a>implicit ARIA semantics</a> take precedence. For this reason, authors SHOULD NOT specify both the native HTML attribute and the equivalent `aria-*` attribute on an element. Please review each attribute for any further author specific requirements.
+          As stated in <a data-cite="wai-aria-1.2#host_general_conflict">WAI-ARIA's Conflicts with Host Language Semantics</a>,
+          when HTML elements use <em>both</em> `aria-*` attributes and their host language (HTML) equivalents, user agents MUST ignore the WAI-ARIA attributes – the 
+          native HTML attributes with the same <a>implicit ARIA semantics</a> take precedence. For this reason, authors SHOULD NOT specify both the native HTML attribute 
+          and the equivalent `aria-*` attribute on an element. Please review each attribute for any further author specific requirements.
         </p>
         <p>
           The following table represents HTML elements and their attributes which have `aria-*` attribute parity.
