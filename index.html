@@ -65,6 +65,10 @@
       </p>
       <ul>
         <li>
+          <a href="https://github.com/w3c/html-aria/pull/455">9 July 2023 - Addition:</a>
+          Update the <a href="#el-aside">`aside`</a> element to allow the dpub `doc-glossary` role.
+        </li>
+        <li>
           <a href="https://github.com/w3c/html-aria/pull/469">5 July 2023 - Addition:</a>
           Update the <a href="#el-button">`button`</a>, <a href="#el-input-button">`input type=button`</a>, <a href="#el-input-image">`input type=image`</a>
           <a href="#el-input-reset">`input type=reset`</a>, and <a href="#el-input-submit">`input type=submit`</a> elements to align their allowed roles.
@@ -314,12 +318,11 @@
           &lt;main role="Main">...&lt;/main>
         </pre>
         <p>
-          The following uses a `role=list` on an [^ul^] element. This is
-          generally unnecessary, because the `ul` element is implicitly exposed
-          as a `role=list`. However, some user agents suppress a list's
-          implicit ARIA semantics if list markers are removed. Authors can
-          use `role=list` to reinstate the role if necessary, though this
-          practice would generally not be recommended, otherwise.
+          The following uses a `role=list` on an [^ul^] element. As the `ul` element has an implicit role of `list`, 
+          explicitly adding the role would generally be considered redundant. However, some user agents suppress a list's
+          implicit ARIA semantics if the list markers are removed from the visual presentation of the list items. 
+          Generally the redundant declaration of an element's implicit role would not be recommended, but in specific situations
+          such as this, and where the role is necessary to expose, authors can explicitly add the role.
         </p>
         <pre class="HTML example" title="Redundant role on list">
           &lt;!-- Generally avoid doing this! -->
@@ -370,7 +373,7 @@
         </p>
         <pre class="HTML example" title="Do not specify elements as generic">
           &lt;!-- Avoid doing this! -->
-          &lt;article role="generic" ...>...&lt;/article>;
+          &lt;article role="generic" ...>...&lt;/article>
         </pre>
         <p>
           Additionally, ARIA specifically mentions in <a data-cite="wai-aria-1.2/#host_general_conflict">Conflicts with Host Language Semantics</a> 
@@ -433,7 +436,7 @@
         Document conformance requirements for use of ARIA attributes in HTML
       </h2>
       <p>
-        The following table provides normative per-element document-conformance requirements for the 
+        The following table provides normative per-element document conformance requirements for the 
         use of ARIA markup in HTML documents. Additionally, it identifies the <a>implicit ARIA semantics</a> 
         that apply to [=HTML elements=]. The <a>implicit ARIA semantics</a> of these elements are defined 
         in [[html-aam-1.0|HTML AAM]].
@@ -674,6 +677,7 @@
                 <a data-cite="dpub-aria-1.0#doc-dedication">`doc-dedication`</a>,
                 <a data-cite="dpub-aria-1.0#doc-example">`doc-example`</a>,
                 <a data-cite="dpub-aria-1.0#doc-footnote">`doc-footnote`</a>,
+                <span class="proposed addition"><a data-cite="dpub-aria-1.0#doc-glossary">`doc-glossary`</a>,</span>
                 <a data-cite="dpub-aria-1.0#doc-pullquote">`doc-pullquote`</a>
                 or <a data-cite="dpub-aria-1.0#doc-tip">`doc-tip`</a>
               </p>
