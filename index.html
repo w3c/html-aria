@@ -1275,15 +1275,14 @@
                 If the `figure` has no `figcaption` descendant:
                 <br>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-figure">figure</a></code> is NOT RECOMMENDED.
-              </p>
-              <p class="addition proposed">
+              </p>       
+              <p>
                 If the `figure` has a `figcaption` descendant:
                 <br>
-
-                DPub Role:
-                <a data-cite="dpub-aria-1.0#doc-example">`doc-example`</a>.</p>
-
-                <p>Otherwise, <code><a href="#index-aria-figure">figure</a></code> is allowed, but NOT RECOMMENDED.
+                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-figure">figure</a></code>, which is NOT RECOMMENDED. 
+              </p>
+              <p class="addition proposed">
+                DPub Role: if the `figure` has a `figcaption` descendant <a data-cite="dpub-aria-1.0#doc-example">`doc-example`</a>.
               </p>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
