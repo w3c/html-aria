@@ -3647,7 +3647,8 @@
                   Use the `disabled` attribute on any element that is allowed the `disabled` attribute in HTML.
                 </p>
                 <p>
-                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-disabled">`aria-disabled`</a> attribute on any element that is allowed the `disabled` attribute in HTML, or any element with a WAI-ARIA role which allows the `aria-disabled` attribute</a>.
+                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-disabled">`aria-disabled`</a> attribute on any element that is allowed the `disabled` attribute in HTML, 
+                  or any element with a WAI-ARIA role which allows the `aria-disabled` attribute</a>.
                 </p>
                 <p>
                   Authors SHOULD NOT use `aria-disabled="true"` on any element which also has a `disabled` attribute.
@@ -3666,19 +3667,22 @@
               </td>
               <td>
                 <p>
-                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on any HTML element that allows <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>, with the following exception:
+                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on any HTML element that allows <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> to 
+                  be specified, with the exception of focusable elements and the <a href="#el-body">`body`</a> element.
                 </p>
                 <p>
-                  Authors SHOULD NOT use the `aria-hidden="true"` attribute on any element which also has a `hidden` attribute.
+                  It is generally NOT RECOMMENDED for authors to use `aria-hidden="true"` on any element which also has the `hidden` attribute specified. However, authors MUST NOT use `aria-hidden="true"` on any element which also has the `hidden` attribute specified in the `until-found` state.
                 </p>
-
-                <!-- this will be covered as part of issue 221 -->
-                <!-- <p>
-                  Authors MUST NOT use `aria-hidden="true"` on an element that can receive keyboard focus, or on an ancestor element to an element or elements which can receive keyboard focus.
-                </p>
-                <p>
-                  Any elements which can receive keyboard focus, interactive elements or otherwise, MUST have their ability to receive keyboard focus removed while the `aria-hidden="true"` attribute is present. For instance, by using `tabindex="-1"` on any focusable elements with `aria-hidden="true"`, or setting `tabindex="-1"` to focusable elements that are descendants of an `aria-hidden="true"` containing element.
-                </p> -->
+                <div class="note">
+                  A focusable element is any element which can be focused by use of keyboard or pointer device. Focusable elements are not always elements which
+                  can be tabbed to via a keyboard. For instance, an element with `tabindex="-1"` is focusable but is not a tabbable element.
+                </div>
+                <div class="note">
+                  Using `aria-hidden="true"` on an element that has the `hidden` attribute is at best an unnecessary redundancy. At worst its usage can 
+                  prevent access to the content if the `hidden` attribute's default UA style of `display: none` has been purposeuflly overwritten by an author or user style sheet.
+                  Finally, if the `hidden` attribute has the value of `until-found`, the use of `aria-hidden=true` will prevent this content from being discoverable to users of assistive
+                  technology when it is found via a browser's in-page find feature and visually rendered to users.
+                </div>
               </td>
             </tr>
             <tr id="att-placeholder" tabindex="-1">
@@ -3694,7 +3698,8 @@
                   `placeholder` attribute in HTML.
                 </p>
                 <p>
-                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-placeholder">`aria-placeholder`</a> attribute on any element that is allowed the `placeholder` attribute in HTML, or any element with a WAI-ARIA role which allows the `aria-placeholder` attribute.
+                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-placeholder">`aria-placeholder`</a> attribute on any element that is allowed the `placeholder` attribute in HTML, 
+                  or any element with a WAI-ARIA role which allows the `aria-placeholder` attribute.
                 </p>
                 <p>
                   Authors MUST NOT use the `aria-placeholder` attribute on any element which also has a `placeholder` attribute.
