@@ -64,6 +64,10 @@
         the following substantive additions and/or corrections have been proposed:
       </p>
       <ul>
+        <!--<li>
+          <a href="https://github.com/w3c/html-aria/pull/...">15 April 2024 - Addition:</a>
+          Add author rules for the <a href="#att-popovertarget">`popovertarget`</a> attribute.
+        </li>-->
         <li>
           <a href="https://github.com/w3c/html-aria/pull/489">4 October 2023 - Addition:</a>
           Update the button element and input type=button,image,reset,submit elements to allow the `separator` role.
@@ -3619,10 +3623,6 @@
               <td>
                 <div class="correction">
                   <p>
-                    Use the `checked` attribute on any element that is allowed the `checked` attribute in HTML. 
-                    Use the <a data-cite="html/input.html#dom-input-indeterminate">`indeterminate`</a> IDL attribute to indicate the "mixed" state for <a data-cite="html/input.html#checkbox-state-(type=checkbox)">`input type=checkbox`</a> elements.
-                  </p>
-                  <p>
                     Authors MUST NOT use the <a data-cite="wai-aria-1.2#aria-checked">`aria-checked`</a> attribute on any element where the <a data-cite="html/form-control-infrastructure.html#concept-fe-checked">checkedness</a>, or the 
                     indeterminate checked value of the element can be in opposition to the current value of the `aria-checked` attribute.
                   </p>
@@ -3643,9 +3643,6 @@
                 `aria-disabled="true"`
               </td>
               <td>
-                <p>
-                  Use the `disabled` attribute on any element that is allowed the `disabled` attribute in HTML.
-                </p>
                 <p>
                   Authors MAY use the <a data-cite="wai-aria-1.2#aria-disabled">`aria-disabled`</a> attribute on any element that is allowed the `disabled` attribute in HTML, or any element with a WAI-ARIA role which allows the `aria-disabled` attribute</a>.
                 </p>
@@ -3690,14 +3687,28 @@
               </td>
               <td>
                 <p>
-                  Use the `placeholder` attribute on any element that is allowed the
-                  `placeholder` attribute in HTML.
-                </p>
-                <p>
                   Authors MAY use the <a data-cite="wai-aria-1.2#aria-placeholder">`aria-placeholder`</a> attribute on any element that is allowed the `placeholder` attribute in HTML, or any element with a WAI-ARIA role which allows the `aria-placeholder` attribute.
                 </p>
                 <p>
                   Authors MUST NOT use the `aria-placeholder` attribute on any element which also has a `placeholder` attribute.
+                </p>
+              </td>
+            </tr>
+          <tr id="att-popovertarget" tabindex="-1">
+              <th>
+                Any element where the <a data-cite="html/popover.html#the-popover-target-attributes">`popovertarget`</a> attribute is allowed: 
+                [^button^], 
+                <a data-cite="html/input.html#button-state-(type=button)">`input type=button`</a>,
+                <a data-cite="html/input.html#button-state-(type=image)">`input type=image`</a>,
+                <a data-cite="html/input.html#reset-button-state-(type=reset)">`input type=reset`</a>
+                <a data-cite="html/input.html#submit-button-state-(type=submit)">`input type=submit`</a>
+              </th>
+              <td>
+                `aria-expanded="..."`
+              </td>
+              <td>
+                <p class="addition">
+                  Authors MUST NOT use the `aria-expanded` attribute on any element which also has a `popovertarget` attribute.
                 </p>
               </td>
             </tr>
@@ -3709,10 +3720,6 @@
                 `aria-valuemax="..."`
               </td>
               <td>
-                <p>
-                  Use the `max` attribute on any element that is
-                  allowed the `max` attribute in HTML.
-                </p>
                 <p>
                   Authors MAY use the <a data-cite="wai-aria-1.2#aria-valuemax">`aria-valuemax`</a> attribute on any other element with a WAI-ARIA role which allows the `aria-valuemax` attribute.
                 </p>
@@ -3733,10 +3740,6 @@
               </td>
               <td>
                 <p>
-                  Use the `min` attribute on any element that is
-                  allowed the `min` attribute in HTML.
-                </p>
-                <p>
                   Authors MAY use the <a data-cite="wai-aria-1.2#aria-valuemax">`aria-valuemin`</a> attribute on any other element with a WAI-ARIA role which allows the `aria-valuemin` attribute.
                 </p>
                 <p>
@@ -3756,10 +3759,6 @@
                 `aria-readonly="true"`
               </td>
               <td>
-                <p>
-                  Use the `readonly` attribute on any element that is
-                  allowed the `readonly` attribute in HTML.
-                </p>
                 <p>
                   Authors MAY use the <a data-cite="wai-aria-1.2#aria-readonly">`aria-readonly`</a> attribute on any element with a WAI-ARIA role which allows the attribute</a>.
                 </p>
@@ -3802,10 +3801,6 @@
               </td>
               <td>
                 <p>
-                  Use the `required` attribute on any element
-                  that is allowed the `required` attribute in HTML.
-                </p>
-                <p>
                   Authors MAY use the <a data-cite="wai-aria-1.2#aria-required">`aria-required`</a> attribute on any element that is allowed the `required` attribute in HTML, or any element with a WAI-ARIA role which allows the `aria-required` attribute.
                 </p>
                 <p>
@@ -3824,10 +3819,6 @@
                 `aria-colspan="..."`
               </td>
               <td>
-                <p>
-                  Use the `colspan` attribute on any element that is
-                  allowed the `colspan` attribute in HTML.
-                </p>
                 <!--
                   Removing per issue #338
                   Revised rules to be re-added
@@ -3852,10 +3843,6 @@
                 `aria-rowspan="..."`
               </td>
               <td>
-                <p>
-                  Use the `rowspan` attribute on any element that is
-                  allowed the `rowspan` attribute in HTML.
-                </p>
                 <!--
                   Removing per issue #338
                   Revised rules to be re-added
