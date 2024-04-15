@@ -431,7 +431,7 @@
           ... 
           &lt;p>&lt;/p>
           
-          &lt;!-- Use a span are allowed in p elements! -->
+          &lt;!-- Instead of a div, use a span. Spans are allowed descendants of p elements! -->
           &lt;p>
             ... &lt;span role=link tabindex=0>...&lt;/span> ...
           &lt;/p>
@@ -2279,7 +2279,7 @@
                   if the parent list element has an implicit or explicit `list` role.
                 </p>
                 <p>
-                  Otherwise, <a><strong>any `role`</strong></a> if the parent list item does not expose an implicit or explicit `list` role.
+                  Otherwise, <a><strong>any `role`</strong></a> if the parent list element does not expose an implicit or explicit `list` role.
                 </p>
                 <p class="note">
                   See <a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, or
