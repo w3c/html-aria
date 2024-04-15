@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>ARIA in HTML - Test Cases</title>
+    <link rel="stylesheet" href="../results/styles.css">
+	<style>
+		body{
+			font-size: 1em;
+		}
+		.roleTest {
+			border: 2px solid black;
+			width: 1em;
+			height: 1em;
+			margin: 5px;
+		}
+		.flex {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+		}
+		.widgetDemo {
+			border: 1px solid #EEE;
+			margin: .5em;
+			padding: 5px;
+			flex: 1 0 0;
+			min-width: calc(300px - 1em);
+		}
+		.widgetDemo p {
+			color: #696969;
+			font-size: 1.125em;
+			padding: 0;
+			margin: .75em 0;
+		}
+		.testcase {
+			margin: 2em 0;
+		}
+		h3{
+			margin: .5em 0;
+			border: 0;
+			padding: 0;
+		}
+		h2 {font-size:2em}
+	</style>
+</head>
+<body>
+
+	<header>
+	<h1>ARIA in HTML - test cases for <code>popovertarget</code> and <code>aria-expanded</code></h1>
+	<p>last updated 15 April 2024</p>
+	<p>
+		<a href="https://html.spec.whatwg.org/multipage/popover.html#the-popover-target-attributes"><code>popovertarget</code></a> is allowed on 
+    <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-button"><code>button</code> elements</a>.
+	</p>
+	</header>
+	<main>
+		<h2>Tests:</h2>
+
+		<div class="flex">
+			<div class="widgetDemo">
+				<h3>Test 1</h3>
+				<p>
+          Authors MUST NOT use the <code>aria-expanded</code> attribute on any element which also has a <code>popovertarget</code> attribute.</p>
+
+				<div class="testcase">
+					<button popovertarget=f aria-expanded="false">test 1</button>
+          <div id=f popover>test 1 popover</div>
+				</div>
+
+				<p><strong>Expected result:</strong>
+				<br> error for inappropriate use of <code>aria-expanded</code> when element has <code>popovertarget</code> 
+          attribute which implicitly handles <code>aria-expanded</code> states.</p>
+			</div>
+
+			<div class="widgetDemo">
+				<h3>Test 2</h3>
+				<p>
+          Authors MUST NOT use the <code>aria-expanded</code> attribute on any element which will have a <code>popovertarget</code> attribute
+          set due to adding it via the <code>popoverTargetElement</code> IDL attribute.</p>
+
+				<p>The first <code>th</code> and <code>td</code> each have an <code>aria-colspan="1"</code> and <code>colspan="1"</code> attribute</p>
+
+				<div class="testcase">
+					<button aria-expanded=false id=t2>test 2</button>
+          <div id=g popover>test 2 popover</div>
+          <script>
+            const b = document.getElementById('t2');
+            const p = document.getElementById('g');
+            b.popoverTargetElement = p;
+          </script>
+				</div>
+
+				<p><strong>Expected result:</strong>
+				<br> error for inappropriate use of <code>aria-expanded</code> when element has <code>popovertarget</code> 
+          attribute which implicitly handles <code>aria-expanded</code> states.</p>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
