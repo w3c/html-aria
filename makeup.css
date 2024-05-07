@@ -48,19 +48,19 @@ a code {
  padding: 0;
 }
 
-.simple thead {
+/* .simple thead {
   position: sticky;
   top: 0px;
-}
+} */
 
 table th ul,
 table td ul {
   padding-left: .825em;
 }
 
-.simple th {
+/* .simple th {
   scroll-margin-top: 120px;
-}
+} */
 
 
 
