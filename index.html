@@ -431,7 +431,7 @@
           ... 
           &lt;p>&lt;/p>
           
-          &lt;!-- Use a span are allowed in p elements! -->
+          &lt;!-- Instead of a div, use a span. Spans are allowed descendants of p elements! -->
           &lt;p>
             ... &lt;span role=link tabindex=0>...&lt;/span> ...
           &lt;/p>
@@ -594,7 +594,7 @@
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <a href="#index-aria-group">`group`</a> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <a href="#index-aria-group">`group`</a> is NOT RECOMMENDED.
               </p>
               <p>
                 Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
@@ -1481,7 +1481,7 @@
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <a href="#index-aria-group">`group`</a> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <a href="#index-aria-group">`group`</a> is NOT RECOMMENDED.
               </p>
               <p>
                 Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
@@ -2257,7 +2257,7 @@
                   if the parent list element has an implicit or explicit `list` role.
                 </p>
                 <p>
-                  Otherwise, <a><strong>any `role`</strong></a> if the parent list item does not expose an implicit or explicit `list` role.
+                  Otherwise, <a><strong>any `role`</strong></a> if the parent list element does not expose an implicit or explicit `list` role.
                 </p>
                 <p class="note">
                   See <a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, or
@@ -2415,7 +2415,8 @@
               </p>
               <p>
                 Otherwise, any 
-                <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>.
+                <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
+                and any other `aria-*` attributes applicable to the `meter` role.
               </p>
             </td>
           </tr>
