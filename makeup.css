@@ -57,6 +57,7 @@ table td ul {
    so these updates were made to make these work better in
    this spec. */
 span.addition.proposed,
+span.addition.correction,
 span.correction.proposed,
 span.amendment.proposed {
  padding: .125em .25em;
