@@ -1585,12 +1585,13 @@
           <tr>
             <th id="el-img" tabindex="-1">
               <div class="correction proposed">
-                [^img^] with an accessible name.
+                [^img^]
               </div>
             </th>
             <td>
               If the `img` has non-empty [^img/alt^] (`alt="some text"`) or an accessible name is provided another 
-              <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming method</a>:<br>
+              <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming method</a>, 
+              or the `img` has no `alt` and has not been provided a name:<br>
               <code>role=<a href="#index-aria-img">img or image</a></code>
             </td>
             <td>
@@ -1633,7 +1634,7 @@
           </tr>
           <tr>
             <th id="el-img-no-name" tabindex="-1">
-              [^img^] with no accessible name.
+              [^img^] with no accessible name
             </th>
             <td>
               <div class="proposed correction">
