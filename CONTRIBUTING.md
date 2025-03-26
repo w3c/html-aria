@@ -1,4 +1,4 @@
-# Web Applications Working Group
+# Contributing to the ARIA in HTML Specification
 
 Contributions to this repository are intended to become part of Recommendation-track documents
 governed by the [W3C Patent Policy](http://www.w3.org/Consortium/Patent-Policy/) and
