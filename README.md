@@ -1,6 +1,6 @@
 # ARIA in HTML Specification
 
-This is the repository for [ARIA in HTML (html-aria)](https://w3c.github.io/html-aria/). 
+This is the repository for [ARIA in HTML (html-aria)](https://w3c.github.io/html-aria/). This is developed by the [ARIA Working Group](http://www.w3.org/WAI/ARIA/). The W3C staff contact is Daniel Montalvo.
 
 If you would like to contribute, please [read the contributing document](https://github.com/w3c/html-aria/blob/gh-pages/CONTRIBUTING.md), and review the [W3C Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc/).
 
