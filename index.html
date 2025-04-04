@@ -69,6 +69,18 @@
           Add author rules for the <a href="#att-popovertarget">`popovertarget`</a> attribute.
         </li>-->
         <li>
+          <a href="https://github.com/w3c/html-aria/pull/525">23 December 2024 - Addition:</a>
+          Update the <a href="#el-img">`img`</a> element to allow the `math` role.
+        </li>
+        <li>
+          <a href="https://github.com/w3c/html-aria/pull/533">13 December 2024 - Addition:</a>
+          Update to include the `image` role as preferred synonym to the `img` role.
+        </li>
+        <li>
+          <a href="https://github.com/w3c/html-aria/pull/507">13 December 2024 - Addition:</a>
+          Clarify the allowance for `aria-hidden` when used with the `hidden` attribute.
+        </li>
+        <li>
           <a href="https://github.com/w3c/html-aria/pull/489">4 October 2023 - Addition:</a>
           Update the button element and input type=button,image,reset,submit elements to allow the `separator` role.
         </li>
@@ -491,7 +503,7 @@
         While it is conforming to use [[[dpub-aria-1.0]]] `role` values as outlined in the following table, the current support for 
         exposing the semantics of these values to users of assistive technology is close to non-existent.
       </p>
-      <table class="simple">
+      <table class="data">
         <caption>
           Rules of ARIA attribute usage by HTML element
         </caption>
@@ -598,7 +610,7 @@
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <a href="#index-aria-group">`group`</a> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <a href="#index-aria-group">`group`</a> is NOT RECOMMENDED.
               </p>
               <p>
                 Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
@@ -636,7 +648,7 @@
                 <p>
                   Roles:
                   <a href="#index-aria-button">`button`</a>
-                  or <a href="#index-aria-link">`link`</a>. (<code><a href="#index-aria-generic">generic</a></code> is also allowed, but SHOULD NOT BE USED.)
+                  or <a href="#index-aria-link">`link`</a>. (<code><a href="#index-aria-generic">generic</a></code> is also allowed, but SHOULD NOT be used.)
                 </p>
                 <p><a>Naming Prohibited</a></p>
                 <p>
@@ -1217,6 +1229,7 @@
                 <a href="#index-aria-application">`application`</a>,
                 <a href="#index-aria-document">`document`</a>,
                 <a href="#index-aria-img">`img`</a>,
+                <a href="#index-aria-img">`image`</a>,
                 <a href="#index-aria-none">`none`</a>
                 or <a href="#index-aria-presentation">`presentation`</a>.
               </p>
@@ -1276,18 +1289,19 @@
             </td>
             <td>
               <p>
-                If the `figure` has no `figcaption` descendant:
+                If the `figure` has a valid `figcaption` descendant:
+                <br>
+                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-figure">figure</a></code>, 
+                which is NOT RECOMMENDED.
+              </p>
+              <p>
+                DPub Role:
+                <a data-cite="dpub-aria-1.0#doc-example">`doc-example`</a>.
+              </p>
+              <p>
+                Otherwise, if the `figure` has no `figcaption` descendant:
                 <br>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-figure">figure</a></code> is NOT RECOMMENDED.
-              </p>
-              <p class="addition proposed">
-                If the `figure` has a `figcaption` descendant:
-                <br>
-
-                DPub Role:
-                <a data-cite="dpub-aria-1.0#doc-example">`doc-example`</a>.</p>
-
-                <p>Otherwise, <code><a href="#index-aria-figure">figure</a></code> is allowed, but NOT RECOMMENDED.
               </p>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
@@ -1485,7 +1499,7 @@
             </td>
             <td>
               <p>
-                <a><strong>Any `role`</strong></a>, though <a href="#index-aria-group">`group`</a> SHOULD NOT be used.
+                <a><strong>Any `role`</strong></a>, though <a href="#index-aria-group">`group`</a> is NOT RECOMMENDED.
               </p>
               <p>
                 Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
@@ -1563,6 +1577,7 @@
                 <a href="#index-aria-application">`application`</a>,
                 <a href="#index-aria-document">`document`</a>,
                 <a href="#index-aria-img">`img`</a>,
+                <a href="#index-aria-img">`image`</a>,
                 <a href="#index-aria-none">`none`</a>
                 or <a href="#index-aria-presentation">`presentation`</a>.
               </p>
@@ -1575,13 +1590,14 @@
           <tr>
             <th id="el-img" tabindex="-1">
               <div class="correction proposed">
-                [^img^] with an accessible name.
+                [^img^]
               </div>
             </th>
             <td>
-              If the `img` has non-empty [^img/alt^] (`alt="some text"`) or an accessible name is provided another 
-              <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming method</a>:<br>
-              <code>role=<a href="#index-aria-img">img</a></code>
+              If the `img` has non-empty [^img/alt^] (`alt="some text"`) or an accessible name is provided by another 
+              <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming method</a>, 
+              or the `img` has no `alt` and has not been provided a name:<br>
+              <code>role=<a href="#index-aria-img">img or image</a></code>
             </td>
             <td>
               <p>
@@ -1589,6 +1605,9 @@
                 <a href="#index-aria-button">`button`</a>,
                 <a href="#index-aria-checkbox">`checkbox`</a>,
                 <a href="#index-aria-link">`link`</a>,
+                <span class="correction">
+                  <a href="#index-aria-math">`math`</a>,
+                </span>
                 <a href="#index-aria-menuitem">`menuitem`</a>,
                 <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
                 <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
@@ -1605,7 +1624,8 @@
                 <a href="#index-aria-slider">`slider`</a>,
                 <a href="#index-aria-switch">`switch`</a>,
                 <a href="#index-aria-tab">`tab`</a> or
-                <a href="#index-aria-treeitem">`treeitem`</a>. (<code><a href="#index-aria-img">img</a></code> is also allowed, but NOT RECOMMENDED.)
+                <a href="#index-aria-treeitem">`treeitem`</a>. 
+                (<code><a href="#index-aria-img">img or image</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
                 DPub Role:
@@ -1619,7 +1639,7 @@
           </tr>
           <tr>
             <th id="el-img-no-name" tabindex="-1">
-              [^img^] with no accessible name.
+              [^img^] with no accessible name
             </th>
             <td>
               <div class="proposed correction">
@@ -1632,7 +1652,7 @@
                 <p id="el-img-no-alt" tabindex="-1">
                   If the `img` <a data-cite="html/images.html#unknown-images">lacks an `alt` attribute</a> and lacks any other 
                   <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming methods</a>:<br>
-                  <code>role=<a href="#index-aria-img">img</a></code>
+                  <code>role=<a href="#index-aria-img">img or image</a></code>
                 </p>
               </div>
             </td>
@@ -1642,7 +1662,7 @@
                 If the `img` has no `alt` attribute or accessible name:
                 <a><strong class="nosupport">No `role`</strong></a> other than the  
                 <code>role=<a href="#index-aria-none">none</a></code> or <code><a href="#index-aria-presentation">presentation</a></code> roles.
-                (<code>role=<a href="#index-aria-img">img</a></code> is also allowed, but NOT RECOMMENDED.)
+                (<code>role=<a href="#index-aria-img">img or image</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
                 If the `img` has an empty `alt=""` attribute and no `aria-label` or `aria-labelledby` attributes to provide it an accessible name:
@@ -2419,7 +2439,8 @@
               </p>
               <p>
                 Otherwise, any 
-                <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>.
+                <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
+                and any other `aria-*` attributes applicable to the `meter` role.
               </p>
             </td>
           </tr>
@@ -2475,8 +2496,9 @@
               <p>
                 Roles:
                 <a href="#index-aria-application">`application`</a>,
-                <a href="#index-aria-document">`document`</a>
-                or <a href="#index-aria-img">`img`</a>.
+                <a href="#index-aria-document">`document`</a>,
+                <a href="#index-aria-img">`img`</a>
+                or <a href="#index-aria-img">`image`</a>.
               </p>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> and
@@ -3593,7 +3615,7 @@
           requirements for using the `aria-*` attributes that supply the same
           <a>implicit ARIA semantics</a>.
         </p>
-        <table class="simple">
+        <table class="data">
           <caption>
             Rules of ARIA attribute usage by HTML feature
           </caption>
@@ -3644,7 +3666,11 @@
               </td>
               <td>
                 <p>
-                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-disabled">`aria-disabled`</a> attribute on any element that is allowed the `disabled` attribute in HTML, or any element with a WAI-ARIA role which allows the `aria-disabled` attribute</a>.
+                  Use the `disabled` attribute on any element that is allowed the `disabled` attribute in HTML.
+                </p>
+                <p>
+                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-disabled">`aria-disabled`</a> attribute on any element that is allowed the `disabled` attribute in HTML, 
+                  or any element with a WAI-ARIA role which allows the `aria-disabled` attribute</a>.
                 </p>
                 <p>
                   Authors SHOULD NOT use `aria-disabled="true"` on any element which also has a `disabled` attribute.
@@ -3663,19 +3689,22 @@
               </td>
               <td>
                 <p>
-                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on any HTML element that allows <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>, with the following exception:
+                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on any HTML element that allows <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> to 
+                  be specified, with the exception of focusable elements and the <a href="#el-body">`body`</a> element.
                 </p>
                 <p>
-                  Authors SHOULD NOT use the `aria-hidden="true"` attribute on any element which also has a `hidden` attribute.
+                  It is generally NOT RECOMMENDED for authors to use `aria-hidden="true"` on any element which also has the `hidden` attribute specified. However, authors MUST NOT use `aria-hidden="true"` on any element which also has the `hidden` attribute specified in the `until-found` state.
                 </p>
-
-                <!-- this will be covered as part of issue 221 -->
-                <!-- <p>
-                  Authors MUST NOT use `aria-hidden="true"` on an element that can receive keyboard focus, or on an ancestor element to an element or elements which can receive keyboard focus.
-                </p>
-                <p>
-                  Any elements which can receive keyboard focus, interactive elements or otherwise, MUST have their ability to receive keyboard focus removed while the `aria-hidden="true"` attribute is present. For instance, by using `tabindex="-1"` on any focusable elements with `aria-hidden="true"`, or setting `tabindex="-1"` to focusable elements that are descendants of an `aria-hidden="true"` containing element.
-                </p> -->
+                <div class="note">
+                  A focusable element is any element which can be focused by use of keyboard or pointer device. Focusable elements are not always elements which
+                  can be tabbed to via a keyboard. For instance, an element with `tabindex="-1"` is focusable but is not a tabbable element.
+                </div>
+                <div class="note">
+                  Using `aria-hidden="true"` on an element that has the `hidden` attribute is at best an unnecessary redundancy. At worst its usage can 
+                  prevent access to the content if the `hidden` attribute's default UA style of `display: none` has been purposeuflly overwritten by an author or user style sheet.
+                  Finally, if the `hidden` attribute has the value of `until-found`, the use of `aria-hidden=true` will prevent this content from being discoverable to users of assistive
+                  technology when it is found via a browser's in-page find feature and visually rendered to users.
+                </div>
               </td>
             </tr>
             <tr id="att-placeholder" tabindex="-1">
@@ -3687,7 +3716,12 @@
               </td>
               <td>
                 <p>
-                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-placeholder">`aria-placeholder`</a> attribute on any element that is allowed the `placeholder` attribute in HTML, or any element with a WAI-ARIA role which allows the `aria-placeholder` attribute.
+                  Use the `placeholder` attribute on any element that is allowed the
+                  `placeholder` attribute in HTML.
+                </p>
+                <p>
+                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-placeholder">`aria-placeholder`</a> attribute on any element that is allowed the `placeholder` attribute in HTML, 
+                  or any element with a WAI-ARIA role which allows the `aria-placeholder` attribute.
                 </p>
                 <p>
                   Authors MUST NOT use the `aria-placeholder` attribute on any element which also has a `placeholder` attribute.
@@ -3984,7 +4018,7 @@
       Additionally, there are certain roles which [[[wai-aria-1.2]]] has specified specific requirements for their allowed descendants. These have been identified in column 3 (Descendant allowances) by indicating to "Refer to the 'Required Owned Elements'" for those particular roles.
     </p>
 
-    <table id="aria-table" class="simple">
+    <table id="aria-table" class="data">
       <caption>
         Allowed descendants of ARIA roles
       </caption>
@@ -4393,7 +4427,7 @@
         </tr>
         <tr>
           <th tabindex="-1" id="index-aria-img">
-            <a data-cite="wai-aria-1.2#img">`img`</a>
+            <a data-cite="wai-aria-1.2#img">`img` or `image`</a>
           </th>
           <td>
             <ul>
