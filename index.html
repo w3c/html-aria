@@ -3655,15 +3655,7 @@
             <tr id="att-command" tabindex="-1">
               <th>
                 <p>
-                  Element with [^html-global/contenteditable^]`=true`
-                  or
-                  element without `contenteditable` attribute whose closest
-                  ancestor with a `contenteditable` attribute has
-                  `contenteditable="true"`.
-                </p>
-                <p class="note">
-                  This is equivalent to the <a data-cite="html/interaction.html#dom-iscontenteditable">`isContentEditable`</a>
-                  IDL attribute.
+                  Any element where the <a data-cite="html/form-elements.html#attr-button-command">`command`</a> attribute is allowed
                 </p>
               </th>
               <td>
@@ -3671,7 +3663,7 @@
               </td>
               <td>
                 <p>
-                  Authors MUST NOT use the `aria-expanded` attribute on any element which also has a `command` attribute.
+                  Authors MUST NOT use the `aria-expanded` attribute on any element which also has a `command` attribute in the <strong>Toggle popover</strong>, <strong>Show popover</strong> or <strong>Hide popover</strong> state. E.g., `command=toggle-popover`, `command=show-popover` or `command=hide-popover`.
                 </p>
                 <p>
                   Authors MAY use `aria-details` to modify whether or how the element exposes a details relationship 
@@ -3703,9 +3695,7 @@
             <tr id="att-disabled" tabindex="-1">
               <th>
                 Any element where the [^input/disabled^]
-                attribute is allowed, including
-                `option` [^option/disabled^] and
-                `optgroup` [^optgroup/disabled^]
+                attribute is allowed
               </th>
               <td>
                 `aria-disabled="true"`
@@ -3732,16 +3722,16 @@
                   Authors MUST NOT use `aria-hidden="true"` on any element which also has the `hidden` attribute specified in the `until-found` state.
                 </p>
                 <p>
-                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on any HTML element that allows 
+                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on an element that allows 
                   <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> to 
                   be specified, with the exception of focusable elements. The attribute MUST NOT be used on the <a href="#el-body">`body`</a> and <a href="#el-html">`html`</a> elements.
                 </p>
                 <div class="note">
-                  A focusable element is any element which can be focused by use of keyboard or pointer device. Focusable elements are not always elements which
+                  A focusable element is an element which can be focused by use of keyboard or pointer device. Focusable elements are not always elements which
                   can be tabbed to with a keyboard. For instance, an element with `tabindex="-1"` is focusable but is not a tabbable element.
                 </div>
                 <div class="note">
-                  Using `aria-hidden="true"` on an element that has the `hidden` attribute is at best an unnecessary redundancy. At worst its usage can 
+                  Using `aria-hidden="true"` on an element that has the `hidden` attribute is at best an unnecessary redundancy. At worst, its usage can 
                   prevent access to the content if the `hidden` attribute's default UA style of `display: none` has been purposeuflly overwritten by an author or user style sheet.
                   Additionally, if the `hidden` attribute has the value of `until-found`, the use of `aria-hidden=true` will prevent this content from being discoverable to 
                   users of assistive technology when it is found via a browser's in-page find feature and visually rendered to users.
@@ -3757,7 +3747,7 @@
               </td>
               <td>
                 <p>
-                  Authors MUST NOT use the `aria-placeholder` attribute on any element which also has a `placeholder` attribute.
+                  Authors MUST NOT use the `aria-placeholder` attribute on an element which also has a `placeholder` attribute.
                 </p>
               </td>
             </tr>
@@ -3770,10 +3760,10 @@
               </td>
               <td>
                 <p>
-                  Authors MUST NOT use the `aria-expanded` attribute on any element which also has a `popovertarget` attribute.
+                  Authors MUST NOT use the `aria-expanded` attribute on an element which also has a `popovertarget` attribute.
                 </p>
                 <p>
-                  Authors MAY use `aria-details` to modify whether or how the element exposes a details relationship 
+                  Authors MAY use `aria-details` to modify whether or how an element exposes a details relationship 
                   with its associated `popover` or other relevant elements.
                 </p>
               </td>
@@ -3787,10 +3777,11 @@
               </td>
               <td>
                 <p>
-                  Authors SHOULD NOT use `aria-valuemax` on any element which allows the `max` attribute. Use the `max` attribute instead.
+                  Authors SHOULD NOT use `aria-valuemax` on an element which allows the `max` attribute. 
+                  Use the `max` attribute instead.
                 </p>
                 <p>
-                  Authors MUST NOT use `aria-valuemax` on any element which also has a `max` attribute.
+                  Authors MUST NOT use `aria-valuemax` on an element which also has a `max` attribute.
                 </p>
               </td>
             </tr>
@@ -3803,10 +3794,11 @@
               </td>
               <td>
                 <p>
-                  Authors SHOULD NOT use `aria-valuemin` on any element which allows the `min` attribute. Use the `min` attribute instead.
+                  Authors SHOULD NOT use `aria-valuemin` on an element which allows the `min` attribute. 
+                  Use the `min` attribute instead.
                 </p>
                 <p>
-                  Authors MUST NOT use `aria-valuemin` on any element which also has a `min` attribute.
+                  Authors MUST NOT use `aria-valuemin` on an element which also has a `min` attribute.
                 </p>
               </td>
             </tr>
@@ -3819,59 +3811,60 @@
               </td>
               <td>
                 <p>
-                  Authors SHOULD NOT use the `aria-readonly="true"` on any element which also has a `readonly` attribute.
+                  Authors SHOULD NOT use the `aria-readonly="true"` on an element which also has a `readonly` attribute.
                 </p>
                 <p>
-                  Authors MUST NOT use `aria-readonly="false"` on any element which also has a `readonly` attribute.
+                  Authors MUST NOT use `aria-readonly="false"` on an element which also has a `readonly` attribute.
                 </p>
               </td>
             </tr>
             <tr id="att-required" tabindex="-1">
               <th>
-                Any element where the `required` attribute is allowed: `input` [^input/required^], `textarea` [^textarea/required^], and `select` [^select/required^]
+                Any element where the `required` attribute is allowed
               </th>
               <td>
                 `aria-required="true"`
               </td>
               <td>
                 <p>
-                  Authors SHOULD NOT use the `aria-required="true"` on any element which also has a `required` attribute.
+                  Authors SHOULD NOT use the `aria-required="true"` on an element which also has a `required` attribute.
                 </p>
                 <p>
-                  Authors MUST NOT use `aria-required="false"` on any element which also has a `required` attribute.
+                  Authors MUST NOT use `aria-required="false"` on an element which also has a `required` attribute.
                 </p>
               </td>
             </tr>
             <tr id="att-colspan" tabindex="-1">
               <th>
-                Any element where the [^th/colspan^] attribute is allowed: `td` and `th`
+                Any element where the [^th/colspan^] attribute is allowed
               </th>
               <td>
                 `aria-colspan="..."`
               </td>
               <td>
                 <p>
-                  Authors SHOULD NOT use the `aria-colspan` attribute on any element which also has a `colspan` attribute.
+                  Authors SHOULD NOT use `aria-colspan` on an element which allows the `colspan` attribute. 
+                  Use the `colspan` attribute instead.
                 </p>
                 <p>
-                  Authors MUST NOT use `aria-colspan` on any element which also has a `colspan` attribute.
+                  Authors MUST NOT use `aria-colspan` on an element which also has a `colspan` attribute.
                 </p>
               </td>
             </tr>
             <tr id="att-rowspan" tabindex="-1">
               <th>
-                Any element where the [^th/rowspan^] attribute is allowed:
-                `td` and `th`
+                Any element where the [^th/rowspan^] attribute is allowed
               </th>
               <td>
                 `aria-rowspan="..."`
               </td>
               <td>
                 <p>
-                  Authors SHOULD NOT use the `aria-rowspan` attribute on any element which also has a `rowspan` attribute.
+                  Authors SHOULD NOT use the `aria-rowspan` attribute on an element which allows the `rowspan` attribute. 
+                  Use the `rowspan` attribute instead.
                 </p>
                 <p>
-                  Authors MUST NOT use `aria-rowspan` on any element which also has a `rowspan` attribute.
+                  Authors MUST NOT use `aria-rowspan` on an element which also has a `rowspan` attribute.
                 </p>
               </td>
             </tr>
