@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>ARIA in HTML - Test Cases</title>
+    <link rel="stylesheet" href="../results/styles.css">
+	<style>
+		body{
+			font-size: 1em;
+		}
+		.roleTest {
+			border: 2px solid black;
+			width: 1em;
+			height: 1em;
+			margin: 5px;
+		}
+		.flex {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+		}
+		.widgetDemo {
+			border: 1px solid #EEE;
+			margin: .5em;
+			padding: 5px;
+			flex: 1 0 0;
+			min-width: calc(300px - 1em);
+		}
+		.widgetDemo p {
+			color: #696969;
+			font-size: 1.125em;
+			padding: 0;
+			margin: .75em 0;
+		}
+		.testcase {
+			margin: 2em 0;
+		}
+		h3{
+			margin: .5em 0;
+			border: 0;
+			padding: 0;
+		}
+		h2 {font-size:2em}
+	</style>
+    <style>
+        select, ::picker(select) {
+            appearance: base-select;
+        }
+	select button {
+		color: black;
+	}
+    </style>
+</head>
+<body>
+
+	<header>
+	<h1>ARIA in HTML - test cases for <code>selectedcontent</code> and <code>select</code>'s <code>button</code> part elements</h1>
+	<p>last updated 23 July 2025</p>
+	</header>
+	<main>
+		<h2>Tests:</h2>
+
+		<div class="flex">
+			<div class="widgetDemo">
+				<h3>Test 1</h3>
+				<p>
+                    Authors MUST NOT use any <code>role</code> or <code>aria-*</code> attribute on the <code>selectedcontent</code> attribute when it
+                    is a valid child of the <code>button</code> part of a customized <code>select</code> element. Additionally authors MUST NOT use ARIA 
+                    attributes on the <code>button</code> part of a customized <code>select</code> element.</p>
+
+				<div class="testcase">
+					<label for=s>Test 1</label>
+                    <select id=s>
+                        <button aria-label=bar aria-expanded=false><selectedcontent role=link aria-label=foo></selectedcontent></button>
+                        <option>option 1</option>
+                        <option>option 2</option>
+                    </select>
+				</div>
+
+				<p><strong>Expected result:</strong>
+                    <br> error or warn for inappropriate use of the <code>role</code> and any <code>aria-*</code> attribute when element is a 
+                    child of the button part of a customized <code>select</code> element. </p>
+			</div>
+
+			<div class="widgetDemo">
+				<h3>Test 2</h3>
+				<p>
+                    The use of the <code>selectedcontent</code> element outside of the context of the button part of a customizable <code>select</code>
+                    element is invalid. But, to allow for a11y remediation of author misuse, ARIA attributes MAY be used on the element in this context.</p>
+				<div class="testcase">
+					<selectedcontent style="color: blue; text-decoration: underline;" role=link aria-label=foo tabindex=0>xxx</selectedcontent>
+				</div>
+
+				<p><strong>Expected result:</strong>
+				    <br> while the use of the <code>seletedcontent</code> element is incorrectly used in this example, the use of ARIA is allowed
+                    so authors may correct for misuse of the element, thus no errors related to the use of ARIA attributes should be flagged in this case.</p>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
