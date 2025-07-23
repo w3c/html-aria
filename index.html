@@ -65,6 +65,12 @@
       </p>
       <ul>
         <li>
+          <a href="https://github.com/w3c/html-aria/pull/528">23 July 2025 - Addition:</a>
+          Add the <a href="#el-selectedcontent">`selectedcontent`</a> element and provide updated
+          allowances for the <a href="#el-button">`button`</a> element when it is used in the context
+          of a customized `select` element.
+        </li>
+        <li>
           <a href="https://github.com/w3c/html-aria/pull/550">23 July 2025 - Correction:</a>
           Clarify that the <a href="#el-html">`html`</a> element is a `generic` element, and that
           neither the `document` or `generic` roles are recommended to be used on the element.
@@ -893,7 +899,8 @@
               [^button^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-button">button</a></code>
+              <p><code>role=<a href="#index-aria-button">button</a></code></p>
+              <p>If the `button` is the first child of a `select` element, the element is `inert`.</p>
             </td>
             <td>
               <p>
@@ -919,6 +926,9 @@
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
+              <hr>
+              <p>If the `button` is the first child of a `select` element:
+                <strong class="nosupport"><a>No `role`</a> or `aria-*` attributes</strong></p>
             </td>
           </tr>
           <tr>
@@ -2951,6 +2961,28 @@
                 Otherwise, 
                 any <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
                 and any other `aria-*` attributes applicable to the `listbox` role.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th id="el-selectedcontent" tabindex="-1">
+              [^selectedcontent^]
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
+            </td>
+            <td>
+              <p>
+                If used as a valid descendant of a `select` element: <strong class="nosupport"><a>no `role`</a> or `aria-*` attributes</strong>
+              </p>
+              <p>
+                Otherwise, <a><strong>any `role`</strong></a> if the element is used outside of its intended context as a child of the `button` part of a customizable `select` element, 
+                though <code><a href="#index-aria-generic">generic</a></code> is NOT RECOMMENDED.
+              </p>
+              <p><a>Naming Prohibited</a></p>
+              <p>
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
           </tr>
