@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>ARIA in HTML - Test Cases</title>
+    <link rel="stylesheet" href="../results/styles.css">
+	<style>
+		body{
+			font-size: 1em;
+		}
+		.roleTest {
+			border: 2px solid black;
+			width: 1em;
+			height: 1em;
+			margin: 5px;
+		}
+		.flex {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+		}
+		.widgetDemo {
+			border: 1px solid #EEE;
+			margin: .5em;
+			padding: 5px;
+			flex: 1 0 0;
+			min-width: calc(300px - 1em);
+		}
+		.widgetDemo p {
+			color: #696969;
+			font-size: 1.125em;
+			padding: 0;
+			margin: .75em 0;
+		}
+		.testcase {
+			margin: 2em 0;
+		}
+		h3{
+			margin: .5em 0;
+			border: 0;
+			padding: 0;
+		}
+		h2 {font-size:2em}
+	</style>
+</head>
+<body>
+
+	<header>
+	<h1>ARIA in HTML - test cases for <code>label</code> element</h1>
+	<p>last updated 23 July 2025</p>
+	</header>
+	<main>
+		<h2>Tests:</h2>
+
+		<div class="flex">
+			<div class="widgetDemo">
+				<h3>Test 1</h3>
+				<p>
+                    Authors MUST NOT use any <code>role</code> or <code>aria-*</code> attribute on the <code>label</code> element when it
+                    associted with a labelable element.</p>
+
+				<div class="testcase">
+          <p>
+					  <label for=x role=button aria-label=foo>Test 1a</label>
+            <input id=x>
+          </p>
+          <p>
+            <label role=article aria-label=foo>Test 1b
+              <input>
+            </label>
+          </p>
+				</div>
+
+				<p><strong>Expected result:</strong>
+                    <br> error or warn for inappropriate use of the <code>role</code> and any <code>aria-*</code> attribute when the
+          <code>label</code> element is used to label a labelable element.</p>
+			</div>
+
+			<div class="widgetDemo">
+				<h3>Test 2</h3>
+				<p>
+          Authors MAY use any allowed role or aria-* attribute on the <code>label</code> element if it is not labeling a labelable element.</p>
+				<div class="testcase">
+					<label tabindex=0 role=button aria-expanded=false>test</label>
+				</div>
+
+				<p><strong>Expected result:</strong>
+				    <br>this <code>label</code> element is not associated with a labelable element and thus authors MAY use any allowed roles and aria-* attributes to it.
+        </p>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
