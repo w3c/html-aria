@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-us">
   <head>
     <meta charset="utf-8">
     <title>ARIA in HTML</title>
@@ -69,6 +69,11 @@
           Add author rules for the <a href="#att-popovertarget">`popovertarget`</a> and  
           <a href="#att-command">`command`</a> attributes.
         </li>-->
+        <li>
+          <a href="https://github.com/w3c/html-aria/pull/550">23 July 2025 - Correction:</a>
+          Clarify that the <a href="#el-html">`html`</a> element is a `generic` element, and that
+          neither the `document` or `generic` roles are recommended to be used on the element.
+        </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/525">23 December 2024 - Addition:</a>
           Update the <a href="#el-img">`img`</a> element to allow the `math` role.
@@ -1537,11 +1542,12 @@
               [^html^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-document">document</a></code>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
               <p>
-                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-document">document</a></code>, which is NOT RECOMMENDED.
+                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-document">document</a></code> 
+                or <code><a href="#index-aria-generic">generic</a></code>, which are NOT RECOMMENDED.
               </p>
               <p>
                 <strong>No `aria-*` attributes</strong>.
