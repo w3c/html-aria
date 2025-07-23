@@ -2246,9 +2246,15 @@
             </td>
             <td>
               <p>
-                <a><strong class="nosupport">No `role`</strong></a>
+                If a `label` element is implicitly or explicitly associated with a 
+                <a href="data-html/https://html.spec.whatwg.org/multipage/forms.html#category-label">labelable element</a> then
+                <a><strong class="nosupport">no `role`</strong></a>
               </p>
-              <p class="addition"><a>Naming Prohibited</a></p>
+              <p>
+                Otherwise, if the `label` is not associted with an element then <a><strong>any `role`</strong></a>, 
+                though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
+              </p>
+              <p><a>Naming Prohibited</a> if exposed as the `generic` role, or if exposed as another role which prohibits naming.</p>
               <p>
                 Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>.
               </p>
