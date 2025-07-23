@@ -140,6 +140,10 @@ select:-moz-focusring {
   padding: 0;
 }
 
+select > button {
+  color: #000;
+}
+
 :focus:not([tabindex="-1"]) {
   outline: .25rem solid #aade87;
 }
