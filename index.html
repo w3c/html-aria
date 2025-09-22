@@ -35,7 +35,7 @@
       shortName: "html-aria",
       specStatus: "ED",
       revisionTypes: ["addition", "correction"],
-      group: "webapps",
+      group: "aria",
       wgPublicList: "public-webapps",
       xref: true,
       errata: "https://github.com/w3c/html-aria/issues/new/",
@@ -69,6 +69,17 @@
           Add author rules for the <a href="#att-popovertarget">`popovertarget`</a> and  
           <a href="#att-command">`command`</a> attributes.
         </li>-->
+        <li>
+          <a href="https://github.com/w3c/html-aria/pull/556">23 July 2025 - Addition:</a>
+          Update the <a href="#el-label">`label`</a> element to allow `role` and `aria-*` attributes
+          to be specified when the element is not associated with a labelable element.
+        </li>
+        <li>
+          <a href="https://github.com/w3c/html-aria/pull/528">23 July 2025 - Addition:</a>
+          Add the <a href="#el-selectedcontent">`selectedcontent`</a> element and provide updated
+          allowances for the <a href="#el-button">`button`</a> element when it is used in the context
+          of a customized `select` element.
+        </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/550">23 July 2025 - Correction:</a>
           Clarify that the <a href="#el-html">`html`</a> element is a `generic` element, and that
@@ -898,7 +909,8 @@
               [^button^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-button">button</a></code>
+              <p><code>role=<a href="#index-aria-button">button</a></code></p>
+              <p>If the `button` is the first child of a `select` element, the element is `inert`.</p>
             </td>
             <td>
               <p>
@@ -924,6 +936,9 @@
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
+              <hr>
+              <p>If the `button` is the first child of a `select` element:
+                <strong class="nosupport"><a>No `role`</a> or `aria-*` attributes</strong></p>
             </td>
           </tr>
           <tr>
@@ -2241,9 +2256,15 @@
             </td>
             <td>
               <p>
-                <a><strong class="nosupport">No `role`</strong></a>
+                If a `label` element is implicitly or explicitly associated with a 
+                <a data-cite="html/forms.html#category-label">labelable element</a> then
+                <a><strong class="nosupport">no `role`</strong></a>
               </p>
-              <p class="addition"><a>Naming Prohibited</a></p>
+              <p>
+                Otherwise, if the `label` is not associted with an element then <a><strong>any `role`</strong></a>, 
+                though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
+              </p>
+              <p><a>Naming Prohibited</a> if exposed as the `generic` role, or if exposed as another role which prohibits naming.</p>
               <p>
                 Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>.
               </p>
@@ -2960,6 +2981,28 @@
             </td>
           </tr>
           <tr>
+            <th id="el-selectedcontent" tabindex="-1">
+              [^selectedcontent^]
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-generic">generic</a></code>
+            </td>
+            <td>
+              <p>
+                If used as a valid descendant of a `select` element: <strong class="nosupport"><a>no `role`</a> or `aria-*` attributes</strong>
+              </p>
+              <p>
+                Otherwise, <a><strong>any `role`</strong></a> if the element is used outside of its intended context as a child of the `button` part of a customizable `select` element, 
+                though <code><a href="#index-aria-generic">generic</a></code> is NOT RECOMMENDED.
+              </p>
+              <p><a>Naming Prohibited</a></p>
+              <p>
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                and any `aria-*` attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr>
             <th id="el-slot" tabindex="-1">
               [^slot^]
             </th>
@@ -3079,22 +3122,23 @@
                 <a>No corresponding role</a>
               </p>
               <div class="note">
-                Many, but not all, user agents expose the `summary` element with an implicit ARIA 
-                <code>role=<a href="#index-aria-button">button</a></code>.
+                The exposed role of a `summary` element can vary depending on the user agent and assistive technology.
               </div>
             </td>
             <td>
               <div class="proposed correction">
                 <p>
                   <a><strong class="nosupport">No `role`</strong></a> if the `summary` element is a 
-                  <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a>.
+                  <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a> element.
                 </p>
                 <p>
                   <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>, 
                   `aria-disabled`, and `aria-haspopup` attributes.
                 </p>
                 <p>
-                  Otherwise, authors MAY specifiy <a><strong>Any `role`</strong></a>, and any 
+                  Otherwise, if the `summary` element is <strong>not</strong> a 
+                  <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a> 
+                  element, authors MAY specifiy <a><strong>any `role`</strong></a>, and any 
                   <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
                   and any `aria-*` attributes applicable to the allowed roles.
                 </p>
