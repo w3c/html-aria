@@ -3117,22 +3117,23 @@
                 <a>No corresponding role</a>
               </p>
               <div class="note">
-                Many, but not all, user agents expose the `summary` element with an implicit ARIA 
-                <code>role=<a href="#index-aria-button">button</a></code>.
+                The exposed role of a `summary` element can vary depending on the user agent and assistive technology.
               </div>
             </td>
             <td>
               <div class="proposed correction">
                 <p>
                   <a><strong class="nosupport">No `role`</strong></a> if the `summary` element is a 
-                  <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a>.
+                  <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a> element.
                 </p>
                 <p>
                   <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>, 
                   `aria-disabled`, and `aria-haspopup` attributes.
                 </p>
                 <p>
-                  Otherwise, authors MAY specifiy <a><strong>Any `role`</strong></a>, and any 
+                  Otherwise, if the `summary` element is <strong>not</strong> a 
+                  <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a> 
+                  element, authors MAY specifiy <a><strong>any `role`</strong></a>, and any 
                   <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
                   and any `aria-*` attributes applicable to the allowed roles.
                 </p>
