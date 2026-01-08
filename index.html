@@ -3216,35 +3216,40 @@
             </th>
             <td>
               <p>
-                <code>role=<a href="#index-aria-cell">cell</a></code> if the ancestor
+                <code>role=<a href="#index-aria-cell">cell</a></code> if the nearest ancestor
                 `table` element is exposed as a `role=table`
               </p>
               <p>
-                <code>role=<a href="#index-aria-gridcell">gridcell</a></code> if the ancestor
+                <code>role=<a href="#index-aria-gridcell">gridcell</a></code> if the nearest ancestor
                 `table` element is exposed as a `role=grid` or `treegrid`
               </p>
               <p>
-                <a>No corresponding role</a> if the ancestor `table` element is not exposed
+                <a>No corresponding role</a> if the nearest ancestor `table` element is not exposed
                 as a `role=table`, `grid` or `treegrid`
               </p>
             </td>
             <td>
               <p>
-                If the ancestor `table` element has `role=table`, `grid`, or `treegrid`,
-                <a><strong class="nosupport">no `role`</strong></a>
-                other than the following:
+                If the nearest ancestor `table` element has `role=table`, `grid`, or `treegrid`
+                then the following roles are allowed: 
+                <code><a href="#index-aria-columnheader">columnheader</a></code>, 
+                <code><a href="#index-aria-none">none</a></code>,
+                <code><a href="#index-aria-none">none</a></code>, 
+                <code><a href="#index-aria-presentation">presentation</a></code> 
+                or <code><a href="#index-aria-rowheader">rowheader</a></code>.
+                (<code><a href="#index-aria-cell">cell</a></code> and <code><a href="#index-aria-gridcell">gridcell</a></code> are allowed, but NOT RECOMMENDED.)
               </p>
-              <ul>
-                <li>If the ancestor `table` element is exposed as a `role=table`, then
-                <code><a href="#index-aria-cell">cell</a></code>
-                is allowed, but NOT RECOMMENDED.</li>
-                <li>If the ancestor `table` element is exposed as a `role=grid` or `treegrid`, then
-                <code><a href="#index-aria-gridcell">gridcell</a></code>
-                is allowed, but NOT RECOMMENDED.</li>
-              </ul>
+              <div class="note">
+                <p>
+                  If a `td` element's nearest descendent `table` element is exposed with a role of `table`, `grid` or `treegrid`, 
+                  and the `td` element is marked as `role=none` or `presentation`, then it is advised that the `td` element be empty, 
+                  contain only whitespace characters or contain an <a data="aria/#dfn-accessibility-child">accessibility child</a> element with 
+                  a role of `cell`, `gridcell`, `columnheader` or `rowheader` - whichever would be most appropriate for what the content represents.
+                </p>
+              </div>
               <p>
-                Otherwise, if the ancestor `table` element is not exposed
-                as a `role=table`, `grid` or `treegrid`,
+                If the nearest ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid`, 
+                or if the `td` element is not a descendent of a `table` element, 
                 <a><strong>any `role`</strong></a>.
               </p>
               <p>
@@ -3308,45 +3313,42 @@
               <p>
                 <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
                 <a href="#index-aria-rowheader">`rowheader`</a> or 
-                <a href="#index-aria-rowheader">`cell`</a> if the ancestor
-                `table` element is exposed as a `role=table`
+                <a href="#index-aria-rowheader">`cell`</a> if the nearest ancestor
+                `table` element is exposed as a `role=table`, `grid` or `treegrid`.
               </p>
               <p>
                 <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
                 <a href="#index-aria-rowheader">`rowheader`</a> or 
-                <a href="#index-aria-rowheader">`gridcell`</a> if the ancestor
+                <a href="#index-aria-rowheader">`gridcell`</a> if the nearest ancestor
                 `table` element is exposed as a `role=grid` or `treegrid`
              </p>
               <p>
-                <a>No corresponding role</a> if the ancestor `table` element is not exposed
+                <a>No corresponding role</a> if the nearest ancestor `table` element is not exposed
                 as a `role=table`, `grid` or `treegrid`
               </p>
             </td>
             <td>
               <p>
-                If the ancestor `table` element has `role=table`, `grid`, or `treegrid`,
-                <a><strong class="nosupport">no `role`</strong></a>
-                other than the following:
+                If the nearest ancestor `table` element has `role=table`, `grid`, or `treegrid`
+                then the following roles are allowed:
+                <a href="#index-aria-cell">`cell`</a>,
+                <a href="#index-aria-gridcell">`cell`</a>,
+                <a href="#index-aria-none">`none`</a>
+                or <a href="#index-aria-presentation">`cell`</a>.
+                (<code><a href="#index-aria-columnheader">columnheader</a></code> and <a href="#index-aria-rowheader">`rowheader`</a>
+                are allowed, but NOT RECOMMENDED).
               </p>
-              <ul>
-                <li>
-                If the ancestor `table` element is exposed as a `role=table`, then
-                <code><a href="#index-aria-columnheader">columnheader</a></code>,
-                <a href="#index-aria-rowheader">`rowheader`</a> and
-                <a href="#index-aria-rowheader">`cell`</a>
-                are allowed, but NOT RECOMMENDED.
-                </li>
-                <li>
-                If the ancestor `table` element is exposed as a `role=grid` or `treegrid`, then
-                <code><a href="#index-aria-columnheader">columnheader</a></code>,
-                <a href="#index-aria-rowheader">`rowheader`</a> or
-                <a href="#index-aria-rowheader">`gridcell`</a>
-                are allowed, but NOT RECOMMENDED.
-                </li>
-              </ul>
+              <div class="note">
+                <p>
+                  If a `tr` element's nearest descendent `table` element is exposed with a role of `table`, `grid` or `treegrid`, 
+                  and the `tr` element is marked as `role=none` or `presentation`, then it is advised that the `tr` element be empty, 
+                  contain only whitespace characters or contain <a data="aria/#dfn-accessibility-child">accessibility children</a> with 
+                  roles of `cell`, `gridcell`, `columnheader` or `rowheader`, as appropriate.
+                </p>
+              </div>
               <p>
-                Otherwise, if the ancestor `table` element is not exposed
-                as a `role=table`, `grid` or `treegrid`,
+                If the nearest ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid`, 
+                or if the `tr` element is not a descendent of a `table` element, 
                 <a><strong>any `role`</strong></a>.
               </p>
               <p>
