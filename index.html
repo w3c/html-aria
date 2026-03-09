@@ -3241,10 +3241,10 @@
               </p>
               <div class="note">
                 <p>
-                  If a `td` element's nearest descendant `table` element is exposed with a role of `table`, `grid` or `treegrid`, 
-                  and the `td` element is marked as `role=none` or `presentation`, then it is advised that the `td` element be empty, 
-                  contain only whitespace characters or contain an <a data="aria/#dfn-accessibility-child">accessibility child</a> element with 
-                  a role of `cell`, `gridcell`, `columnheader` or `rowheader` - whichever would be most appropriate for what the content represents.
+                  If a `td` element is a descendant of a `table` element with exposed with a role of `table`, `grid` or `treegrid`, and the `td` is marked as 
+                  `role=none` or `presentation`, then it is advised that the `td` contain an <a data="aria/#dfn-accessibility-child">accessibility child</a> 
+                  element with with a role of `cell`, `gridcell`, `columnheader` or `rowheader`. Otherwise, it is advised that the presentational `td` be empty,  
+                  contain only whitespace characters or content hidden from the accessibility tree.
                 </p>
               </div>
               <p>
