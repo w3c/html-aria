@@ -3233,7 +3233,6 @@
                 If the nearest ancestor `table` element has `role=table`, `grid`, or `treegrid`
                 then the following roles are allowed: 
                 <code><a href="#index-aria-columnheader">columnheader</a></code>, 
-                <code><a href="#index-aria-none">none</a></code>,
                 <code><a href="#index-aria-none">none</a></code>, 
                 <code><a href="#index-aria-presentation">presentation</a></code> 
                 or <code><a href="#index-aria-rowheader">rowheader</a></code>.
@@ -3243,14 +3242,13 @@
                 <p>
                   If a `td` element is a descendant of a `table` element with exposed with a role of `table`, `grid` or `treegrid`, and the `td` is marked as 
                   `role=none` or `presentation`, then it is advised that the `td` contain an <a data="aria/#dfn-accessibility-child">accessibility child</a> 
-                  element with with a role of `cell`, `gridcell`, `columnheader` or `rowheader`. Otherwise, it is advised that the presentational `td` be empty,  
+                  element with with a role of `cell`, `gridcell`, `columnheader` or `rowheader`. Otherwise, that the presentational `td` be empty,  
                   own only whitespace characters or content hidden from the accessibility tree.
                 </p>
               </div>
               <p>
-                If the nearest ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid`, 
-                or if the `td` element is not a descendent of a `table` element, 
-                <a><strong>any `role`</strong></a>.
+                Otherwise, <a><strong>any `role`</strong></a> if the nearest ancestor `table` element is not exposed as a `role=table`, 
+                `grid` or `treegrid`, or if the `td` element is not a descendent of a `table` element.
               </p>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
@@ -3332,7 +3330,7 @@
                 If the nearest ancestor `table` element has `role=table`, `grid`, or `treegrid`
                 then the following roles are allowed:
                 <a href="#index-aria-cell">`cell`</a>,
-                <a href="#index-aria-gridcell">`cell`</a>,
+                <a href="#index-aria-gridcell">`gridcell`</a>,
                 <a href="#index-aria-none">`none`</a>
                 or <a href="#index-aria-presentation">`cell`</a>.
                 (<code><a href="#index-aria-columnheader">columnheader</a></code> and <a href="#index-aria-rowheader">`rowheader`</a>
@@ -3340,16 +3338,15 @@
               </p>
               <div class="note">
                 <p>
-                  If a `tr` element is a descendant of a `table` element with exposed with a role of `table`, `grid` or `treegrid`, and the `tr` is marked as 
-                  as `role=none` or `presentation`, then it is advised that the `tr` contain an <a data="aria/#dfn-accessibility-child">accessibility child</a> 
-                  element with with a role of `row` or `rowgroup`. Otherwise, it is advised that the presentational `tr` be empty, own only whitespace 
-                  characters, or content hidden from the accessibility tree.
+                  If a `th` element is a descendant of a `table` element with exposed with a role of `table`, `grid` or `treegrid`, and the `th` is marked as 
+                  `role=none` or `presentation`, then it is advised that the `th` contain an <a data="aria/#dfn-accessibility-child">accessibility child</a> 
+                  element with with a role of `cell`, `gridcell`, `columnheader` or `rowheader`. Otherwise, that the presentational `th` be empty,  
+                  own only whitespace characters or content hidden from the accessibility tree.
                 </p>
               </div>
               <p>
-                If the nearest ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid`, 
-                or if the `tr` element is not a descendent of a `table` element, 
-                <a><strong>any `role`</strong></a>.
+                Otherwise, <a><strong>any `role`</strong></a> if the nearest ancestor `table` element is not exposed as a `role=table`, 
+                `grid` or `treegrid`, or if the `th` element is not a descendent of a `table` element.
               </p>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
@@ -3414,10 +3411,24 @@
             </td>
             <td>
               <p>
-                If the ancestor `table` element has `role=table`, `grid`, or `treegrid`,
-                <a><strong class="nosupport">no `role`</strong></a> other than <code><a href="#index-aria-row">row</a></code>, which is NOT RECOMMENDED;
-                otherwise
-                <a><strong>any `role`</strong></a>, though <code><a href="#index-aria-row">row</a></code> is NOT RECOMMENDED.
+                If the neartest ancestor `table` element has `role=table`, `grid`, or `treegrid`,
+                then the following roles are allowed:
+                <code><a href="#index-aria-none">none</a></code>,
+                <code><a href="#index-aria-presentation">presentation</a></code>
+                or <code><a href="#index-aria-rowgroup">rowgroup</a></code>.
+                (<code><a href="#index-aria-row">row</a></code> is allowed, but NOT RECOMMENDED).
+              </p>
+              <div class="note">
+                <p>
+                  If a `tr` element is a descendant of a `table` element with exposed with a role of `table`, `grid` or `treegrid`, and the `tr` is marked as 
+                  as `role=none` or `presentation`, then it is advised that the `tr` contain an <a data="aria/#dfn-accessibility-child">accessibility child</a> 
+                  element with with a role of `row` or `rowgroup`. Otherwise, that the presentational `tr` be empty, own only whitespace characters or 
+                  content hidden from the accessibility tree.
+                </p>
+              </div>
+              <p>
+                Otherwise, <a><strong>any `role`</strong></a> if the nearest ancestor `table` element is not exposed as a `role=table`, 
+                `grid` or `treegrid`, or if the `tr` element is not a descendent of a `table` element.
               </p>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
