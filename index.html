@@ -3244,7 +3244,7 @@
                   If a `td` element is a descendant of a `table` element with exposed with a role of `table`, `grid` or `treegrid`, and the `td` is marked as 
                   `role=none` or `presentation`, then it is advised that the `td` contain an <a data="aria/#dfn-accessibility-child">accessibility child</a> 
                   element with with a role of `cell`, `gridcell`, `columnheader` or `rowheader`. Otherwise, it is advised that the presentational `td` be empty,  
-                  contain only whitespace characters or content hidden from the accessibility tree.
+                  own only whitespace characters or content hidden from the accessibility tree.
                 </p>
               </div>
               <p>
@@ -3340,10 +3340,10 @@
               </p>
               <div class="note">
                 <p>
-                  If a `tr` element's nearest descendant `table` element is exposed with a role of `table`, `grid` or `treegrid`, 
-                  and the `tr` element is marked as `role=none` or `presentation`, then it is advised that the `tr` element be empty, 
-                  contain only whitespace characters or contain <a data="aria/#dfn-accessibility-child">accessibility children</a> with 
-                  roles of `cell`, `gridcell`, `columnheader` or `rowheader`, as appropriate.
+                  If a `tr` element is a descendant of a `table` element with exposed with a role of `table`, `grid` or `treegrid`, and the `tr` is marked as 
+                  as `role=none` or `presentation`, then it is advised that the `tr` contain an <a data="aria/#dfn-accessibility-child">accessibility child</a> 
+                  element with with a role of `row` or `rowgroup`. Otherwise, it is advised that the presentational `tr` be empty, own only whitespace 
+                  characters, or content hidden from the accessibility tree.
                 </p>
               </div>
               <p>
