@@ -59,7 +59,9 @@ table td ul {
 span.addition.proposed,
 span.addition.correction,
 span.correction.proposed,
-span.amendment.proposed {
+span.amendment.proposed,
+proposed-addition,
+proposed-correction {
  padding: .125em .25em;
  border-width: 3px;
 }
