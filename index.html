@@ -133,7 +133,7 @@
         </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/410">31 May 2023 - Correction:</a>
-          Update <a href="#el-li">`li`</a> element role allowances in context to the element's ancestral relationship, or lack of, 
+          Update <a href="#el-li">`li`</a> element role allowances in context to the element's ancestral relationship, or lack of,
           to a list element parent.
         </li>
         <li>
@@ -174,8 +174,8 @@
         </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/396">12 February 2022 - Addition &amp; Correction:</a>
-          Allow `combobox` role on <a href="#el-button">`button` element</a>. 
-          Allow `combobox` and `checkbox` roles on <a href="#el-input-button">`input type=button` element</a>. 
+          Allow `combobox` role on <a href="#el-button">`button` element</a>.
+          Allow `combobox` and `checkbox` roles on <a href="#el-input-button">`input type=button` element</a>.
         </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/391">18 January 2022 - Addition:</a>
@@ -183,7 +183,7 @@
         </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/369">06 January 2022 - Addition:</a>
-          Change allowances for `doc-biblioentry` and `doc-endnote` roles on the <a href="#el-li">`li` element</a>. 
+          Change allowances for `doc-biblioentry` and `doc-endnote` roles on the <a href="#el-li">`li` element</a>.
           These roles are deprecated in [[[dpub-aria-1.1]]].
         </li>
         <li>
@@ -191,12 +191,12 @@
           Allow `radio` role on <a href="#el-img">`img alt="some text"` element</a>.
         </li>
         <li>
-          <a href="https://github.com/w3c/html-aria/pull/353">07 December 2021 - Correction:</a> 
-          Allow only `none` and `presentation` roles for <a href="#el-wbr">`wbr` element</a>. 
+          <a href="https://github.com/w3c/html-aria/pull/353">07 December 2021 - Correction:</a>
+          Allow only `none` and `presentation` roles for <a href="#el-wbr">`wbr` element</a>.
           Allow only `aria-hidden` global attribute for <a href="#el-br">`br`</a> and <a href="#el-wbr">`wbr`</a> elements.
         </li>
         <li>
-          <a href="https://github.com/w3c/html-aria/pull/367">02 December 2021 - Addition:</a> 
+          <a href="https://github.com/w3c/html-aria/pull/367">02 December 2021 - Addition:</a>
           Allow `group` role on <a href="#el-section">`section` element</a>.
         </li>
         <li>
@@ -205,7 +205,7 @@
         </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/352">26 October 2021 - Addition:</a>
-          Allow `aria-hidden` attribute on the <a href="#el-picture">`picture` element</a>. 
+          Allow `aria-hidden` attribute on the <a href="#el-picture">`picture` element</a>.
         </li>
       </ul>
     </section>
@@ -225,25 +225,25 @@
         of HTML are defined by the [[html-aam-1.0|HTML Accessibility API Mappings]] specification.
       </p>
       <p>
-        Any constraints for the use of ARIA features in HTML defined by this specification 
-        are intended to prevent authors from making assistive technology products report 
+        Any constraints for the use of ARIA features in HTML defined by this specification
+        are intended to prevent authors from making assistive technology products report
         nonsensical user interface (UI) information that does not represent the actual UI
         of the document.
       </p>
       <p>
-        Authors MUST NOT use the ARIA `role` and `aria-*` attributes in a manner that conflicts 
-        with the semantics described in the [[[#docconformance]]] and [[[#docconformance-attr]]] 
-        tables. It is NOT RECOMMENDED for authors to set the ARIA `role` and `aria-*` attributes 
-        to values that match the <a>implicit ARIA semantics</a> defined in either table. 
+        Authors MUST NOT use the ARIA `role` and `aria-*` attributes in a manner that conflicts
+        with the semantics described in the [[[#docconformance]]] and [[[#docconformance-attr]]]
+        tables. It is NOT RECOMMENDED for authors to set the ARIA `role` and `aria-*` attributes
+        to values that match the <a>implicit ARIA semantics</a> defined in either table.
         Doing so is unnecessary and can potentially lead to unintended consequences.
       </p>
     </section>
     <section class="informative">
       <h2>ARIA semantics that extend and diverge from HTML</h2>
       <p>
-        Through the use of ARIA, authors can specify semantics that go beyond the current 
-        capabilities of native HTML. This can be very useful, as it provides authors the opportunity 
-        to create widgets, or expose specific accessible states and properties to native HTML features 
+        Through the use of ARIA, authors can specify semantics that go beyond the current
+        capabilities of native HTML. This can be very useful, as it provides authors the opportunity
+        to create widgets, or expose specific accessible states and properties to native HTML features
         which would not be possible by the use of HTML alone.
       </p>
       <p>
@@ -252,8 +252,8 @@
         attribute, allowing for an aural UI that will match the visual presentation of the control.
       </p>
       <p>
-        In the following example, a `button` element allows for a user to toggle the state of a 
-        setting within a web application. The `aria-pressed` attribute is used to 
+        In the following example, a `button` element allows for a user to toggle the state of a
+        setting within a web application. The `aria-pressed` attribute is used to
         augment the `button` element. When in the "pressed" state that information can be
         exposed to users of assistive technologies.
       </p>
@@ -261,40 +261,40 @@
       &lt;button aria-pressed=true>...&lt;/button>
       </pre>
       <p>
-        There are also situations where certain `aria-*` attributes are allowed for use on elements 
+        There are also situations where certain `aria-*` attributes are allowed for use on elements
         with specific `role`s, while the equivalent native attribute is currently not valid in HTML itself.
       </p>
       <p>
-        For instance, HTML has no direct concept of a disabled hyperlink (`a href` element). 
-        Constructs such as `&lt;a href="..." disabled&gt; ... &lt;/a&gt;` are not valid, 
-        and will not be conveyed to assistive technologies. 
+        For instance, HTML has no direct concept of a disabled hyperlink (`a href` element).
+        Constructs such as `&lt;a href="..." disabled&gt; ... &lt;/a&gt;` are not valid,
+        and will not be conveyed to assistive technologies.
       </p>
       <p>
         ARIA diverges from HTML in this regard and does allow for an `aria-disabled`
         attribute to be specified on an element with an explicit `role=link`. If an author were
         to specify an `aria-disabled=true` on an HTML hyperlink, user agents would not functionally
-        treat the hyperlink any differently (it would still be clickable/operable), however it 
+        treat the hyperlink any differently (it would still be clickable/operable), however it
         would be exposed to assistive technologies as being in the disabled state.
       </p>
       <p>
-        Similarly, while native HTML `option` elements that are descendants of a `select` can 
-        only be set as being `selected`, elements with an explicit `option` role can not only 
+        Similarly, while native HTML `option` elements that are descendants of a `select` can
+        only be set as being `selected`, elements with an explicit `option` role can not only
         allow the equivalent `aria-selected`, but also the `aria-checked` attribute, supporting
         widgets/constructs that go beyond the capabilities of a native `select` element.
       </p>
       <p>
-        Unfortunately, in these situations where ARIA and HTML have feature parity, but diverge 
-        in allowances, it can create for a misalignment in support, if not also user experiences. 
+        Unfortunately, in these situations where ARIA and HTML have feature parity, but diverge
+        in allowances, it can create for a misalignment in support, if not also user experiences.
         In situations where ARIA allows a feature not supported by HTML, it will often
-        be in the author's and ultimately the user's best interest to instead implement as a 
+        be in the author's and ultimately the user's best interest to instead implement as a
         fully custom ARIA widget.
       </p>
       <p>
         In the following example, a hyperlink needs to be communicated as being in the disabled
         state. HTML does not allow for the use of the `disabled` attribute on a hyperlink,
-        and using `aria-disabled=true` would communicate the hyperlink as being disabled to 
-        assistive technologies, but would not actually disable the element. The most effective way 
-        to both communicate and actually disable a hyperlink would be to remove the `href` from 
+        and using `aria-disabled=true` would communicate the hyperlink as being disabled to
+        assistive technologies, but would not actually disable the element. The most effective way
+        to both communicate and actually disable a hyperlink would be to remove the `href` from
         the [^a^] element, creating a placeholder. Then, ARIA can be applied to this
         placeholder link to communicate the element's intended role and state.
       </p>
@@ -318,16 +318,16 @@
         </p>
         <p>
           As an example, the following uses a `role=heading` on a [^button^] element. This is
-          not allowed, because the `button` element has default functionality that conflicts with user 
+          not allowed, because the `button` element has default functionality that conflicts with user
           expectations for the heading role.
         </p>
         <pre class="example HTML" title="Wrong role">
           &lt;button role="heading"&gt;search&lt;/button&gt;
         </pre>
         <p>
-          An author would need to take additional steps to ensure the default functionality and presentation of 
-          the `button` was removed, and even doing so may still not be enough to fully supress the element's 
-          implicit features depending on how the user chooses to engage with the web page. E.g., by turning on 
+          An author would need to take additional steps to ensure the default functionality and presentation of
+          the `button` was removed, and even doing so may still not be enough to fully supress the element's
+          implicit features depending on how the user chooses to engage with the web page. E.g., by turning on
           Windows high contrast themes, or viewing the web page in a browser's reader mode.
         </p>
       </section>
@@ -337,10 +337,10 @@
         </h3>
         <p>
           The following example illustrates a [^button^] element which has also been
-          provided an explicit `role=button`. Specifying this role is unnecessary, as a "button" 
+          provided an explicit `role=button`. Specifying this role is unnecessary, as a "button"
           element is already exposed with an implicit `button` role. In practice this particular
-          instance of redundancy will likely not have unforeseen side effects, other than 
-          unnecessarily making the markup more verbose, and incorrectly signaling to other authors 
+          instance of redundancy will likely not have unforeseen side effects, other than
+          unnecessarily making the markup more verbose, and incorrectly signaling to other authors
           that this practice is useful. Please review the section [[[#side-effects]]]
           for an example of where specifying unnecessary roles can be problematic.
         </p>
@@ -350,9 +350,9 @@
         </pre>
         <p>
           Similarly, the following uses a `role=group` on a [^fieldset^] element, and a `role=Main` on a [^main^] element.
-          This is unnecessary, because the `fieldset` element is implicitly exposed as a `role=group`, as is the `main` element 
-          implicitly exposed as a `role=main`. Again, in practice this will likely not have any unforeseen side effects to users 
-          of assistive technology, as long as the declaration of the `role` value uses [=ASCII lowercase=]. 
+          This is unnecessary, because the `fieldset` element is implicitly exposed as a `role=group`, as is the `main` element
+          implicitly exposed as a `role=main`. Again, in practice this will likely not have any unforeseen side effects to users
+          of assistive technology, as long as the declaration of the `role` value uses [=ASCII lowercase=].
           Please see [[[#case-sensitivity]]] for more information.
         </p>
         <pre class="HTML example" title="Redundant role on fieldset and main">
@@ -362,9 +362,9 @@
           &lt;main role="Main">...&lt;/main>
         </pre>
         <p>
-          The following uses a `role=list` on an [^ul^] element. As the `ul` element has an implicit role of `list`, 
+          The following uses a `role=list` on an [^ul^] element. As the `ul` element has an implicit role of `list`,
           explicitly adding the role would generally be considered redundant. However, some user agents suppress a list's
-          implicit ARIA semantics if the list markers are removed from the visual presentation of the list items. 
+          implicit ARIA semantics if the list markers are removed from the visual presentation of the list items.
           Generally the redundant declaration of an element's implicit role would not be recommended, but in specific situations
           such as this, and where the role is necessary to expose, authors can explicitly add the role.
         </p>
@@ -411,8 +411,8 @@
           using the `generic` role as its intended purpose is for use by implementors of user agents.
         </p>
         <p>
-          In the following example, rather than using a `generic` role, authors are advised to use a `div` in 
-          place of the `article` element. If changing the HTML element is not possible, specifying a role of 
+          In the following example, rather than using a `generic` role, authors are advised to use a `div` in
+          place of the `article` element. If changing the HTML element is not possible, specifying a role of
           `presentation` or `none` would be acceptable alternaties to remove the implicit role of the `article`.
         </p>
         <pre class="HTML example" title="Do not specify elements as generic">
@@ -420,7 +420,7 @@
           &lt;article role="generic" ...>...&lt;/article>
         </pre>
         <p>
-          Additionally, ARIA specifically mentions in <a data-cite="wai-aria-1.2/#host_general_conflict">Conflicts with Host Language Semantics</a> 
+          Additionally, ARIA specifically mentions in <a data-cite="wai-aria-1.2/#host_general_conflict">Conflicts with Host Language Semantics</a>
           that if authors use both native HTML features for exposing states and properties as well as their ARIA counterparts, then
           the host language features take priority over the explicit ARIA attributes that are also used.
         </p>
@@ -445,12 +445,12 @@
         <p>
           For instance, in the following example an author has specified a role of `link` on a `div` element. While
           HTML allows for a hyperlink (exposed as a `role=link`) to be a descendant of a `p` element, the HTML parser does not
-          allow a `div` to be a descendant of a `p` element. 
+          allow a `div` to be a descendant of a `p` element.
         </p>
         <pre class="HTML example" title="Revised ARIA semantics with invalid HTML nesting">
           &lt;!-- Do not do this! -->
           &lt;p>
-            ... &lt;div role=link tabindex=0>...&lt;/div> ... 
+            ... &lt;div role=link tabindex=0>...&lt;/div> ...
           &lt;/p>
         </pre>
         <p>
@@ -459,10 +459,10 @@
         <pre class="HTML example" title="Unwanted rendered markup with valid alternative solution">
           &lt!-- The previous example's markup will render as follows -->
           &lt;p>...&lt;/p>
-          &lt;div role=link tabindex=0>...&lt;/div> 
-          ... 
+          &lt;div role=link tabindex=0>...&lt;/div>
+          ...
           &lt;p>&lt;/p>
-          
+
           &lt;!-- Instead of a div, use a span. Spans are allowed descendants of p elements! -->
           &lt;p>
             ... &lt;span role=link tabindex=0>...&lt;/span> ...
@@ -480,44 +480,48 @@
         Document conformance requirements for use of ARIA attributes in HTML
       </h2>
       <p>
-        The following table provides normative per-element document conformance requirements for the 
-        use of ARIA markup in HTML documents. Additionally, it identifies the <a>implicit ARIA semantics</a> 
-        that apply to [=HTML elements=]. The <a>implicit ARIA semantics</a> of these elements are defined 
+        The following table provides normative per-element document conformance requirements for the
+        use of ARIA markup in HTML documents. Additionally, it identifies the <a>implicit ARIA semantics</a>
+        that apply to [=HTML elements=]. The <a>implicit ARIA semantics</a> of these elements are defined
         in [[html-aam-1.0|HTML AAM]].
       </p>
+        <aside class="proposed correction" id="c1"><span class="marker">Proposed Correction 1</span></aside>
       <p>
-        Each language feature (element) in a cell in the first column implies the ARIA semantics 
-        (role, states, and properties) given in the cell in  the second column of the same row. 
+        Each language feature (element) in a cell in the first column implies the ARIA semantics
+        (role, states, and properties) given in the cell in  the second column of the same row.
         The third cell in each row defines the ARIA `role` values and `aria-*` attributes which authors MAY specify
         on the element. Where a cell in the third column includes the term <dfn><strong>Any</strong> `role`</dfn>
-        it indicates that any `role` value <span class="proposed-correction">MAY be used on the element. However, 
-        it is NOT RECOMMENDED for authors to specify the implicit role of the element, the `generic` role, or a role 
-        <a href="#docconformance-deprecated">deprecated by ARIA</a> on these elements.</span> 
-        If a cell in the third column includes the term <dfn><strong>No `role`</strong></dfn> it indicates 
-        that authors MUST NOT overwrite the implicit ARIA semantics, or native semantics of the HTML element. 
+        it indicates that any `role` value <ins class="proposed" cite="#c1">MAY be used on the element. However,
+        it is NOT RECOMMENDED for authors to specify the implicit role of the element, the `generic` role, or a role
+        <a href="#docconformance-deprecated">deprecated by ARIA</a> on these elements.</ins>
+        If a cell in the third column includes the term <dfn><strong>No `role`</strong></dfn> it indicates
+        that authors MUST NOT overwrite the implicit ARIA semantics, or native semantics of the HTML element.
       </p>
-      <div class="proposed-addition">
-        <p>
-          [[wai-aria-1.2|WAI-ARIA]] identifies roles which have 
-          <a data-cite="wai-aria-1.2/#prohibitedattributes">prohibited states and properties</a>.
-          These roles do not allow certain WAI-ARIA attributes to be specified by authors.
-          HTML elements which expose these implicit WAI-ARIA roles also prohibit authors from
-          specifying these WAI-ARIA attributes.
-        </p>
-        <p>
-          Elements which are identified as <dfn>Naming prohibited</dfn> are those which authors MUST NOT specify an 
-          `aria-label` or `aria-labelledby` attribute, unless the element allows for its implicit role to be overwritten 
-          by an explicit WAI-ARIA role which allows naming from authors. For more information see [[[#docconformance-naming]]].
-        </p>
-      </div>
+        <aside class="proposed addition" id="a1">
+            <span class="marker">Proposed addition 1:</span>
+            <ins class="proposed" cite="#a1">
+                <p>
+                    [[wai-aria-1.2|WAI-ARIA]] identifies roles which have
+                    <a data-cite="wai-aria-1.2/#prohibitedattributes">prohibited states and properties</a>.
+                    These roles do not allow certain WAI-ARIA attributes to be specified by authors.
+                    HTML elements which expose these implicit WAI-ARIA roles also prohibit authors from
+                    specifying these WAI-ARIA attributes.
+                </p>
+                <p>
+                    Elements which are identified as <dfn>Naming prohibited</dfn> are those which authors MUST NOT specify an
+                    `aria-label` or `aria-labelledby` attribute, unless the element allows for its implicit role to be overwritten
+                    by an explicit WAI-ARIA role which allows naming from authors. For more information see [[[#docconformance-naming]]].
+                </p>
+            </ins>
+        </aside>
       <p class="note" id="aria-usage-note">
         While setting an ARIA `role` and/or `aria-*` attribute that matches the <span>implicit ARIA semantics</span>
-        is NOT RECOMMENDED, in some  situations explicitly setting these attributes can be helpful – for instance, 
+        is NOT RECOMMENDED, in some  situations explicitly setting these attributes can be helpful – for instance,
         for user agents that do not expose implicit ARIA semantics for certain elements.
       </p>
       <p class="note" id="dpub-usage-note">
         While it is conforming to use [[[dpub-aria-1.1]]] `role` values as outlined in the following table, the use of these roles
-        is not intended for implementation of websites. If using these role for purposes beyond the scope of the digital publishing 
+        is not intended for implementation of websites. If using these role for purposes beyond the scope of the digital publishing
         industry, further manual testing will be necessary to ensure the intended experience is provided to users.
       </p>
       <table class="data">
@@ -578,7 +582,7 @@
                 `a` element with an `href` attribute.
               </p>
               <div class="note">
-                If a link needs to be programmatically communicated as "disabled", 
+                If a link needs to be programmatically communicated as "disabled",
                 <a href="#example-communicate-a-disabled-link-with-aria">remove the `href` attribute</a>.
               </div>
             </td>
@@ -594,7 +598,10 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+              <div class="proposed addition" id="a2">
+                <span class="marker">Proposed addition 2:</span>
+                <ins><p><a>Naming Prohibited</a></p></ins>
+              </div>
               <p>
                 Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
@@ -612,7 +619,10 @@
               <p>
                 <a><strong>Any `role`</strong></a>
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+              <div class="proposed addition" id="a3">
+                  <span class="marker">Proposed addition 3:</span>
+                  <ins><p><a>Naming Prohibited</a></p></ins>
+              </div>
               <p>
                 Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> and any `aria-*` attributes applicable to the allowed roles.
               </p>
@@ -630,7 +640,7 @@
                 <a><strong>Any `role`</strong></a>, though <a href="#index-aria-group">`group`</a> is NOT RECOMMENDED.
               </p>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -647,8 +657,8 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-link">link</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
-                and any `aria-*` attributes applicable to the 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
+                and any `aria-*` attributes applicable to the
                 <a href="#index-aria-link">`link`</a> role.
               </p>
             </td>
@@ -661,17 +671,20 @@
               <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
-              <div class="proposed-addition">
-                <p>
-                  Roles:
-                  <a href="#index-aria-button">`button`</a>
-                  or <a href="#index-aria-link">`link`</a>. (<code><a href="#index-aria-generic">generic</a></code> is also allowed, but SHOULD NOT be used.)
-                </p>
-                <p><a>Naming Prohibited</a></p>
-                <p>
-                  Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
-                  and any `aria-*` attributes applicable to the allowed roles.
-                </p>
+              <div class="proposed addition" id="a4">
+                <span class="marker">Proposed addition 4:</span>
+                <ins>
+                    <p>
+                      Roles:
+                      <a href="#index-aria-button">`button`</a>
+                      or <a href="#index-aria-link">`link`</a>. (<code><a href="#index-aria-generic">generic</a></code> is also allowed, but SHOULD NOT be used.)
+                    </p>
+                    <p><a>Naming Prohibited</a></p>
+                    <p>
+                      Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
+                      and any `aria-*` attributes applicable to the allowed roles.
+                    </p>
+                </ins>
               </div>
             </td>
           </tr>
@@ -694,7 +707,7 @@
                 or <a href="#index-aria-region">`region`</a>. (<code><a href="#index-aria-article">article</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -716,17 +729,20 @@
                 <a href="#index-aria-region">`region`</a>
                 or <a href="#index-aria-search">`search`</a>. (<code><a href="#index-aria-complementary">complementary</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
+              <div class="proposed addition" id="a5">
+                  <span class="marker">Proposed addition 5</span>
+              </div>
               <p>
                 DPub Roles:
                 <a data-cite="dpub-aria-1.1#doc-dedication">`doc-dedication`</a>,
                 <a data-cite="dpub-aria-1.1#doc-example">`doc-example`</a>,
                 <a data-cite="dpub-aria-1.1#doc-footnote">`doc-footnote`</a>,
-                <span class="proposed-addition"><a data-cite="dpub-aria-1.1#doc-glossary">`doc-glossary`</a>,</span>
+                <ins class="proposed" cite="#a5"><a data-cite="dpub-aria-1.1#doc-glossary">`doc-glossary`</a>,</ins>
                 <a data-cite="dpub-aria-1.1#doc-pullquote">`doc-pullquote`</a>
                 or <a data-cite="dpub-aria-1.1#doc-tip">`doc-tip`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -744,8 +760,8 @@
                 <a href="#index-aria-application">`application`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
-                and any `aria-*` attributes applicable to the 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
+                and any `aria-*` attributes applicable to the
                 <a href="#index-aria-application">`application`</a> role.
               </p>
             </td>
@@ -764,18 +780,19 @@
             </td>
             <td>
               <p>
-                If role defined by `ElementInternals`, 
+                If role defined by `ElementInternals`,
                 <a><strong class="nosupport">no `role`</strong></a>
               </p>
               <p>
                 Otherwise, <a><strong>any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition">
-                <a>Naming Prohibited</a> if exposed as the `generic` role, or if exposed
-                as another role which prohibits naming.
-              </p>
+              <div class="proposed addition" id="a6">
+                <span class="marker">Proposed addition 6:</span>
+                <ins><p><a>Naming Prohibited</a> if exposed as the `generic` role, or if exposed
+                as another role which prohibits naming.</p></ins>
+              </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -791,9 +808,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+              <div class="proposed addition" id="a7">
+                <span class="marker">Proposed addition 7:</span>
+                <ins><p><a>Naming Prohibited</a></p></ins>
+              </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -822,9 +842,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a8">
+                    <span class="marker">Proposed addition 8:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -840,9 +863,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+              <div class="proposed addition" id="a9">
+                <span class="marker">Proposed addition 9:</span>
+                <ins><p><a>Naming Prohibited</a></p></ins>
+              </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -859,7 +885,7 @@
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-blockquote">`blockquote`</a></code> is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -875,13 +901,14 @@
               <p>
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-generic">generic</a></code>, which SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
-              <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
-                <span class="proposed-addition">
-                  allowed for the `generic` role, with the exception that authors MUST NOT specify `aria-hidden=true` on the `body` element.
-                </span>
-              </p>
+                <div class="proposed addition" id="a10">
+                    <span class="marker">Proposed Addition 10</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
+                <div class="proposed addition" id="a11">
+                    <span class="marker">Proposed Addition 11</span>
+                    <p>Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> <ins>allowed for the `generic` role, with the exception that authors MUST NOT specify `aria-hidden=true` on the `body` element.</p></ins>
+                </div>
             </td>
           </tr>
           <tr>
@@ -897,10 +924,11 @@
                 <a href="#index-aria-none">`none`</a>
                 or <a href="#index-aria-presentation">`presentation`</a>
               </p>
-              <p class="proposed-correction">
-                Authors MAY specify the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on the `br` element.
-                Otherwise, no other allowed `aria-*` attributes.
-              </p>
+              <div class="proposed addition" id="a12">
+                  <span class="marker">Proposed addition 12:</span>
+                  <ins><p>Authors MAY specify the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on the `br` element.
+                      Otherwise, no other allowed `aria-*` attributes.</p></ins>
+              </div>
             </td>
           </tr>
           <tr>
@@ -912,27 +940,30 @@
               <p>If the `button` is the first child of a `select` element, the element is `inert`.</p>
             </td>
             <td>
+                <div class="proposed addition" id="a13">
+                    <span class="marker">Proposed addition 13</span>
+                </div>
               <p>
                 Roles:
                 <a href="#index-aria-checkbox">`checkbox`</a>,
-                <span class="proposed-addition"><a href="#index-aria-combobox">`combobox`</a></span>,
-                <span class="proposed-addition"><a href="#index-aria-gridcell">`gridcell`</a></span>,
+                <ins class="proposed" cite="#a13"><a href="#index-aria-combobox">`combobox`</a>,</ins>
+                <ins class="proposed" cite="#a13"><a href="#index-aria-gridcell">`gridcell`</a>,</ins>
                 <a href="#index-aria-link">`link`</a>,
                 <a href="#index-aria-menuitem">`menuitem`</a>,
                 <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
                 <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
                 <a href="#index-aria-option">`option`</a>,
                 <a href="#index-aria-radio">`radio`</a>,
-                <span class="proposed-addition">
+                <ins class="proposed" cite="#a13">
                   <a href="#index-aria-separator">`separator`</a>,
-                  <a href="#index-aria-slider">`slider`</a></span>,
+                  <a href="#index-aria-slider">`slider`</a>,</ins>
                 <a href="#index-aria-switch">`switch`</a>,
                 <a href="#index-aria-tab">`tab`</a>,
-                or <span class="proposed-addition"><a href="#index-aria-treeitem">`treeitem`</a></span>.
+                or <ins class="proposed" cite="#a13"><a href="#index-aria-treeitem">`treeitem`</a>.</ins>
                 (<code><a href="#index-aria-button">button</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
               <hr>
@@ -952,7 +983,7 @@
                 <a><strong>Any `role`</strong></a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -968,7 +999,10 @@
               <p>
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-caption">`caption`</a></code>, which is NOT RECOMMENDED.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a14">
+                    <span class="marker">Proposed addition 14:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
                 Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>.
               </p>
@@ -985,9 +1019,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a15">
+                    <span class="marker">Proposed addition 15:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1003,9 +1040,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-code">`code`</a></code> is NOT RECOMMENDED.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a16">
+                    <span class="marker">Proposed addition 16:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1047,9 +1087,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a17">
+                    <span class="marker">Proposed addition 17:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1062,12 +1105,13 @@
               <code>role=<a href="#index-aria-listbox">listbox</a></code>
             </td>
             <td>
-              <div class="proposed-correction">
+              <div class="proposed correction" id="c3">
+                <span class="marker">Proposed correction 3:</span> Disallow roles and aria-* attributes on the datalist element.
                 <p>
-                  <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-listbox">listbox</a></code>, which is NOT RECOMMENDED.
+                    <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-listbox">listbox</a></code>, which is NOT RECOMMENDED.
                 </p>
                 <p>
-                  <strong>No `aria-*` attributes</strong>.
+                    <strong>No `aria-*` attributes</strong>.
                 </p>
               </div>
             </td>
@@ -1084,7 +1128,7 @@
                 <a><strong class="nosupport">No `role`</strong></a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `definition` role.
               </p>
             </td>
@@ -1100,9 +1144,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-deletion">`deletion`</a></code> is NOT RECOMMENDED.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a18">
+                    <span class="marker">Proposed addition 18:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1119,7 +1166,7 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-group">group</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `group` role.
               </p>
             </td>
@@ -1136,7 +1183,7 @@
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-term">term</a></code> is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1154,7 +1201,7 @@
                 <a href="#index-aria-alertdialog">`alertdialog`</a>. (<code><a href="#index-aria-dialog">dialog</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `dialog` role.
               </p>
             </td>
@@ -1167,15 +1214,21 @@
               <code>role=<a href="#index-aria-generic">generic</a></code>
             </td>
             <td>
-              <p class="proposed-addition">
-                If a direct child of a [^dl^] element,
-                only <a href="#index-aria-presentation">`presentation`</a>
-                or <a href="#index-aria-none">`none`</a>. Otherwise,
-                <a><strong>any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
-              </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
-              <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                <div class="proposed addition" id="a19">
+                    <span class="marker">Proposed addition 19:</span>
+                    <ins><p>
+                        If a direct child of a [^dl^] element,
+                        only <a href="#index-aria-presentation">`presentation`</a>
+                        or <a href="#index-aria-none">`none`</a>. Otherwise,
+                        <a><strong>any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
+                    </p></ins>
+                </div>
+                <div class="proposed addition" id="a20">
+                    <span class="marker">Proposed addition 20:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
+                <p>
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1196,7 +1249,7 @@
                 or <a href="#index-aria-presentation">`presentation`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1214,7 +1267,7 @@
                 <a href="#index-aria-listitem">`listitem`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1230,9 +1283,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-emphasis">`emphasis`</a></code> is NOT RECOMMENDED.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a21">
+                    <span class="marker">Proposed addition 21:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1275,7 +1331,7 @@
                 or <a href="#index-aria-radiogroup">`radiogroup`</a>. (<code><a href="#index-aria-group">group</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1294,9 +1350,12 @@
                 <a href="#index-aria-none">`none`</a>
                 or <a href="#index-aria-presentation">`presentation`</a>
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a22">
+                    <span class="marker">Proposed addition 22:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1312,7 +1371,7 @@
               <p>
                 If the `figure` has a valid `figcaption` descendant:
                 <br>
-                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-figure">figure</a></code>, 
+                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-figure">figure</a></code>,
                 which is NOT RECOMMENDED.
               </p>
               <p>
@@ -1325,7 +1384,7 @@
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-figure">figure</a></code> is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1363,9 +1422,12 @@
                 DPub Role:
                 <a data-cite="dpub-aria-1.1#doc-footnote">`doc-footnote`</a>
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a> if exposed as `generic`.</p>
+                <div class="proposed addition" id="a23">
+                    <span class="marker">Proposed addition 23:</span>
+                    <ins><p><a>Naming Prohibited</a> if exposed as `generic`.</p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1387,7 +1449,7 @@
                 or <a href="#index-aria-search">`search`</a>. (<code><a href="#index-aria-form">form</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
               <p class="note">
@@ -1409,7 +1471,7 @@
             </td>
             <td>
               <p>
-                If role defined by `ElementInternals`, 
+                If role defined by `ElementInternals`,
                 <a><strong class="nosupport">no `role`</strong></a>
               </p>
               <p>
@@ -1428,11 +1490,12 @@
                 <a href="#index-aria-switch">`switch`</a>
                 or <a href="#index-aria-textbox">`textbox`</a>. (<code><a href="#index-aria-generic">generic</a></code> is also allowed, but SHOULD NOT be used.)
               </p>
-              <p class="proposed-addition">
-                <a>Naming Prohibited</a> if exposed as the `generic` role.
-              </p>
+                <div class="proposed addition" id="a24">
+                    <span class="marker">Proposed addition 24:</span>
+                    <ins><p><a>Naming Prohibited</a> if exposed as the `generic` role.</p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1457,7 +1520,7 @@
                 <a data-cite="dpub-aria-1.1#doc-subtitle">`doc-subtitle`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1483,7 +1546,7 @@
               <p>
                 If not a descendant of an `article`, `aside`, `main`,
                 `nav` or `section` element, or an element with `role=article`,
-                `complementary`, `main`, `navigation` or `region` then 
+                `complementary`, `main`, `navigation` or `region` then
                 <code>role=<a href="#index-aria-banner">banner</a></code>
               </p>
               <p>
@@ -1504,9 +1567,12 @@
                 Otherwise, <code>role=<a href="#index-aria-generic">generic</a></code>
                 is also allowed, but SHOULD NOT be used.)
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a> if exposed as `generic`.</p>
+                <div class="proposed addition" id="a25">
+                    <span class="marker">Proposed addition 25:</span>
+                    <ins><p><a>Naming Prohibited</a> if exposed as `generic`.</p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1523,7 +1589,7 @@
                 <a><strong>Any `role`</strong></a>, though <a href="#index-aria-group">`group`</a> is NOT RECOMMENDED.
               </p>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1546,7 +1612,7 @@
                 <a data-cite="dpub-aria-1.1#doc-pagebreak">`doc-pagebreak`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `separator` role.
               </p>
             </td>
@@ -1560,7 +1626,7 @@
             </td>
             <td>
               <p>
-                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-document">document</a></code> 
+                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-document">document</a></code>
                 or <code><a href="#index-aria-generic">generic</a></code>, which are NOT RECOMMENDED.
               </p>
               <p>
@@ -1579,9 +1645,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a26">
+                    <span class="marker">Proposed addition 26:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1611,42 +1680,46 @@
           </tr>
           <tr>
             <th id="el-img" tabindex="-1">
-              <div class="proposed-correction">
-                [^img^]
+              <div class="proposed correction" id="c4">
+                  <span class="marker">Proposed correction 4:</span>
+                  <ins><p>[^img^]</p></ins>
               </div>
             </th>
             <td>
-              If the `img` has non-empty [^img/alt^] (`alt="some text"`) or an accessible name is provided by another 
-              <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming method</a>, 
+              If the `img` has non-empty [^img/alt^] (`alt="some text"`) or an accessible name is provided by another
+              <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming method</a>,
               or the `img` has no `alt` and has not been provided a name:<br>
               <code>role=<a href="#index-aria-img">img or image</a></code>
             </td>
             <td>
+            <div class="proposed correction" id="a27">
+                <span class="marker">Proposed addition 27</span>
+            </div>
               <p>
                 Roles:
                 <a href="#index-aria-button">`button`</a>,
                 <a href="#index-aria-checkbox">`checkbox`</a>,
                 <a href="#index-aria-link">`link`</a>,
-                <span class="proposed-correction">
+                <ins class="proposed" cite="#a27">
                   <a href="#index-aria-math">`math`</a>,
-                </span>
+                </ins>
                 <a href="#index-aria-menuitem">`menuitem`</a>,
                 <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
                 <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
-                <span class="proposed-addition">
+                <ins class="proposed" cite="#a27">
                   <a href="#index-aria-meter">`meter`</a>,
-                </span>
+                </ins>
                 <a href="#index-aria-option">`option`</a>,
                 <a href="#index-aria-progressbar">`progressbar`</a>,
-                <span class="proposed-correction">
+                <ins class="proposed" cite="#a27">
                   <a href="#index-aria-radio">`radio`</a>,
-                </span>
+                </ins>
                 <a href="#index-aria-scrollbar">`scrollbar`</a>,
                 <a href="#index-aria-separator">`separator`</a>,
                 <a href="#index-aria-slider">`slider`</a>,
                 <a href="#index-aria-switch">`switch`</a>,
                 <a href="#index-aria-tab">`tab`</a> or
-                <a href="#index-aria-treeitem">`treeitem`</a>. 
+                <a href="#index-aria-treeitem">`treeitem`</a>.
                 (<code><a href="#index-aria-img">img or image</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
@@ -1654,7 +1727,7 @@
                 <a data-cite="dpub-aria-1.1#doc-cover">`doc-cover`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1664,41 +1737,46 @@
               [^img^] with no accessible name
             </th>
             <td>
-              <div class="proposed-correction">
-                <p id="el-img-empty-alt">
-                  If the `img` has an empty `alt` ([^img/alt^]`=""`) and lacks any other 
-                  <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming methods</a>:<br>
-                  <code>role=<a href="#index-aria-none">none</a></code>, 
-                  <code>role=<a href="#index-aria-presentation">presentation</a></code>
-                </p>
-                <p id="el-img-no-alt" tabindex="-1">
-                  If the `img` <a data-cite="html/images.html#unknown-images">lacks an `alt` attribute</a> and lacks any other 
-                  <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming methods</a>:<br>
-                  <code>role=<a href="#index-aria-img">img or image</a></code>
-                </p>
+              <div class="proposed correction" id="c5">
+                  <span class="marker">Proposed correction 5:</span>Clarify that if an <code>img</code> has no accessible name, then it must not be exposed as an image role.
+                  <ins><p id="el-img-empty-alt">
+                      If the `img` has an empty `alt` ([^img/alt^]`=""`) and lacks any other
+                      <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming methods</a>:<br>
+                      <code>role=<a href="#index-aria-none">none</a></code>,
+                      <code>role=<a href="#index-aria-presentation">presentation</a></code>
+                  </p>
+                      <p id="el-img-no-alt" tabindex="-1">
+                          If the `img` <a data-cite="html/images.html#unknown-images">lacks an `alt` attribute</a> and lacks any other
+                          <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming methods</a>:<br>
+                          <code>role=<a href="#index-aria-img">img or image</a></code>
+                      </p>
+                  </ins>
               </div>
             </td>
             <td>
-              <div class="proposed-correction">
-              <p>
-                If the `img` has no `alt` attribute or accessible name:
-                <a><strong class="nosupport">No `role`</strong></a> other than the  
-                <code>role=<a href="#index-aria-none">none</a></code> or <code><a href="#index-aria-presentation">presentation</a></code> roles.
-                (<code>role=<a href="#index-aria-img">img or image</a></code> is also allowed, but NOT RECOMMENDED.)
-              </p>
-              <p>
-                If the `img` has an empty `alt=""` attribute and no `aria-label` or `aria-labelledby` attributes to provide it an accessible name:
-                <a><strong class="nosupport">No `role`</strong></a> other than the <code>role=<a href="#index-aria-none">none</a></code> or
-                <code><a href="#index-aria-presentation">presentation</a></code> roles, which are NOT RECOMMENDED.
-              </p>
-              <p>
-                <strong>No `aria-*` attributes</strong>
-                except <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden="true"`</a>.
-              </p>
-              <p>
-                Otherwise, if the `img` has an author defined accessible name, 
-                see <a href="#el-img">`img` with an accessible name</a>.
-              </p>
+              <div class="proposed correction" id="c6">
+                  <span class="marker">Proposed correction 6:</span>Clarify that if an <code>img</code> has no accessible name, then it must not be exposed as an image role.
+                  <ins>
+                      <p>
+                        If the `img` has no `alt` attribute or accessible name:
+                        <a><strong class="nosupport">No `role`</strong></a> other than the
+                        <code>role=<a href="#index-aria-none">none</a></code> or <code><a href="#index-aria-presentation">presentation</a></code> roles.
+                        (<code>role=<a href="#index-aria-img">img or image</a></code> is also allowed, but NOT RECOMMENDED.)
+                          </p>
+                      <p>
+                        If the `img` has an empty `alt=""` attribute and no `aria-label` or `aria-labelledby` attributes to provide it an accessible name:
+                        <a><strong class="nosupport">No `role`</strong></a> other than the <code>role=<a href="#index-aria-none">none</a></code> or
+                        <code><a href="#index-aria-presentation">presentation</a></code> roles, which are NOT RECOMMENDED.
+                      </p>
+                      <p>
+                        <strong>No `aria-*` attributes</strong>
+                        except <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden="true"`</a>.
+                      </p>
+                      <p>
+                        Otherwise, if the `img` has an author defined accessible name,
+                        see <a href="#el-img">`img` with an accessible name</a>.
+                      </p>
+                  </ins>
               </div>
             </td>
           </tr>
@@ -1710,27 +1788,30 @@
               <code>role=<a href="#index-aria-button">button</a></code>
             </td>
             <td>
+                <div class="proposed addition" id="a28">
+                    <span class="marker">Proposed addition 28</span>
+                </div>
               <p>
                 Roles:
-                <span class="proposed-correction"><a href="#index-aria-checkbox">`checkbox`</a>,</span>
-                <span class="proposed-addition"><a href="#index-aria-combobox">`combobox`</a>,</span>
-                <span class="proposed-addition"><a href="#index-aria-gridcell">`gridcell`</a>,</span>
+                <ins class="proposed" cite="#a28"><a href="#index-aria-checkbox">`checkbox`</a>,</ins>
+                <ins class="proposed" cite="#a28"><a href="#index-aria-combobox">`combobox`</a>,</ins>
+                <ins class="proposed" cite="#a28"><a href="#index-aria-gridcell">`gridcell`</a>,</ins>
                 <a href="#index-aria-link">`link`</a>,
                 <a href="#index-aria-menuitem">`menuitem`</a>,
                 <a href="#index-aria-menuitemcheckbox">`menuitemcheckbox`</a>,
                 <a href="#index-aria-menuitemradio">`menuitemradio`</a>,
                 <a href="#index-aria-option">`option`</a>,
                 <a href="#index-aria-radio">`radio`</a>,
-                <span class="proposed-addition">
+                <ins class="proposed" cite="#a28">
                   <a href="#index-aria-separator">`separator`</a>,
-                  <a href="#index-aria-slider">`slider`</a>,</span>
+                  <a href="#index-aria-slider">`slider`</a>,</ins>
                 <a href="#index-aria-switch">`switch`</a>,
                 <a href="#index-aria-tab">`tab`</a>,
-                or <span class="proposed-addition"><a href="#index-aria-treeitem">`treeitem`</a></span>. 
+                or <ins class="proposed" cite="#a28"><a href="#index-aria-treeitem">`treeitem`</a></ins>.
                 (<code><a href="#index-aria-button">button</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -1750,9 +1831,10 @@
                 or <a href="#index-aria-switch">`switch`</a>;
                 <a href="#index-aria-button">`button` if used with `aria-pressed`</a>. (<code><a href="#index-aria-checkbox">checkbox</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
-              <p class="proposed-correction">
-                Authors <a href="#att-checked">MUST NOT use the `aria-checked` attribute on `input type=checkbox` elements</a>.
-              </p>
+              <div class="proposed correction" id="c7">
+                  <span class="marker">Proposed correction 7:</span>
+                  <ins><p>Authors <a href="#att-checked">MUST NOT use the `aria-checked` attribute on `input type=checkbox` elements</a>.</p></ins>
+              </div>
               <p>
                 Otherwise, any <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> and
                 any `aria-*` attributes applicable to the allowed roles.
@@ -1827,7 +1909,7 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-textbox">textbox</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
@@ -1844,7 +1926,7 @@
                 <a><strong class="nosupport">No `role`</strong></a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>, 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>,
                 `aria-disabled`, `aria-invalid` and `aria-required` attributes.
               </p>
             </td>
@@ -1870,8 +1952,9 @@
               <code>role=<a href="#index-aria-button">button</a></code>
             </td>
             <td>
-              <div class="proposed-addition">
-                <p>
+              <div class="proposed addition" id="a29">
+                  <span class="marker">Proposed addition 29:</span>
+                <ins><p>
                   The following roles are allowed, but are NOT RECOMMENDED:
                   <a href="#index-aria-button">`button`</a>,
                   <a href="#index-aria-checkbox">`checkbox`</a>,
@@ -1886,10 +1969,10 @@
                   <a href="#index-aria-slider">`slider`</a>,
                   <a href="#index-aria-switch">`switch`</a>,
                   <a href="#index-aria-tab">`tab`</a>
-                  or <a href="#index-aria-treeitem">`treeitem`</a>. 
-                </p>
+                  or <a href="#index-aria-treeitem">`treeitem`</a>.
+                </p></ins>
                 <p>
-                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                   and any `aria-*` attributes applicable to the allowed roles.
                 </p>
                 <p>
@@ -1911,7 +1994,7 @@
                 <a><strong class="nosupport">No `role`</strong></a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
@@ -1928,7 +2011,7 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-spinbutton">spinbutton</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `spinbutton` role.
               </p>
             </td>
@@ -1945,7 +2028,7 @@
                 <a><strong class="nosupport">No `role`</strong></a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
@@ -1962,10 +2045,11 @@
                 Role:
                 <a href="#index-aria-menuitemradio">`menuitemradio`</a>. (<code><a href="#index-aria-radio">radio</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
-              <p class="proposed-correction">
-                Authors <a href="#att-checked">MUST NOT use the
-                `aria-checked` attribute on `input type=radio` elements</a>.
-              </p>
+              <div class="proposed correction">
+                  <span class="marker">Proposed correction 8:</span> Clarify that the <code>radio</code> role is not recommended for <code>input type=radio</code> elements.</span>
+                  <ins><p>Authors <a href="#att-checked">MUST NOT use the
+                `aria-checked` attribute on `input type=radio` elements</a>.</p></ins>
+              </div>
               <p>
                 Otherwise, any <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> and any `aria-*` attributes
                 applicable to the allowed roles.
@@ -1989,12 +2073,12 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-slider">slider</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                Authors SHOULD NOT use the <a href="#att-max">`aria-valuemax`</a> or 
+                Authors SHOULD NOT use the <a href="#att-max">`aria-valuemax`</a> or
                 <a href="#att-min">`aria-valuemin`</a> attributes on `input type=range`.
               </p>
               <p>
-                Otherwise, any 
-                <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, any
+                <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any other `aria-*` attributes applicable to the `slider` role.
               </p>
             </td>
@@ -2007,8 +2091,9 @@
               <code>role=<a href="#index-aria-button">button</a></code>
             </td>
             <td>
-              <div class="proposed-addition">
-                <p>
+              <div class="proposed addition" id="a30">
+                  <span class="marker">Proposed addition 30:</span>
+                <ins><p>
                   The following roles are allowed, but are NOT RECOMMENDED:
                   <a href="#index-aria-button">`button`</a>,
                   <a href="#index-aria-checkbox">`checkbox`</a>,
@@ -2025,9 +2110,9 @@
                   <a href="#index-aria-switch">`switch`</a>,
                   <a href="#index-aria-tab">`tab`</a>
                   or <a href="#index-aria-treeitem">`treeitem`</a>.
-                </p>
+                </p></ins>
                 <p>
-                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                   and any `aria-*` attributes applicable to the allowed roles.
                 </p>
                 <p>
@@ -2050,7 +2135,7 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-searchbox">searchbox</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `searchbox` role.
               </p>
             </td>
@@ -2063,8 +2148,9 @@
               <code>role=<a href="#index-aria-button">button</a></code>
             </td>
             <td>
-              <div class="proposed-addition">
-                <p>
+              <div class="proposed addition" id="a31">
+                  <span class="marker">Proposed addition 31:</span>
+                <ins><p>
                   The following roles are allowed, but are NOT RECOMMENDED:
                   <a href="#index-aria-button">`button`</a>,
                   <a href="#index-aria-checkbox">`checkbox`</a>,
@@ -2081,9 +2167,9 @@
                   <a href="#index-aria-switch">`switch`</a>,
                   <a href="#index-aria-tab">`tab`</a>
                   or <a href="#index-aria-treeitem">`treeitem`</a>.
-                </p>
+                </p></ins>
                 <p>
-                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                   and any `aria-*` attributes applicable to the allowed roles.
                 </p>
                 <p>
@@ -2095,7 +2181,7 @@
           </tr>
           <tr>
             <th id="el-input-tel" tabindex="-1">
-              <a data-cite="html/input.html#telephone-state-(type=tel)">`input type=tel`</a>, 
+              <a data-cite="html/input.html#telephone-state-(type=tel)">`input type=tel`</a>,
               with no [^input/list^] attribute
             </th>
             <td>
@@ -2106,7 +2192,7 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-textbox">textbox</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
@@ -2127,7 +2213,7 @@
                 or <a href="#index-aria-spinbutton">`spinbutton`</a>. (<code><a href="#index-aria-textbox">textbox</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2153,7 +2239,7 @@
               </p>
               <p>
                 Otherwise, any
-                <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any other `aria-*` attributes applicable to the `combobox` role.
               </p>
             </td>
@@ -2170,7 +2256,7 @@
                 <a><strong class="nosupport">No `role`</strong></a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
@@ -2188,7 +2274,7 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-textbox">textbox</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
@@ -2205,7 +2291,7 @@
                 <a><strong class="nosupport">No `role`</strong></a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
@@ -2221,9 +2307,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-insertion">`insertion`</a></code> is NOT RECOMMENDED.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+              <div class="proposed addition" id="a32">
+                  <span class="marker">Proposed addition 32:</span>
+                  <ins><p><a>Naming Prohibited</a></p></ins>
+              </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2239,9 +2328,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a33">
+                    <span class="marker">Proposed addition 33:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2255,12 +2347,12 @@
             </td>
             <td>
               <p>
-                If a `label` element is implicitly or explicitly associated with a 
+                If a `label` element is implicitly or explicitly associated with a
                 <a data-cite="html/forms.html#category-label">labelable element</a> then
                 <a><strong class="nosupport">no `role`</strong></a>
               </p>
               <p>
-                Otherwise, if the `label` is not associated with an element then <a><strong>any `role`</strong></a>, 
+                Otherwise, if the `label` is not associated with an element then <a><strong>any `role`</strong></a>,
                 though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p><a>Naming Prohibited</a> if exposed as the `generic` role, or if exposed as another role which prohibits naming.</p>
@@ -2280,7 +2372,10 @@
               <p>
                 <a><strong class="nosupport">No `role`</strong></a>
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a34">
+                    <span class="marker">Proposed addition 34:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
                 Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>.
               </p>
@@ -2292,39 +2387,45 @@
             </th>
             <td>
               <p>
-                If the `li` is a child of a list element 
-                (<a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, 
+                If the `li` is a child of a list element
+                (<a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>,
                 <a href="#el-menu">`menu`</a>)
                 <code>role=<a href="#index-aria-listitem">listitem</a></code>.
               </p>
               <p>
-                Otherwise, if the `li` is not a child of a list element it is exposed as 
+                Otherwise, if the `li` is not a child of a list element it is exposed as
                 a <code>role=<a href="#index-aria-generic">generic</a></code>.
               </p>
             </td>
             <td>
-              <div class="proposed-correction">
-                <p>
-                  <strong class="nosupport"><a>No `role`</a></strong> other than <code><a href="#index-aria-listitem">listitem</a></code>, which is NOT RECOMMENDED,
-                  if the parent list element has an implicit or explicit `list` role.
-                </p>
-                <p>
-                  Otherwise, <a><strong>any `role`</strong></a> if the parent list element does not expose an implicit or explicit `list` role.
-                </p>
-                <p class="note">
-                  See <a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, or
-                  <a href="#el-menu">`menu`</a> for allowed roles for list elements.
-                </p>
+              <div class="proposed correction" id="c8">
+                  <span class="marker">Proposed correction 8:</span> Clarify allowed roles for `li`
+                <ins>
+                    <p>
+                      <strong class="nosupport"><a>No `role`</a></strong> other than <code><a href="#index-aria-listitem">listitem</a></code>, which is NOT RECOMMENDED,
+                      if the parent list element has an implicit or explicit `list` role.
+                    </p>
+                    <p>
+                      Otherwise, <a><strong>any `role`</strong></a> if the parent list element does not expose an implicit or explicit `list` role.
+                    </p>
+                    <p class="note">
+                      See <a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, or
+                      <a href="#el-menu">`menu`</a> for allowed roles for list elements.
+                    </p>
+                </ins>
               </div>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
-              <div class="proposed-addition">
-                <p>Authors SHOULD NOT use the following <a href="#docconformance-deprecated">deprecated</a> DPub Roles:
-                  <a data-cite="dpub-aria-1.1#doc-biblioentry">`doc-biblioentry`</a>,
-                  <a data-cite="dpub-aria-1.1#doc-endnote">`doc-endnote`</a>.
-                </p>
+              <div class="proposed addition" id="a35">
+                  <span class="marker">Proposed addition 35:</span>
+                  <ins>
+                      <p>Authors SHOULD NOT use the following <a href="#docconformance-deprecated">deprecated</a> DPub Roles:
+                          <a data-cite="dpub-aria-1.1#doc-biblioentry">`doc-biblioentry`</a>,
+                          <a data-cite="dpub-aria-1.1#doc-endnote">`doc-endnote`</a>.
+                      </p>
+                  </ins>
               </div>
             </td>
           </tr>
@@ -2353,7 +2454,7 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-main">main</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `main` role.
               </p>
             </td>
@@ -2382,9 +2483,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a36">
+                    <span class="marker">Proposed addition 36:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2401,7 +2505,7 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-math">math</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `math` role.
               </p>
             </td>
@@ -2428,12 +2532,12 @@
                 or <a href="#index-aria-tree">`tree`</a>. (<code><a href="#index-aria-list">list</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
-              <div class="proposed-addition">
-                <p>Authors SHOULD NOT use <a href="#docconformance-deprecated">deprecated</a> <a href="#index-aria-directory">`directory`</a> role.
-                </p>
+              <div class="proposed addition" id="a37">
+                  <span class="marker">Proposed addition 37:</span>
+                  <ins><p>Authors SHOULD NOT use <a href="#docconformance-deprecated">deprecated</a> <a href="#index-aria-directory">`directory`</a> role.</p></ins>
               </div>
             </td>
           </tr>
@@ -2462,11 +2566,11 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-meter">`meter`</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                Authors SHOULD NOT use the <a href="#att-max">`aria-valuemax`</a> or 
+                Authors SHOULD NOT use the <a href="#att-max">`aria-valuemax`</a> or
                 <a href="#att-min">`aria-valuemin`</a> attributes on `meter` elements.
               </p>
               <p>
-                Otherwise, any 
+                Otherwise, any
                 <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any other `aria-*` attributes applicable to the `meter` role.
               </p>
@@ -2480,12 +2584,15 @@
               <code>role=<a href="#index-aria-navigation">navigation</a></code>
             </td>
             <td>
+                <div class="proposed addition" id="a38">
+                    <span class="marker">Proposed addition 38</span>
+                </div>
               <p>
                 Roles:
                 <a href="#index-aria-menu">`menu`</a>,
                 <a href="#index-aria-menubar">`menubar`</a>,
-                <span class="proposed-addition"><a href="#index-aria-none">`none`</a>,
-                <a href="#index-aria-presentation">`presentation`</a></span>
+                <ins class="proposed" cite="#a38"><a href="#index-aria-none">`none`</a>,
+                <a href="#index-aria-presentation">`presentation`</a></ins>
                 or <a href="#index-aria-tablist">`tablist`</a>. (<code><a href="#index-aria-navigation">navigation</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
@@ -2495,7 +2602,7 @@
                 or <a data-cite="dpub-aria-1.1#doc-toc">`doc-toc`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2556,11 +2663,12 @@
                 or <a href="#index-aria-tree">`tree`</a>. (<code><a href="#index-aria-list">list</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
-              <div class="proposed-addition">
-                <p>Authors SHOULD NOT use <a href="#docconformance-deprecated">deprecated</a> <a href="#index-aria-directory">`directory`</a> role.
+              <div class="proposed addition" id="a39">
+                <span class="marker">Proposed addition 39:</span>
+                <ins><p>Authors SHOULD NOT use <a href="#docconformance-deprecated">deprecated</a> <a href="#index-aria-directory">`directory`</a> role.</ins>
                 </p>
               </div>
             </td>
@@ -2577,7 +2685,7 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-group">group</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `group` role.
               </p>
             </td>
@@ -2616,7 +2724,7 @@
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-status">status</a></code> is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2632,9 +2740,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-paragraph">`paragraph`</a></code> is NOT RECOMMENDED.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+              <div class="proposed addition" id="a40">
+                  <span class="marker">Proposed addition 40:</span>
+                  <ins><p><a>Naming Prohibited</a></p></ins>
+              </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2663,11 +2774,14 @@
               <p>
                 <a><strong class="nosupport">No `role`</strong></a>
               </p>
-              <div class="proposed-addition">
-                <p>
-                  Authors MAY specify the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on the `picture` element.
-                  Otherwise, no other allowed `aria-*` attributes.
-                </p>
+              <div class="proposed addition" id="a41">
+                <span class="marker">Proposed addition 41:</span>
+                <ins>
+                    <p>
+                      Authors MAY specify the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on the `picture` element.
+                      Otherwise, no other allowed `aria-*` attributes.
+                    </p>
+                </ins>
               </div>
             </td>
           </tr>
@@ -2682,9 +2796,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a42">
+                    <span class="marker">Proposed addition 42:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2701,12 +2818,12 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-progressbar">progressbar</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                Authors SHOULD NOT use the <a href="#att-max">`aria-valuemax`</a> attribute 
+                Authors SHOULD NOT use the <a href="#att-max">`aria-valuemax`</a> attribute
                 on `progress` elements.
               </p>
               <p>
-                Otherwise, 
-                any <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise,
+                any <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any other `aria-*` attributes applicable to the `progressbar` role.
               </p>
             </td>
@@ -2722,9 +2839,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a43">
+                    <span class="marker">Proposed addition 43:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2740,9 +2860,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a44">
+                    <span class="marker">Proposed addition 44:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2758,9 +2881,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a45">
+                    <span class="marker">Proposed addition 45:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2777,7 +2903,7 @@
                 <a><strong>Any `role`</strong></a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2790,12 +2916,16 @@
               <code>role=<a href="#index-aria-deletion">`deletion`</a></code>
             </td>
             <td>
-              <p class="proposed-addition">
-                <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-deletion">`deletion`</a></code> is NOT RECOMMENDED.
-              </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a46">
+                    <span class="marker">Proposed addition 46:</span>
+                    <ins><p><a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-deletion">`deletion`</a></code> is NOT RECOMMENDED.</p></ins>
+                </div>
+                <div class="proposed addition" id="a47">
+                    <span class="marker">Proposed addition 47:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2811,9 +2941,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a48">
+                    <span class="marker">Proposed addition 48:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2841,21 +2974,24 @@
               </p>
             </td>
             <td>
-              <div class="proposed-addition">
-                <p>
-                  Roles:
-                  <a href="#index-aria-form">`form`</a>,
-                  <a href="#index-aria-group">`group`</a>,
-                  <a href="#index-aria-none">`none`</a>,
-                  <a href="#index-aria-presentation">`presentation`</a> or
-                  <a href="#index-aria-region">`region`</a>.
-                  (<code><a href="#index-aria-search">search</a></code> is also allowed, but NOT RECOMMENDED.)
-                </p>
-                <p>
-                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
-                  and any `aria-*` attributes applicable to the allowed roles.
-                </p>
-              </div>
+                <div class="proposed addition" id="a49">
+                    <span class="marker">Proposed addition 49:</span>
+                    <ins>
+                        <p>
+                            Roles:
+                            <a href="#index-aria-form">`form`</a>,
+                            <a href="#index-aria-group">`group`</a>,
+                            <a href="#index-aria-none">`none`</a>,
+                            <a href="#index-aria-presentation">`presentation`</a> or
+                            <a href="#index-aria-region">`region`</a>.
+                            (<code><a href="#index-aria-search">search</a></code> is also allowed, but NOT RECOMMENDED.)
+                        </p>
+                        <p>
+                            <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
+                            and any `aria-*` attributes applicable to the allowed roles.
+                        </p>
+                    </ins>
+                </div>
             </td>
           </tr>
           <tr>
@@ -2865,14 +3001,17 @@
             <td>
               <p>
                 <code>role=<a href="#index-aria-region">region</a></code> if the
-                [^section^] element has an 
+                [^section^] element has an
                 <a data-cite="accname-1.2/#dfn-accessible-name">accessible name</a>
-              </p> 
+              </p>
               <p>
                 Otherwise, <code>role=<a href="#index-aria-generic">generic</a></code>
               </p>
             </td>
             <td>
+                <div class="proposed addition" id="a50">
+                    <span class="marker">Proposed addition 50</span>
+                </div>
               <p>
                 Roles:
                 <a href="#index-aria-alert">`alert`</a>,
@@ -2884,7 +3023,7 @@
                 <a href="#index-aria-dialog">`dialog`</a>,
                 <a href="#index-aria-document">`document`</a>,
                 <a href="#index-aria-feed">`feed`</a>,
-                <span class="proposed-addition"><a href="#index-aria-group">`group`</a>,</span>
+                <ins class="proposed" cite="#a50"><a href="#index-aria-group">`group`</a>,</ins>
                 <a href="#index-aria-log">`log`</a>,
                 <a href="#index-aria-main">`main`</a>,
                 <a href="#index-aria-marquee">`marquee`</a>,
@@ -2895,7 +3034,7 @@
                 <a href="#index-aria-search">`search`</a>,
                 <a href="#index-aria-status">`status`</a>
                 or <a href="#index-aria-tabpanel">`tabpanel`</a>.
-                (<code>role=<a href="#index-aria-region">region</a></code> is also allowed, 
+                (<code>role=<a href="#index-aria-region">region</a></code> is also allowed,
                 but NOT RECOMMENDED. <code>role=<a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.)
               </p>
               <p>
@@ -2930,7 +3069,7 @@
                 <a data-cite="dpub-aria-1.1#doc-toc">`doc-toc`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -2951,8 +3090,8 @@
                 Authors SHOULD NOT use the `aria-multiselectable` attribute on a `select` element.
               </p>
               <p>
-                Otherwise, 
-                any <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise,
+                any <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any other `aria-*` attributes applicable to the `combobox` or `menu` role.
               </p>
             </td>
@@ -2973,8 +3112,8 @@
                 Authors SHOULD NOT use the `aria-multiselectable` attribute on a `select` element.
               </p>
               <p>
-                Otherwise, 
-                any <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise,
+                any <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any other `aria-*` attributes applicable to the `listbox` role.
               </p>
             </td>
@@ -2991,12 +3130,12 @@
                 If used as a valid descendant of a `select` element: <strong class="nosupport"><a>no `role`</a> or `aria-*` attributes</strong>
               </p>
               <p>
-                Otherwise, <a><strong>any `role`</strong></a> if the element is used outside of its intended context as a child of the `button` part of a customizable `select` element, 
+                Otherwise, <a><strong>any `role`</strong></a> if the element is used outside of its intended context as a child of the `button` part of a customizable `select` element,
                 though <code><a href="#index-aria-generic">generic</a></code> is NOT RECOMMENDED.
               </p>
               <p><a>Naming Prohibited</a></p>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3025,9 +3164,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a51">
+                    <span class="marker">Proposed addition 51:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3056,9 +3198,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a52">
+                    <span class="marker">Proposed addition 52:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3074,9 +3219,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-strong">`strong`</a></code> is NOT RECOMMENDED.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a53">
+                    <span class="marker">Proposed addition 53:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3105,9 +3253,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-subscript">`subscript`</a></code> is NOT RECOMMENDED.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a54">
+                    <span class="marker">Proposed addition 54:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3125,22 +3276,23 @@
               </div>
             </td>
             <td>
-              <div class="proposed-correction">
-                <p>
-                  <a><strong class="nosupport">No `role`</strong></a> if the `summary` element is a 
+              <div class="proposed correction" id="c9">
+                  <span class="marker">Proposed correction 9:</span> Clarify allowances for `summary` element
+                <ins><p>
+                  <a><strong class="nosupport">No `role`</strong></a> if the `summary` element is a
                   <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a> element.
                 </p>
                 <p>
-                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>, 
+                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>,
                   `aria-disabled`, and `aria-haspopup` attributes.
                 </p>
                 <p>
-                  Otherwise, if the `summary` element is <strong>not</strong> a 
-                  <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a> 
-                  element, authors MAY specify <a><strong>any `role`</strong></a>, and any 
-                  <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                  Otherwise, if the `summary` element is <strong>not</strong> a
+                  <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a>
+                  element, authors MAY specify <a><strong>any `role`</strong></a>, and any
+                  <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                   and any `aria-*` attributes applicable to the allowed roles.
-                </p>
+                </p></ins>
                </div>
             </td>
           </tr>
@@ -3155,9 +3307,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-superscript">superscript</a></code> is NOT RECOMMENDED.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a55">
+                    <span class="marker">Proposed addition 55:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3175,7 +3330,7 @@
                 <a><strong>Any `role`</strong></a>, though `graphics-document` is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3192,7 +3347,7 @@
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-table">table</a></code> is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3209,7 +3364,7 @@
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-rowgroup">rowgroup</a></code> is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3252,7 +3407,7 @@
                 <a><strong>any `role`</strong></a>.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3282,7 +3437,7 @@
                 <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-textbox">textbox</a></code>, which is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `textbox` role.
               </p>
             </td>
@@ -3299,7 +3454,7 @@
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-rowgroup">rowgroup</a></code> is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3311,13 +3466,13 @@
             <td>
               <p>
                 <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
-                <a href="#index-aria-rowheader">`rowheader`</a> or 
+                <a href="#index-aria-rowheader">`rowheader`</a> or
                 <a href="#index-aria-rowheader">`cell`</a> if the ancestor
                 `table` element is exposed as a `role=table`
               </p>
               <p>
                 <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
-                <a href="#index-aria-rowheader">`rowheader`</a> or 
+                <a href="#index-aria-rowheader">`rowheader`</a> or
                 <a href="#index-aria-rowheader">`gridcell`</a> if the ancestor
                 `table` element is exposed as a `role=grid` or `treegrid`
              </p>
@@ -3354,7 +3509,7 @@
                 <a><strong>any `role`</strong></a>.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3371,7 +3526,7 @@
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-rowgroup">rowgroup</a></code> is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3387,9 +3542,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-time">time</a></code> is NOT RECOMMENDED.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a56">
+                    <span class="marker">Proposed addition 56:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3422,7 +3580,7 @@
                 <a><strong>any `role`</strong></a>, though <code><a href="#index-aria-row">row</a></code> is NOT RECOMMENDED.
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3451,9 +3609,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>, though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a57">
+                    <span class="marker">Proposed addition 57:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3480,14 +3641,15 @@
                 or <a href="#index-aria-tree">`tree`</a>. (<code><a href="#index-aria-list">list</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
-              <div class="proposed-addition">
-                <p>
-                  Authors SHOULD NOT use the <a href="#docconformance-deprecated">deprecated</a> 
+              <div class="proposed addition" id="a58">
+                  <span class="marker">Proposed addition 58:</span>
+                <ins><p>
+                  Authors SHOULD NOT use the <a href="#docconformance-deprecated">deprecated</a>
                   <a href="#index-aria-directory">`directory`</a> role.
-                </p>
+                </p></ins>
               </div>
             </td>
           </tr>
@@ -3502,9 +3664,12 @@
               <p>
                 <a><strong>Any `role`</strong></a>
               </p>
-              <p class="proposed-addition"><a>Naming Prohibited</a></p>
+                <div class="proposed addition" id="a59">
+                    <span class="marker">Proposed addition 59:</span>
+                    <ins><p><a>Naming Prohibited</a></p></ins>
+                </div>
               <p>
-                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> 
+                Otherwise, <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
             </td>
@@ -3521,7 +3686,7 @@
                 Role: <a href="#index-aria-application">`application`</a>
               </p>
               <p>
-                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the `application` role.
               </p>
             </td>
@@ -3534,7 +3699,8 @@
               <a>No corresponding role</a>
             </td>
             <td>
-              <div class="proposed-correction">
+              <div class="proposed correction" id="c10">
+                  <span class="marker">Proposed correction 10:</span> Clarify allowances for `wbr` element
                 <p>
                   Roles:
                   <a href="#index-aria-none">`none`</a>
@@ -3551,12 +3717,12 @@
       </table>
 
       <p>
-        The elements marked with <dfn>No corresponding role</dfn>, in the second column of 
-        the table do not have any <a>implicit ARIA semantics</a>, but they do have meaning 
-        and this meaning may be represented in roles, states and properties not provided 
-        by ARIA, and exposed to users of assistive technology via accessibility APIs. 
-        It is therefore recommended that authors add a `role` attribute to a semantically 
-        neutral element such as a [^div^] or [^span^], rather than overriding the semantics 
+        The elements marked with <dfn>No corresponding role</dfn>, in the second column of
+        the table do not have any <a>implicit ARIA semantics</a>, but they do have meaning
+        and this meaning may be represented in roles, states and properties not provided
+        by ARIA, and exposed to users of assistive technology via accessibility APIs.
+        It is therefore recommended that authors add a `role` attribute to a semantically
+        neutral element such as a [^div^] or [^span^], rather than overriding the semantics
         of the listed elements.
       </p>
       <div class="note">
@@ -3603,7 +3769,10 @@
 &lt;/figure&gt;
 </pre><!-- source: http://www.geocities.com/SoHo/7373/aquatic.htm#fish -->
       </aside>
-      <section class="proposed-addition">
+        <div  class="proposed addition" id="a60">
+            <span class="marker">Proposed addition 60:</span>Add section on requirements for use of ARIA attributes to name elements
+        </div>
+      <section class="proposed addition">
         <h3 id="docconformance-naming">
           Requirements for use of ARIA attributes to name <!-- and describe --> elements
         </h3>
@@ -3645,14 +3814,14 @@
           Requirements for use of ARIA attributes in place of equivalent HTML attributes
         </h3>
         <p>
-          Unless otherwise stated, authors MAY use `aria-*` attributes in place of their HTML equivalents on HTML elements where the `aria-*` semantics would 
-          be expected. For example, authors MAY specify `aria-disabled=true` on a [^button^] element, while also implementing the necessary scripting to functionally 
+          Unless otherwise stated, authors MAY use `aria-*` attributes in place of their HTML equivalents on HTML elements where the `aria-*` semantics would
+          be expected. For example, authors MAY specify `aria-disabled=true` on a [^button^] element, while also implementing the necessary scripting to functionally
           disable the `button`, rather than the use `disabled` attribute.
         </p>
         <p>
           As stated in <a data-cite="wai-aria-1.2#host_general_conflict">WAI-ARIA's Conflicts with Host Language Semantics</a>,
-          when HTML elements use <em>both</em> `aria-*` attributes and their host language (HTML) equivalents, user agents MUST ignore the WAI-ARIA attributes – the 
-          native HTML attributes with the same <a>implicit ARIA semantics</a> take precedence. For this reason, authors SHOULD NOT specify both the native HTML attribute 
+          when HTML elements use <em>both</em> `aria-*` attributes and their host language (HTML) equivalents, user agents MUST ignore the WAI-ARIA attributes – the
+          native HTML attributes with the same <a>implicit ARIA semantics</a> take precedence. For this reason, authors SHOULD NOT specify both the native HTML attribute
           and the equivalent `aria-*` attribute on an element. Please review each attribute for any further author specific requirements.
         </p>
         <p>
@@ -3694,13 +3863,14 @@
                 `aria-checked="true"`
               </td>
               <td>
-                <div class="proposed-correction">
+                <div class="proposed correction" id="c11">
+                    <span class="marker">Proposed correction 11:</span>
                   <p>
-                    Use the `checked` attribute on any element that is allowed the `checked` attribute in HTML. 
+                    Use the `checked` attribute on any element that is allowed the `checked` attribute in HTML.
                     Use the <a data-cite="html/input.html#dom-input-indeterminate">`indeterminate`</a> IDL attribute to indicate the "mixed" state for <a data-cite="html/input.html#checkbox-state-(type=checkbox)">`input type=checkbox`</a> elements.
                   </p>
                   <p>
-                    Authors MUST NOT use the <a data-cite="wai-aria-1.2#aria-checked">`aria-checked`</a> attribute on any element where the <a data-cite="html/form-control-infrastructure.html#concept-fe-checked">checkedness</a>, or the 
+                    Authors MUST NOT use the <a data-cite="wai-aria-1.2#aria-checked">`aria-checked`</a> attribute on any element where the <a data-cite="html/form-control-infrastructure.html#concept-fe-checked">checkedness</a>, or the
                     indeterminate checked value of the element can be in opposition to the current value of the `aria-checked` attribute.
                   </p>
                 </div>
@@ -3724,7 +3894,7 @@
                   Use the `disabled` attribute on any element that is allowed the `disabled` attribute in HTML.
                 </p>
                 <p>
-                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-disabled">`aria-disabled`</a> attribute on any element that is allowed the `disabled` attribute in HTML, 
+                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-disabled">`aria-disabled`</a> attribute on any element that is allowed the `disabled` attribute in HTML,
                   or any element with a WAI-ARIA role which allows the `aria-disabled` attribute</a>.
                 </p>
                 <p>
@@ -3744,7 +3914,7 @@
               </td>
               <td>
                 <p>
-                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on any HTML element that allows <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> to 
+                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on any HTML element that allows <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> to
                   be specified, with the exception of focusable elements and the <a href="#el-body">`body`</a> element.
                 </p>
                 <p>
@@ -3755,7 +3925,7 @@
                   can be tabbed to via a keyboard. For instance, an element with `tabindex="-1"` is focusable but is not a tabbable element.
                 </div>
                 <div class="note">
-                  Using `aria-hidden="true"` on an element that has the `hidden` attribute is at best an unnecessary redundancy. At worst its usage can 
+                  Using `aria-hidden="true"` on an element that has the `hidden` attribute is at best an unnecessary redundancy. At worst its usage can
                   prevent access to the content if the `hidden` attribute's default UA style of `display: none` has been purposeuflly overwritten by an author or user style sheet.
                   Finally, if the `hidden` attribute has the value of `until-found`, the use of `aria-hidden=true` will prevent this content from being discoverable to users of assistive
                   technology when it is found via a browser's in-page find feature and visually rendered to users.
@@ -3775,7 +3945,7 @@
                   `placeholder` attribute in HTML.
                 </p>
                 <p>
-                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-placeholder">`aria-placeholder`</a> attribute on any element that is allowed the `placeholder` attribute in HTML, 
+                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-placeholder">`aria-placeholder`</a> attribute on any element that is allowed the `placeholder` attribute in HTML,
                   or any element with a WAI-ARIA role which allows the `aria-placeholder` attribute.
                 </p>
                 <p>
@@ -3956,7 +4126,10 @@
           </tbody>
         </table>
       </section>
-      <section class="proposed-addition">
+        <div class="proposed addition" id="a61">
+            <span class="marker">Proposed addition 61:</span> Add section on requirements for deprecated ARIA features
+        </div>
+        <section class="proposed addition">
         <h2 id="docconformance-deprecated">
           Requirements for deprecated ARIA role, state and property and attributes
         </h2>
@@ -3968,7 +4141,7 @@
         </p>
 
         <h3>Deprecated ARIA roles</h3>
-        <ul>  
+        <ul>
           <li><a data-cite="wai-aria-1.2#directory">`directory`</a></li>
         </ul>
         <div class="note">
