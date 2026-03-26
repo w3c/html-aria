@@ -1,0 +1,18 @@
+# Implementation report
+
+- [ ] fix caps for should not and is not recommended
+- [ ] autonomous custom element
+
+# Spec
+
+- [ ] For proposed corrections, I feel it's not clear what's changed. The previous wording has been removed, so it's hard to understand what was changed.
+- [x] Some additions listed at the top of the document are not marked up. Example: https://github.com/w3c/html-aria/pull/533
+- [ ] Fix id numbers to be correlative
+- [ ] Fix correction idd numbering
+
+embed
+iframe
+img with an accessible name
+img with no accessible name refers to img with accessible name
+object
+index-aria-img
