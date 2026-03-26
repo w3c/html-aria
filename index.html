@@ -1776,9 +1776,10 @@
             </th>
             <td>
               <aside class="proposed correction" id="c5">
-                  <span class="marker">Proposed correction 5:</span>Clarify that if an <code>img</code> has no accessible name, then it must not be exposed as an image role.
+                  <span class="marker">Proposed correction 5:</span>Clarify img with empty alt
+                  versus with no alt.
                   <del class="proposed"
-                    cite="#c4"><code>role=<a href="#index-aria-presentation">presentation</a></code></del>
+                    cite="#c5"><code>role=<a href="#index-aria-presentation">presentation</a></code></del>
                   <ins><p id="el-img-empty-alt">
                       If the `img` has an empty `alt` ([^img/alt^]`=""`) and lacks any other
                       <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming methods</a>:<br>
@@ -1795,7 +1796,10 @@
             </td>
             <td>
               <aside class="proposed correction" id="c6">
-                  <span class="marker">Proposed correction 6:</span>Clarify that if an <code>img</code> has no accessible name, then it must not be exposed as an image role.
+                  <span class="marker">Proposed correction 6:</span>Clarify that if an
+                  <code>img</code> has no accessible name, it can have roles either
+                  `none`,
+                  or `presentation`. `img` or `image` allowed, though not recommended.
                   <ins>
                       <p>
                         If the `img` has no `alt` attribute or accessible name:
