@@ -1109,13 +1109,26 @@
             </td>
             <td>
               <aside class="proposed correction" id="c2">
-                <span class="marker">Proposed correction 3:</span> Disallow roles and aria-* attributes on the datalist element.
-                <p>
-                    <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-listbox">listbox</a></code>, which is NOT RECOMMENDED.
-                </p>
-                <p>
+                <span class="marker">Proposed correction 2:</span> Disallow roles and aria-*
+                attributes on the datalist element.
+                <del class="proposed" cite="#c2">
+                  <p><a><strong class="nosupport">No `role`</strong></a>
+                  </p>
+                  <p>
+                    <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
+                    and any `aria-*` attributes applicable to the
+                    <a href="#index-aria-listbox">`listbox`</a> role.
+                    </p>
+                    </del> <ins class="proposed" cite="#c2">
+                      <p>
+                        <a><strong class="nosupport">No `role`</strong></a> other than
+                        <code><a href="#index-aria-listbox">listbox</a></code>, which is NOT
+                        RECOMMENDED.
+                      </p>
+                      <p>
                     <strong>No `aria-*` attributes</strong>.
-                </p>
+                  </p>
+                </ins>
               </aside>
             </td>
           </tr>
