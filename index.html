@@ -1306,7 +1306,9 @@
                 <a href="#index-aria-application">`application`</a>,
                 <a href="#index-aria-document">`document`</a>,
                 <a href="#index-aria-img">`img`</a>,
-                <a href="#index-aria-img">`image`</a>,
+                <ins class="proposed" cite="#a62">
+                  <a href="#index-aria-img">`image`</a>,
+                </ins>
                 <a href="#index-aria-none">`none`</a>
                 or <a href="#index-aria-presentation">`presentation`</a>.
               </p>
@@ -1668,7 +1670,9 @@
                 <a href="#index-aria-application">`application`</a>,
                 <a href="#index-aria-document">`document`</a>,
                 <a href="#index-aria-img">`img`</a>,
-                <a href="#index-aria-img">`image`</a>,
+                <ins class="proposed" cite="#a62">
+                  <a href="#index-aria-img">`image`</a>,
+                </ins>
                 <a href="#index-aria-none">`none`</a>
                 or <a href="#index-aria-presentation">`presentation`</a>.
               </p>
@@ -1689,7 +1693,7 @@
               If the `img` has non-empty [^img/alt^] (`alt="some text"`) or an accessible name is provided by another
               <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming method</a>,
               or the `img` has no `alt` and has not been provided a name:<br>
-              <code>role=<a href="#index-aria-img">img or image</a></code>
+              <code>role=<a href="#index-aria-img">img <ins class="proposed" cite="#a62"> or image</a></code></ins>
             </td>
             <td>
             <aside class="proposed correction" id="a27">
@@ -1720,7 +1724,10 @@
                 <a href="#index-aria-switch">`switch`</a>,
                 <a href="#index-aria-tab">`tab`</a> or
                 <a href="#index-aria-treeitem">`treeitem`</a>.
-                (<code><a href="#index-aria-img">img or image</a></code> is also allowed, but NOT RECOMMENDED.)
+                <ins class="proposed" cite="#a62">
+                  (<code><a href="#index-aria-img">img or image</a></code>
+                  is also allowed, but NOT RECOMMENDED.)
+                </ins>
               </p>
               <p>
                 DPub Role:
@@ -1748,7 +1755,7 @@
                       <p id="el-img-no-alt" tabindex="-1">
                           If the `img` <a data-cite="html/images.html#unknown-images">lacks an `alt` attribute</a> and lacks any other
                           <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming methods</a>:<br>
-                          <code>role=<a href="#index-aria-img">img or image</a></code>
+                          <code>role=<a href="#index-aria-img">img <ins class="proposed" cite="#a62">or image</ins></a></code>
                       </p>
                   </ins>
               </aside>
@@ -1761,7 +1768,8 @@
                         If the `img` has no `alt` attribute or accessible name:
                         <a><strong class="nosupport">No `role`</strong></a> other than the
                         <code>role=<a href="#index-aria-none">none</a></code> or <code><a href="#index-aria-presentation">presentation</a></code> roles.
-                        (<code>role=<a href="#index-aria-img">img or image</a></code> is also allowed, but NOT RECOMMENDED.)
+                        (<code>role=<a href="#index-aria-img">img <ins class="proposed" cite="#a62">or image</ins></a></code>
+                        is also allowed, but NOT RECOMMENDED.)
                           </p>
                       <p>
                         If the `img` has an empty `alt=""` attribute and no `aria-label` or `aria-labelledby` attributes to provide it an accessible name:
@@ -2633,7 +2641,9 @@
                 <a href="#index-aria-application">`application`</a>,
                 <a href="#index-aria-document">`document`</a>,
                 <a href="#index-aria-img">`img`</a>
-                or <a href="#index-aria-img">`image`</a>.
+                <ins class="proposed" cite="#a62">
+                  or <a href="#index-aria-img">`image`</a>.
+                </ins>
               </p>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> and
@@ -4660,7 +4670,12 @@
         </tr>
         <tr>
           <th tabindex="-1" id="index-aria-img">
-            <a data-cite="wai-aria-1.2#img">`img` or `image`</a>
+            <aside class="proposed addition" id="a62">
+              <span class="marker">Proposed addition 62:</span> Add `image` role
+              <a data-cite="wai-aria-1.2#img">`img`
+                <ins>or `image`</ins>
+              </a>
+            </aside>
           </th>
           <td>
             <ul>
