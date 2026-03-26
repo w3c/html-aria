@@ -1106,7 +1106,7 @@
               <code>role=<a href="#index-aria-listbox">listbox</a></code>
             </td>
             <td>
-              <aside class="proposed correction" id="c3">
+              <aside class="proposed correction" id="c2">
                 <span class="marker">Proposed correction 3:</span> Disallow roles and aria-* attributes on the datalist element.
                 <p>
                     <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-listbox">listbox</a></code>, which is NOT RECOMMENDED.
@@ -1625,13 +1625,24 @@
               [^html^]
             </th>
             <td>
-              <code>role=<a href="#index-aria-generic">generic</a></code>
+              <aside class="proposed correction" id="c3">
+                <span class="marker">Proposed correction 3:</span> Clarify the HTML element
+                implicit `role=generic`
+              </aside>
+              <del class="proposed"
+                cite="#c3"><code>role=<a href="#index-aria-document">document</a></code></del>
+              <ins class="proposed"
+                cite="#c3"><code>role=<a href="#index-aria-generic">generic</a></code></ins>
             </td>
             <td>
-              <p>
-                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-document">document</a></code>
-                or <code><a href="#index-aria-generic">generic</a></code>, which are NOT RECOMMENDED.
-              </p>
+              <ins class="proposed" cite="#c3">
+                <p>
+                  <a><strong class="nosupport">No `role`</strong></a> other than
+                  <code><a href="#index-aria-document">document</a></code>
+                  or <code><a href="#index-aria-generic">generic</a></code>, which are NOT
+                  RECOMMENDED.
+                  </p>
+              </ins>
               <p>
                 <strong>No `aria-*` attributes</strong>.
               </p>
