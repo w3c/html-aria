@@ -1878,7 +1878,8 @@
               </p>
               <aside class="proposed correction" id="c7">
                   <span class="marker">Proposed correction 7:</span>
-                  <ins><p>Authors <a href="#att-checked">MUST NOT use the `aria-checked` attribute on `input type=checkbox` elements</a>.</p></ins>
+                  <p>Authors <a href="#att-checked"><ins>MUST</ins><del>SHOULD</del> NOT use the
+                      `aria-checked` attribute on `input type=checkbox` elements</a>.</p>
               </aside>
               <p>
                 Otherwise, any <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> and
@@ -3913,14 +3914,15 @@
               <td>
                 <aside class="proposed correction" id="c11">
                     <span class="marker">Proposed correction 11:</span>
-                  <p>
+                  <ins>
+                    <p>
                     Use the `checked` attribute on any element that is allowed the `checked` attribute in HTML.
                     Use the <a data-cite="html/input.html#dom-input-indeterminate">`indeterminate`</a> IDL attribute to indicate the "mixed" state for <a data-cite="html/input.html#checkbox-state-(type=checkbox)">`input type=checkbox`</a> elements.
                   </p>
                   <p>
                     Authors MUST NOT use the <a data-cite="wai-aria-1.2#aria-checked">`aria-checked`</a> attribute on any element where the <a data-cite="html/form-control-infrastructure.html#concept-fe-checked">checkedness</a>, or the
                     indeterminate checked value of the element can be in opposition to the current value of the `aria-checked` attribute.
-                  </p>
+                  </p></ins>
                 </aside>
                 <p>
                   Authors MAY use the `aria-checked` attribute on any other element with a WAI-ARIA role which allows the attribute.
