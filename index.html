@@ -485,8 +485,10 @@
         that apply to [=HTML elements=]. The <a>implicit ARIA semantics</a> of these elements are defined
         in [[html-aam-1.0|HTML AAM]].
       </p>
-        <aside class="proposed correction" id="c1"><span class="marker">Proposed
-            Correction 1:</span></aside>
+      <aside class="proposed correction" id="c1"><span class="marker">Proposed
+          Correction 1:</span>It is NOT RECOMMENDED for authors to specify the implicit
+          role of the element, the `generic` role, or a role deprecated by ARIA on these
+          elements.</aside>
       <p>
         Each language feature (element) in a cell in the first column implies the ARIA semantics
         (role, states, and properties) given in the cell in  the second column of the same row.
@@ -1697,14 +1699,17 @@
           <tr>
             <th id="el-img" tabindex="-1">
               <aside class="proposed correction" id="c4">
-                  <span class="marker">Proposed correction 4:</span>
-                  <ins><p>[^img^]</p></ins>
+                <span class="marker">Proposed correction 4:</span>
+                Split `img` based on whether it has an accessible name or not.
               </aside>
+              <del class="proposed" cite="#c4">[^img^] with [^img/alt^]`="some text"`</del>
+              <ins class="proposed" cite="#c4`">[^img^]</ins>
             </th>
             <td>
-              If the `img` has non-empty [^img/alt^] (`alt="some text"`) or an accessible name is provided by another
+              <ins class="proposed" cite="#c4">If the `img` has non-empty [^img/alt^]
+                (`alt="some text"`) or an accessible name is provided by another
               <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming method</a>,
-              or the `img` has no `alt` and has not been provided a name:<br>
+              or the `img` has no `alt` and has not been provided a name:</ins><br>
               <code>role=<a href="#index-aria-img">img <ins class="proposed" cite="#a62"> or image</a></code></ins>
             </td>
             <td>
@@ -1753,11 +1758,14 @@
           </tr>
           <tr>
             <th id="el-img-no-name" tabindex="-1">
-              [^img^] with no accessible name
+              <del class="proposed" cite="#c4">[^img^] with [^img/alt^]`=""`</del>
+              <ins class="proposed" cite="#c4">[^img^] with no accessible name</ins>
             </th>
             <td>
               <aside class="proposed correction" id="c5">
                   <span class="marker">Proposed correction 5:</span>Clarify that if an <code>img</code> has no accessible name, then it must not be exposed as an image role.
+                  <del class="proposed"
+                    cite="#c4"><code>role=<a href="#index-aria-presentation">presentation</a></code></del>
                   <ins><p id="el-img-empty-alt">
                       If the `img` has an empty `alt` ([^img/alt^]`=""`) and lacks any other
                       <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming methods</a>:<br>
