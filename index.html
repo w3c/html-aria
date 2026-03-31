@@ -3,13 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>ARIA in HTML</title>
-    <script>
-      // fix bug where proposed amendmenmds are identified as candidate amendments
-      function proposedAmendments(config, doc, utils) {
-        const status = document.getElementById("sotd");
-        status.innerHTML = status.innerHTML.replace(/Candidate (corrections|additions)/g, "Proposed $1");
-      }
-    </script>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
     <script class="remove">
     var respecConfig = {
@@ -48,7 +41,6 @@
       wgPublicList: "public-aria",
       xref: true,
       errata: "https://github.com/w3c/html-aria/issues/new/",
-      postProcess: [proposedAmendments]
     };
     </script>
     <link rel="stylesheet" href="makeup.css">
