@@ -1118,25 +1118,25 @@
               <aside class="proposed correction" id="c2">
                 <span class="marker">Proposed correction 2:</span> Disallow roles and aria-*
                 attributes on the datalist element.
-                <del>
-                  <p><a><strong class="nosupport">No `role`</strong></a>
-                  </p>
-                  <p>
-                    <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
-                    and any `aria-*` attributes applicable to the
-                    <a href="#index-aria-listbox">`listbox`</a> role.
-                    </p>
-                    </del> <ins>
-                      <p>
-                        <a><strong class="nosupport">No `role`</strong></a> other than
-                        <code><a href="#index-aria-listbox">listbox</a></code>, which is NOT
-                        RECOMMENDED.
-                      </p>
-                      <p>
-                    <strong>No `aria-*` attributes</strong>.
-                  </p>
-                </ins>
               </aside>
+              <del class="proposed" cite="#c2">
+                <p><a><strong class="nosupport">No `role`</strong></a>
+                </p>
+                <p>
+                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
+                  and any `aria-*` attributes applicable to the
+                  <a href="#index-aria-listbox">`listbox`</a> role.
+                </p>
+              </del> <ins class="proposed" cite="#c2">
+                <p>
+                  <a><strong class="nosupport">No `role`</strong></a> other than
+                  <code><a href="#index-aria-listbox">listbox</a></code>, which is NOT
+                  RECOMMENDED.
+                </p>
+                <p>
+                  <strong>No `aria-*` attributes</strong>.
+                </p>
+              </ins>
             </td>
           </tr>
           <tr>
@@ -1787,8 +1787,9 @@
               <aside class="proposed correction" id="c5">
                 <span class="marker">Proposed correction 5:</span>Clarify img with empty alt
                 versus with no alt.
-                <del><code>role=<a href="#index-aria-presentation">presentation</a></code></del>
-                <ins><p id="el-img-empty-alt">
+              </aside>
+                <del class="proposed" cite="#c5"><code>role=<a href="#index-aria-presentation">presentation</a></code></del>
+                <ins class="proposed" cite="#c5"><p id="el-img-empty-alt">
                     If the `img` has an empty `alt` ([^img/alt^]`=""`) and lacks any other
                     <a data-cite="html-aam-1.0#img-element-accessible-name-computation">`img` naming methods</a>:<br>
                     <code>role=<a href="#index-aria-none">none</a></code>,
@@ -1800,37 +1801,35 @@
                     <code>role=<a href="#index-aria-img">img <ins class="proposed" cite="#a62">or image</ins></a></code>
                   </p>
                 </ins>
-              </aside>
             </td>
             <td>
               <aside class="proposed correction" id="c6">
-                <span class="marker">Proposed correction 6:</span>Clarify that if an
-                <code>img</code> has no accessible name, it can have roles either
-                `none`,
+                <span class="marker">Proposed correction 6:</span>
+                Clarify that if an <code>img</code> has no accessible name, it can have roles either `none`
                 or `presentation`. `img` or `image` allowed, though not recommended.
-                <ins>
-                  <p>
-                    If the `img` has no `alt` attribute or accessible name:
-                    <a><strong class="nosupport">No `role`</strong></a> other than the
-                    <code>role=<a href="#index-aria-none">none</a></code> or <code><a href="#index-aria-presentation">presentation</a></code> roles.
-                    (<code>role=<a href="#index-aria-img">img <ins class="proposed" cite="#a62">or image</ins></a></code>
-                    is also allowed, but NOT RECOMMENDED.)
-                  </p>
-                  <p>
-                    If the `img` has an empty `alt=""` attribute and no `aria-label` or `aria-labelledby` attributes to provide it an accessible name:
-                    <a><strong class="nosupport">No `role`</strong></a> other than the <code>role=<a href="#index-aria-none">none</a></code> or
-                    <code><a href="#index-aria-presentation">presentation</a></code> roles, which are NOT RECOMMENDED.
-                  </p>
-                  <p>
-                    <strong>No `aria-*` attributes</strong>
-                    except <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden="true"`</a>.
-                  </p>
-                  <p>
-                    Otherwise, if the `img` has an author defined accessible name,
-                    see <a href="#el-img">`img` with an accessible name</a>.
-                  </p>
-                </ins>
               </aside>
+              <ins class="proposed" cite="#c6">
+                <p>
+                  If the `img` has no `alt` attribute or accessible name:
+                  <a><strong class="nosupport">No `role`</strong></a> other than the
+                  <code>role=<a href="#index-aria-none">none</a></code> or <code><a href="#index-aria-presentation">presentation</a></code> roles.
+                  (<code>role=<a href="#index-aria-img">img <ins class="proposed" cite="#a62">or image</ins></a></code>
+                  is also allowed, but NOT RECOMMENDED.)
+                </p>
+                <p>
+                  If the `img` has an empty `alt=""` attribute and no `aria-label` or `aria-labelledby` attributes to provide it an accessible name:
+                  <a><strong class="nosupport">No `role`</strong></a> other than the <code>role=<a href="#index-aria-none">none</a></code> or
+                  <code><a href="#index-aria-presentation">presentation</a></code> roles, which are NOT RECOMMENDED.
+                </p>
+                <p>
+                  <strong>No `aria-*` attributes</strong>
+                  except <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden="true"`</a>.
+                </p>
+                <p>
+                  Otherwise, if the `img` has an author defined accessible name,
+                  see <a href="#el-img">`img` with an accessible name</a>.
+                </p>
+              </ins>
             </td>
           </tr>
           <tr>
@@ -1886,9 +1885,10 @@
               </p>
               <aside class="proposed correction" id="c7">
                 <span class="marker">Proposed correction 7:</span>
-                <p>Authors <a href="#att-checked"><ins>MUST</ins><del>SHOULD</del> NOT use the
-                  `aria-checked` attribute on `input type=checkbox` elements</a>.</p>
+                Replace "SHOULD NOT" with "MUST NOT" regarding use of `aria-checked` on `input type=checkbox`
               </aside>
+              <p>Authors <a href="#att-checked"><ins class="proposed" cite="#c7">MUST</ins> <del class="proposed" cite="#c7">SHOULD</del> NOT use the
+                `aria-checked` attribute on `input type=checkbox` elements</a>.</p>
               <p>
                 Otherwise, any <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> and
                 any `aria-*` attributes applicable to the allowed roles.
@@ -2100,12 +2100,11 @@
                 <a href="#index-aria-menuitemradio">`menuitemradio`</a>. (<code><a href="#index-aria-radio">radio</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
               <aside class="proposed correction" id="c8">
-                <span class="marker">Proposed correction 8:</span> Clarify that
-                <code>aria-checked</code> attribute is not recommended for
-                <code>input type=radio</code> elements.</span>
-                <ins><p>Authors <a href="#att-checked">MUST NOT use the
-                  `aria-checked` attribute on `input type=radio` elements</a>.</p></ins>
+                <span class="marker">Proposed correction 8:</span>
+                Clarify that `aria-checked` attribute is not allowed for `input type=radio` elements.
               </aside>
+              <ins class="proposed" cite="#c8"><p>Authors <a href="#att-checked">MUST NOT use the
+                `aria-checked` attribute on `input type=radio` elements</a>.</p></ins>
               <p>
                 Otherwise, any <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> and any `aria-*` attributes
                 applicable to the allowed roles.
@@ -2455,22 +2454,21 @@
             </td>
             <td>
               <aside class="proposed correction" id="c9">
-                <span class="marker">Proposed correction 9:</span> Clarify allowed roles for
-                `li`
-                <ins>
-                  <p>
-                    <strong class="nosupport"><a>No `role`</a></strong> other than <code><a href="#index-aria-listitem">listitem</a></code>, which is NOT RECOMMENDED,
-                    if the parent list element has an implicit or explicit `list` role.
-                  </p>
-                  <p>
-                    Otherwise, <a><strong>any `role`</strong></a> if the parent list element does not expose an implicit or explicit `list` role.
-                  </p>
-                  <p class="note">
-                    See <a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, or
-                    <a href="#el-menu">`menu`</a> for allowed roles for list elements.
-                  </p>
-                </ins>
+                <span class="marker">Proposed correction 9:</span> Clarify allowed roles for `li`
               </aside>
+              <ins class="proposed" cite="#c9">
+                <p>
+                  <strong class="nosupport"><a>No `role`</a></strong> other than <code><a href="#index-aria-listitem">listitem</a></code>, which is NOT RECOMMENDED,
+                  if the parent list element has an implicit or explicit `list` role.
+                </p>
+                <p>
+                  Otherwise, <a><strong>any `role`</strong></a> if the parent list element does not expose an implicit or explicit `list` role.
+                </p>
+                <p class="note">
+                  See <a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, or
+                  <a href="#el-menu">`menu`</a> for allowed roles for list elements.
+                </p>
+              </ins>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>
                 and any `aria-*` attributes applicable to the allowed roles.
@@ -3337,25 +3335,24 @@
             </td>
             <td>
               <aside class="proposed correction" id="c10">
-                <span class="marker">Proposed correction 10:</span> Clarify allowances for
-                `summary` element
-                <p>
-                  <a><strong class="nosupport">No `role`</strong></a> if the `summary` element is a
-                  <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary
-                    for its parent details</a><ins> element</ins>.
-                </p>
-                <p>
-                  <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>,
-                  `aria-disabled`, and `aria-haspopup` attributes.
-                </p>
-                <p>
-                  Otherwise, <ins>if the `summary` element is <strong>not</strong> a
-                  <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a>
-                  element,</ins> authors MAY specify <a><strong>any `role`</strong></a>, and any
-                  <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
-                  and any `aria-*` attributes applicable to the allowed roles.
-                </p>
-               </aside>
+                <span class="marker">Proposed correction 10:</span> Clarify allowances for `summary` element
+              </aside>
+              <p>
+                <a><strong class="nosupport">No `role`</strong></a> if the `summary` element is a
+                <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary
+                  for its parent details</a><ins class="proposed" cite="#c10"> element</ins>.
+              </p>
+              <p>
+                <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a>,
+                `aria-disabled`, and `aria-haspopup` attributes.
+              </p>
+              <p>
+                Otherwise, <ins class="proposed" cite="#c10">if the `summary` element is <strong>not</strong> a
+                <a data-cite="html/interactive-elements.html#summary-for-its-parent-details">summary for its parent details</a>
+                element,</ins> authors MAY specify <a><strong>any `role`</strong></a>, and any
+                <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a>
+                and any `aria-*` attributes applicable to the allowed roles.
+              </p>
             </td>
           </tr>
           <tr>
@@ -3762,32 +3759,31 @@
             </td>
             <td>
               <aside class="proposed correction" id="c11">
-                <span class="marker">Proposed correction 11:</span> Clarify allowances for
-                `wbr` element
-                <del>
-                  <p>
-                    <a><strong>Any</strong> `role`</a>
-                  </p>
-                  <p>
-                    <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>
-                    and
-                    any `aria-*` attributes applicable to the allowed roles.
-                  </p>
-                </del>
-                <ins>
-                  <p>
-                    Roles:
-                    <a href="#index-aria-none">`none`</a>
-                    or <a href="#index-aria-presentation">`presentation`</a>
-                  </p>
-                  <p>
-                    Authors MAY specify the <a
-                      data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on the
-                    `wbr` element.
-                    Otherwise, no other allowed `aria-*` attributes.
-                    </p>
-                </ins>
+                <span class="marker">Proposed correction 11:</span> Clarify allowances for `wbr` element
               </aside>
+              <del class="proposed" cite="#c11">
+                <p>
+                  <a><strong>Any</strong> `role`</a>
+                </p>
+                <p>
+                  <a data-cite="wai-aria-1.1#global_states">Global `aria-*` attributes</a>
+                  and
+                  any `aria-*` attributes applicable to the allowed roles.
+                </p>
+              </del>
+              <ins class="proposed" cite="#c11">
+                <p>
+                  Roles:
+                  <a href="#index-aria-none">`none`</a>
+                  or <a href="#index-aria-presentation">`presentation`</a>
+                </p>
+                <p>
+                  Authors MAY specify the <a
+                    data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on the
+                  `wbr` element.
+                  Otherwise, no other allowed `aria-*` attributes.
+                  </p>
+              </ins>
             </td>
           </tr>
         </tbody>
