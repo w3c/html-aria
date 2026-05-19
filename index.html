@@ -1655,6 +1655,13 @@
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
                 and any `aria-*` attributes applicable to the allowed roles.
               </p>
+
+              <p>
+                If the `img` has no `alt` attribute or no accessible name:
+                <a><strong class="nosupport">No `role`</strong></a> other than the  
+                <code>role=<a href="#index-aria-none">none</a></code> or <code><a href="#index-aria-presentation">presentation</a></code> roles.
+                (<code>role=<a href="#index-aria-img">img or image</a></code> is also allowed, but NOT RECOMMENDED.)
+              </p>
             </td>
           </tr>
           <tr>
@@ -1673,12 +1680,6 @@
             </td>
             <td>
               <div class="correction proposed">
-              <p>
-                If the `img` has no `alt` attribute or accessible name:
-                <a><strong class="nosupport">No `role`</strong></a> other than the  
-                <code>role=<a href="#index-aria-none">none</a></code> or <code><a href="#index-aria-presentation">presentation</a></code> roles.
-                (<code>role=<a href="#index-aria-img">img or image</a></code> is also allowed, but NOT RECOMMENDED.)
-              </p>
               <p>
                 If the `img` has an empty `alt=""` attribute and no `aria-label` or `aria-labelledby` attributes to provide it an accessible name:
                 <a><strong class="nosupport">No `role`</strong></a> other than the <code>role=<a href="#index-aria-none">none</a></code> or
