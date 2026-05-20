@@ -119,7 +119,7 @@
         </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/469">29 June 2023 - Addition:</a>
-          Update the <a href="#el-s">`s`</a> element allowed roles to indicate use of `role=deletion` on the element would be considered redundnat.
+          Update the <a href="#el-s">`s`</a> element allowed roles to indicate use of `role=deletion` on the element would be considered redundant.
         </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/435">31 May 2023 - Correction:</a>
@@ -326,7 +326,7 @@
         </pre>
         <p>
           An author would need to take additional steps to ensure the default functionality and presentation of 
-          the `button` was removed, and even doing so may still not be enough to fully supress the element's 
+          the `button` was removed, and even doing so may still not be enough to fully suppress the element's 
           implicit features depending on how the user chooses to engage with the web page. E.g., by turning on 
           Windows high contrast themes, or viewing the web page in a browser's reader mode.
         </p>
@@ -411,7 +411,7 @@
         <p>
           In the following example, rather than using a `generic` role, authors are advised to use a `div` in 
           place of the `article` element. If changing the HTML element is not possible, specifying a role of 
-          `presentation` or `none` would be acceptable alternaties to remove the implicit role of the `article`.
+          `presentation` or `none` would be acceptable alternatives to remove the implicit role of the `article`.
         </p>
         <pre class="HTML example" title="Do not specify elements as generic">
           &lt;!-- Avoid doing this! -->
@@ -2258,7 +2258,7 @@
                 <a><strong class="nosupport">no `role`</strong></a>
               </p>
               <p>
-                Otherwise, if the `label` is not associted with an element then <a><strong>any `role`</strong></a>, 
+                Otherwise, if the `label` is not associated with an element then <a><strong>any `role`</strong></a>, 
                 though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p><a>Naming Prohibited</a> if exposed as the `generic` role, or if exposed as another role which prohibits naming.</p>
@@ -3757,7 +3757,7 @@
                 </div>
                 <div class="note">
                   Using `aria-hidden="true"` on an element that has the `hidden` attribute is at best an unnecessary redundancy. At worst its usage can 
-                  prevent access to the content if the `hidden` attribute's default UA style of `display: none` has been purposeuflly overwritten by an author or user style sheet.
+                  prevent access to the content if the `hidden` attribute's default UA style of `display: none` has been purposefully overwritten by an author or user style sheet.
                   Finally, if the `hidden` attribute is in the Hidden Until Found state, the use of `aria-hidden=true` will prevent this content from being discoverable to users 
                   of assistive technology when it is found via a browser's in-page find feature and visually rendered to users.
                 </div>
