@@ -119,7 +119,7 @@
         </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/469">29 June 2023 - Addition:</a>
-          Update the <a href="#el-s">`s`</a> element allowed roles to indicate use of `role=deletion` on the element would be considered redundnat.
+          Update the <a href="#el-s">`s`</a> element allowed roles to indicate use of `role=deletion` on the element would be considered redundant.
         </li>
         <li>
           <a href="https://github.com/w3c/html-aria/pull/435">31 May 2023 - Correction:</a>
@@ -326,7 +326,7 @@
         </pre>
         <p>
           An author would need to take additional steps to ensure the default functionality and presentation of 
-          the `button` was removed, and even doing so may still not be enough to fully supress the element's 
+          the `button` was removed, and even doing so may still not be enough to fully suppress the element's 
           implicit features depending on how the user chooses to engage with the web page. E.g., by turning on 
           Windows high contrast themes, or viewing the web page in a browser's reader mode.
         </p>
@@ -349,17 +349,15 @@
           &lt;button role="button"&gt;...&lt;/button&gt;
         </pre>
         <p>
-          Similarly, the following uses a `role=group` on a [^fieldset^] element, and a `role=Main` on a [^main^] element.
+          Similarly, the following uses a `role=group` on a [^fieldset^] element, and a `role=main` on a [^main^] element.
           This is unnecessary, because the `fieldset` element is implicitly exposed as a `role=group`, as is the `main` element 
-          implicitly exposed as a `role=main`. Again, in practice this will likely not have any unforeseen side effects to users 
-          of assistive technology, as long as the declaration of the `role` value uses [=ASCII lowercase=]. 
-          Please see [[[#case-sensitivity]]] for more information.
+          implicitly exposed as a `role=main`.
         </p>
         <pre class="HTML example" title="Redundant role on fieldset and main">
           &lt;!-- Avoid doing this! -->
           &lt;fieldset role="group"&gt;...&lt;/fieldset&gt;
-          &lt;!-- or this! -->
-          &lt;main role="Main">...&lt;/main>
+          &lt;!-- And similarly this! -->
+          &lt;main role="main">...&lt;/main>
         </pre>
         <p>
           The following uses a `role=list` on an [^ul^] element. As the `ul` element has an implicit role of `list`, 
@@ -413,7 +411,7 @@
         <p>
           In the following example, rather than using a `generic` role, authors are advised to use a `div` in 
           place of the `article` element. If changing the HTML element is not possible, specifying a role of 
-          `presentation` or `none` would be acceptable alternaties to remove the implicit role of the `article`.
+          `presentation` or `none` would be acceptable alternatives to remove the implicit role of the `article`.
         </p>
         <pre class="HTML example" title="Do not specify elements as generic">
           &lt;!-- Avoid doing this! -->
@@ -457,7 +455,7 @@
           The HTML parser will modify the above markup to be output as the following:
         </p>
         <pre class="HTML example" title="Unwanted rendered markup with valid alternative solution">
-          &lt!-- The previous example's markup will render as follows -->
+          &lt;!-- The previous example's markup will render as follows -->
           &lt;p>...&lt;/p>
           &lt;div role=link tabindex=0>...&lt;/div> 
           ... 
@@ -2260,7 +2258,7 @@
                 <a><strong class="nosupport">no `role`</strong></a>
               </p>
               <p>
-                Otherwise, if the `label` is not associted with an element then <a><strong>any `role`</strong></a>, 
+                Otherwise, if the `label` is not associated with an element then <a><strong>any `role`</strong></a>, 
                 though <code><a href="#index-aria-generic">generic</a></code> SHOULD NOT be used.
               </p>
               <p><a>Naming Prohibited</a> if exposed as the `generic` role, or if exposed as another role which prohibits naming.</p>
@@ -2292,14 +2290,14 @@
             </th>
             <td>
               <p>
-                If the `li` is a child of a list element 
-                (<a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, 
-                <a href="#el-menu">`menu`</a>)
+                If the `li` is a child of an element exposed as a `role=list` 
+                (e.g., <a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, 
+                <a href="#el-menu">`menu`</a>):
                 <code>role=<a href="#index-aria-listitem">listitem</a></code>.
               </p>
               <p>
-                Otherwise, if the `li` is not a child of a list element it is exposed as 
-                a <code>role=<a href="#index-aria-generic">generic</a></code>.
+                Otherwise, 
+                <code>role=<a href="#index-aria-generic">generic</a></code>
               </p>
             </td>
             <td>
@@ -3725,7 +3723,7 @@
                 </p>
                 <p>
                   Authors MAY use the <a data-cite="wai-aria-1.2#aria-disabled">`aria-disabled`</a> attribute on any element that is allowed the `disabled` attribute in HTML, 
-                  or any element with a WAI-ARIA role which allows the `aria-disabled` attribute</a>.
+                  or any element with a WAI-ARIA role which allows the `aria-disabled` attribute.
                 </p>
                 <p>
                   Authors SHOULD NOT use `aria-disabled="true"` on any element which also has a `disabled` attribute.
@@ -3744,11 +3742,14 @@
               </td>
               <td>
                 <p>
-                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on any HTML element that allows <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> to 
+                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-hidden">`aria-hidden`</a> attribute on any HTML element that allows 
+                  <a data-cite="wai-aria-1.2#global_states">global `aria-*` attributes</a> to 
                   be specified, with the exception of focusable elements and the <a href="#el-body">`body`</a> element.
                 </p>
                 <p>
-                  It is generally NOT RECOMMENDED for authors to use `aria-hidden="true"` on any element which also has the `hidden` attribute specified. However, authors MUST NOT use `aria-hidden="true"` on any element which also has the `hidden` attribute specified in the `until-found` state.
+                  It is generally NOT RECOMMENDED for authors to use `aria-hidden="true"` on any element which also has the `hidden` attribute specified. However, 
+                  authors MUST NOT use `aria-hidden="true"` on any element which also has the `hidden` attribute specified in the 
+                  <a data-cite="html/interaction.html#attr-hidden-until-found-state">Hidden Until Found</a> state.
                 </p>
                 <div class="note">
                   A focusable element is any element which can be focused by use of keyboard or pointer device. Focusable elements are not always elements which
@@ -3756,9 +3757,9 @@
                 </div>
                 <div class="note">
                   Using `aria-hidden="true"` on an element that has the `hidden` attribute is at best an unnecessary redundancy. At worst its usage can 
-                  prevent access to the content if the `hidden` attribute's default UA style of `display: none` has been purposeuflly overwritten by an author or user style sheet.
-                  Finally, if the `hidden` attribute has the value of `until-found`, the use of `aria-hidden=true` will prevent this content from being discoverable to users of assistive
-                  technology when it is found via a browser's in-page find feature and visually rendered to users.
+                  prevent access to the content if the `hidden` attribute's default UA style of `display: none` has been purposefully overwritten by an author or user style sheet.
+                  Finally, if the `hidden` attribute is in the Hidden Until Found state, the use of `aria-hidden=true` will prevent this content from being discoverable to users 
+                  of assistive technology when it is found via a browser's in-page find feature and visually rendered to users.
                 </div>
               </td>
             </tr>
@@ -3843,7 +3844,7 @@
                   allowed the `readonly` attribute in HTML.
                 </p>
                 <p>
-                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-readonly">`aria-readonly`</a> attribute on any element with a WAI-ARIA role which allows the attribute</a>.
+                  Authors MAY use the <a data-cite="wai-aria-1.2#aria-readonly">`aria-readonly`</a> attribute on any element with a WAI-ARIA role which allows the attribute.
                 </p>
                 <p>
                   Authors SHOULD NOT use the `aria-readonly="true"` on any element which also has a `readonly` attribute.
@@ -3958,7 +3959,7 @@
       </section>
       <section class="addition">
         <h2 id="docconformance-deprecated">
-          Requirements for deprecated ARIA role, state and property and attributes
+          Requirements for deprecated ARIA role, state and property attributes
         </h2>
         <p>
           The ARIA Specification's <a data-cite="wai-aria-1.2#deprecated">Deprecated Requirements</a> section indicates that if an ARIA feature is marked as deprecated then authors are advised not to use said feature for new content.
@@ -3972,7 +3973,7 @@
           <li><a data-cite="wai-aria-1.2#directory">`directory`</a></li>
         </ul>
         <div class="note">
-          <p>The `directory` role is marked for deprecation in [[wai-aria-1.2|WAI-ARIA 1.2]]. In reality, the `directory` role had no functional difference to an element with an implicit or explicit `list` role. Authors are advised to use one of HTML's native list elements, or an ARIA `list` instead.</p>
+          <p>The `directory` role is marked for deprecation in [[wai-aria-1.2|WAI-ARIA 1.2]]. In reality, the `directory` role had no functional difference compared to an element with an implicit or explicitly declared `list` role. Authors are advised to use one of HTML's native list elements, or an ARIA `list` role instead.</p>
         </div>
 
         <h3>Deprecated DPub ARIA roles</h3>
