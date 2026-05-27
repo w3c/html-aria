@@ -32,7 +32,7 @@
 
 <body>
   <h1>Implementation Report</h1>
-  <p>Last updated 19 August 2021</p>
+  <p>Last updated 22 March 2026</p>
   <p>
     Status of checks against the <a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a> rules in the following implementations:
   </p>
@@ -54,7 +54,7 @@
     The following is a list of rules which are presently in process of being implemented, but at this time are marked as 'at risk' due to a lack of two implementations.
   </p> -->
 
-  <p>As of 06-26-2021 all features have been verified to have at least two implementations. There are no features at risk.</p>
+  <p>As of 22 March 2026, the features listed in this report have been verified against the current state of the specification. There are no features at risk due to lack of implementations.</p>
 
   <p><b>Note:</b> IBM presently does not return errors/warnings when explicit roles are specified on elements which natively expose that role implicitly.</p>
 
@@ -140,14 +140,15 @@
           <code>a</code> without <code>href</code>
         </th>
         <td>
-          No corresponding role
+          <code>role=generic</code>
         </td>
         <td>
           <p>
-            <strong>Any</strong> <code>role</code>
+            <strong>Any</strong> <code>role</code>, though <code>generic</code> should not be used.
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -168,7 +169,8 @@
            <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -182,11 +184,11 @@
           <code>address</code>
         </th>
         <td>
-          No corresponding role
+          <code>role=group</code>
         </td>
         <td>
           <p>
-            <strong>Any</strong> <code>role</code>
+            <strong>Any</strong> <code>role</code>, though <code>group</code> is NOT RECOMMENDED.
           </p>
           <p>
             Global <code>aria-*</code> attributes and
@@ -218,6 +220,29 @@
         <td><strong class=yes>yes</strong><br> - note: same expectations for <code>area</code> with or without <code>href</code></td>
         <td><strong class=yes>yes</strong><br> - note: same expectations for <code>area</code> with or without <code>href</code></td>
         <td><strong class=yes>yes</strong><br> - note: same expectations for <code>area</code> with or without <code>href</code></td>
+      </tr>
+      <tr id="el-area-no-href" tabindex="-1">
+        <th>
+          <code>area</code> without <code>href</code>
+        </th>
+        <td>
+          <code>role="generic"</code>
+        </td>
+        <td>
+          <p>
+            Roles:
+              <code>button</code> or <code>link</code>. (<code>generic</code> is also allowed, but SHOULD NOT be used.)
+          </p>
+          <p>
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
+            any <code>aria-*</code> attributes applicable to the allowed roles.
+          </p>
+        </td>
+        <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/area-test.html">area</a></td>
+        <td><strong class=yes>yes</strong></td>
+        <td><strong class=yes>yes</strong></td>
+        <td><strong class=yes>yes</strong></td>
       </tr>
       <tr id="el-article" tabindex="-1">
         <th>
@@ -263,12 +288,14 @@
             <code>presentation</code>,
             <code>region</code>
             or <code>search</code>.
+            (<code>complementary</code> is also allowed, but is NOT RECOMMENDED.)
           </p>
           <p>
             DPub Roles:
             <code>doc-dedication</code>,
             <code>doc-example</code>,
             <code>doc-footnote</code>,
+            <code>doc-glossary</code>,
             <code>doc-pullquote</code>,
             <code>doc-tip</code>
           </p>
@@ -310,16 +337,17 @@
         </th>
         <td>
           Role exposed from author defined <code>ElementInternals</code>.
-          Otherwise no corresponding role.
+          Otherwise <code>role=generic</code>.
         </td>
         <td>
           <p>If role defined by <code>ElementInternals</code>,
             <strong class="nosupport">no <code>role</code></strong>.</p>
           <p>
-            Otherwise, <strong>any</strong> <code>role</code>
+            Otherwise, <strong>any</strong> <code>role</code>, though <code>generic</code> should not be used.
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited if exposed as <code>generic</code>, or as another role which prohibits naming.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -341,7 +369,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -377,7 +406,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -398,7 +428,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -433,16 +464,16 @@
           <code>body</code>
         </th>
         <td>
-          No corresponding role
+          <code>role=generic</code>
         </td>
         <td>
           <p>
-            <strong class="nosupport">No <code>role</code></strong>
+            <strong class="nosupport">No <code>role</code></strong> other than <code>generic</code>, which SHOULD NOT be used.
           </p>
           <p>
-            Global <code>aria-*</code> attributes
-            and any <code>aria-*</code> attributes applicable to the
-            <code>document</code> role.
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes for the <code>generic</code> role,
+            with the exception that authors MUST NOT specify <code>aria-hidden=true</code> on the <code>body</code> element.
           </p>
         </td>
         <td><a href="https://w3c.github.io/html-aria/tests/body-head-test.html">body</a></td><!-- test case -->
@@ -464,8 +495,8 @@
             or <code>none</code>.
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
-            any <code>aria-*</code> attributes applicable to the allowed roles.
+            <code>aria-hidden</code>,
+            no other allowed <code>aria-*</code> attributes.
           </p>
         </td>
         <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/br-test.html">br</a></td>
@@ -484,14 +515,19 @@
           <p>
             Roles:
             <code>checkbox</code>,
+            <code>combobox</code>,
+            <code>gridcell</code>,
             <code>link</code>,
             <code>menuitem</code>,
             <code>menuitemcheckbox</code>,
             <code>menuitemradio</code>,
             <code>option</code>,
             <code>radio</code>,
+            <code>separator</code>,
+            <code>slider</code>,
             <code>switch</code>
-            or <code>tab</code>.
+            <code>tab</code>.,
+            or <code>treeitem</code>.
           </p>
           <p>
             Global <code>aria-*</code> attributes and
@@ -536,7 +572,8 @@
             <strong class="nosupport">No <code>role</code></strong>
           </p>
           <p>
-            Global <code>aria-*</code> attributes
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes.
           </p>
         </td>
         <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/caption-test.html">caption</a></td>
@@ -556,7 +593,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -577,7 +615,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -628,7 +667,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -646,12 +686,10 @@
         </td>
         <td>
           <p>
-            <strong class="nosupport">No <code>role</code></strong>
+            <strong class="nosupport">No <code>role</code></strong> other than <code>listbox</code>, which is NOT RECOMMENDED.
           </p>
           <p>
-            Global <code>aria-*</code> attributes
-            and any <code>aria-*</code> attributes applicable to the
-            <code>listbox</code> role.
+            No <code>aria-*</code> attributes.
           </p>
         </td>
         <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/datalist-test.html">datalist</a></td>
@@ -692,7 +730,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -772,10 +811,12 @@
         </td>
         <td>
           <p>
-            <strong>Any</strong> <code>role</code>
+            If a direct child of <a href="#el-dl">`dl`</a>, only <code>presentation</code> or <code>none</code>.
+            Otherwise, <strong>any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -844,7 +885,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -866,6 +908,7 @@
             <code>application</code>,
             <code>document</code>,
             <code>img</code>,
+            <code>image</code>,
             <code>presentation</code>
             or <code>none</code>.
           </p>
@@ -918,7 +961,8 @@
             or <code>none</code>.
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -936,18 +980,18 @@
         </td>
         <td>
           <p>
-            If the <code>figure</code> has no <code>figcaption</code> descendant:
+            If the <code>figure</code> has a valid <code>figcaption</code> descendant:
             <br>
-            <strong>Any</strong> <code>role</code>
+            <strong class="nosupport">No <code>role</code></strong> other than <code>figure</code>, which is not recommended.
           </p>
           <p>
-            If the <code>figure</code> has a <code>figcaption</code> descendant:
+            If no <code>figcaption</code> descendant:
             <br>
-            <strong class="nosupport">No <code>role</code></strong>.
-          </p>
-          <p>
             Global <code>aria-*</code> attributes and
-            any <code>aria-*</code> attributes applicable to the allowed roles.
+            any <code>aria-*</code> attributes applicable to the allowed roles, although <code>figure</code> is not recommended.
+          </p>
+          <p>DPUB Roles:
+            <code>doc-example</code>.
           </p>
         </td>
         <td>
@@ -982,7 +1026,8 @@
             <code>doc-footnote</code>.
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited if exposed as <code>generic</code>.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -1045,7 +1090,8 @@
             or <code>textbox</code>.
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited if exposed as <code>generic</code>.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -1125,7 +1171,8 @@
             or <code>presentation</code>.
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited if exposed as <code>generic</code>.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -1138,9 +1185,9 @@
         <th>
           <code>hgroup</code>
         </th>
-        <td>No corresponding role</td>
+        <td><code>role=group</code></td>
         <td>
-          <p><strong>Any</strong> <code>role</code>.</p>
+          <p><strong>Any</strong> <code>role</code>, though <code>group</code> is NOT RECOMMENDED.</p>
           <p>
             Global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
@@ -1183,10 +1230,10 @@
           <code>html</code>
         </th>
         <td>
-          <code>role=document</code>
+          <code>role=generic</code>
         </td>
         <td>
-          <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+          <strong class="nosupport">No <code>role</code></strong> other than <code>document</code> or <code>generic</code>, which are not recommended.
         </td>
         <td><a href="https://w3c.github.io/html-aria/tests/body-head-test.html">html</a></td><!-- test case -->
         <td><strong class=yes>yes</strong></td><!-- validator -->
@@ -1205,7 +1252,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -1227,6 +1275,7 @@
             <code>application</code>,
             <code>document</code>,
             <code>img</code>,
+            <code>image</code>,
             <code>none</code>
             or <code>presentation</code>.
           </p>
@@ -1245,7 +1294,10 @@
           <code>img</code> with <code>alt="some text"</code>
         </th>
         <td>
-          <code>role=img</code>
+          <p>
+            If the <code>img</code> has non-empty <code>alt</code> (<code>alt="some text"</code>) or an accessible name is provided by another <code>img</code> naming method, or the <code>img</code> has no <code>alt</code> and has not been provided a name:<br>
+            <code>role=img or image</code>
+          </p>
         </td>
         <td>
           <p>
@@ -1253,17 +1305,21 @@
             <code>button</code>,
             <code>checkbox</code>,
             <code>link</code>,
+            <code>math</code>,
             <code>menuitem</code>,
             <code>menuitemcheckbox</code>,
             <code>menuitemradio</code>,
+            <code>meter</code>,
             <code>option</code>,
             <code>progressbar</code>,
+            <code>radio</code>,
             <code>scrollbar</code>,
             <code>separator</code>,
             <code>slider</code>,
             <code>switch</code>,
             <code>tab</code> or
             <code>treeitem</code>
+            (<code>img or image</code> is also allowed, but NOT RECOMMENDED.)
           </p>
           <p>
             DPub Role:
@@ -1292,7 +1348,10 @@
           <code>alt=""</code>
         </th>
         <td>
-          <code>role=presentation</code>
+          <p>
+            If the <code>img</code> has an empty <code>alt</code> (<code>alt=""</code>) and lacks any other <code>img</code> naming methods:<br>
+            <code>role=none</code>, <code>role=presentation</code>
+          </p>
         </td>
         <td>
           <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
@@ -1321,7 +1380,10 @@
           <code>img</code> without <code>alt</code> attribute
         </th>
         <td>
-          <code>role=img</code>
+          <p>
+            If the <code>img</code> lacks an <code>alt</code> attribute and lacks any other <code>img</code> naming methods:<br>
+            <code>role=img or image</code>
+          </p>
         </td>
         <td>
           <p>
@@ -1351,14 +1413,20 @@
         <td>
           <p>
             Roles:
+            <code>checkbox</code>,
+            <code>combobox</code>,
+            <code>gridcell</code>,
             <code>link</code>,
             <code>menuitem</code>,
             <code>menuitemcheckbox</code>,
             <code>menuitemradio</code>,
             <code>option</code>,
             <code>radio</code>,
+            <code>separator</code>,
+            <code>slider</code>,
             <code>switch</code>
-            or <code>tab</code>.
+            <code>tab</code>,
+            or <code>treeitem</code>.
           </p>
           <p>
             Global <code>aria-*</code> attributes and
@@ -1388,7 +1456,7 @@
             <code>button</code> if used with <code>aria-pressed</code>.
           </p>
           <p>
-            Authors <em>SHOULD NOT</em> use the <code>aria-checked</code> attribute on <code>input type=checkbox</code> elements.
+            Authors <em class="rfc2119">MUST NOT</em> use the <code>aria-checked</code> attribute on <code>input type=checkbox</code> elements.
           </p>
           <p>
             Otherwise, any global <code>aria-*</code> attributes and
@@ -1538,13 +1606,21 @@
         </td>
         <td>
           <p>
-            Roles:
+            Roles (allowed but not recommended):
+            <code>button</code>,
+            <code>checkbox</code>,
+            <code>gridcell</code>,
             <code>link</code>,
             <code>menuitem</code>,
             <code>menuitemcheckbox</code>,
             <code>menuitemradio</code>,
+            <code>option</code>,
             <code>radio</code>
-            or <code>switch</code>.
+            <code>separator</code>,
+            <code>slider</code>,
+            <code>switch</code>,
+            <code>tab</code>,
+            or <code>treeitem</code>.
           </p>
           <p>
             Global <code>aria-*</code> attributes and
@@ -1630,7 +1706,7 @@
             <code>menuitemradio</code>
           </p>
           <p>
-            Authors <em class="rfc2119">SHOULD NOT</em> use the <code>aria-checked</code> attribute on <code>input type=radio</code> elements.
+            Authors <em class="rfc2119">MUST NOT</em> use the <code>aria-checked</code> attribute on <code>input type=radio</code> elements.
           </p>
           <p>
             Otherwise, any global <code>aria-*</code> attributes and
@@ -1681,11 +1757,25 @@
         </td>
         <td>
           <p>
-            <strong class="nosupport">No <code>role</code></strong>
+            Roles (allowed but not recommended):
+            <code>button</code>,
+            <code>checkbox</code>,
+            <code>gridcell</code>,
+            <code>link</code>,
+            <code>menuitem</code>,
+            <code>menuitemcheckbox</code>,
+            <code>menuitemradio</code>,
+            <code>option</code>,
+            <code>radio</code>,
+            <code>separator</code>,
+            <code>slider</code>,
+            <code>switch</code>,
+            <code>tab</code>,
+            or <code>treeitem</code>.
           </p>
           <p>
             Global <code>aria-*</code> attributes and
-            any <code>aria-*</code> attributes applicable to the <code>button</code> role.
+            any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
         <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/input-Reset-test.html">type=reset</a></td><!-- test case -->
@@ -1724,11 +1814,25 @@
         </td>
         <td>
           <p>
-            <strong class="nosupport">No <code>role</code></strong>
+            Roles (allowed but not recommended):
+            <code>button</code>,
+            <code>checkbox</code>,
+            <code>gridcell</code>,
+            <code>link</code>,
+            <code>menuitem</code>,
+            <code>menuitemcheckbox</code>,
+            <code>menuitemradio</code>,
+            <code>option</code>,
+            <code>radio</code>,
+            <code>separator</code>,
+            <code>slider</code>,
+            <code>switch</code>,
+            <code>tab</code>,
+            or <code>treeitem</code>.
           </p>
           <p>
             Global <code>aria-*</code> attributes and
-            any <code>aria-*</code> attributes applicable to the <code>button</code> role.
+            any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
         <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/input-Submit-test.html">type=submit</a></td><!-- test case -->
@@ -1879,7 +1983,7 @@
             Global <code>aria-*</code> attributes and any <code>aria-*</code> attributes applicable to the <code>textbox</code> role.
           </p>
         </td>
-        <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/input-Week-test.html">type=week</td>
+        <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/input-Week-test.html">type=week</a></td>
         <td><strong class=yes>yes</strong></td><!-- validator -->
         <td><strong class=yes>yes</strong></td><!-- arc -->
         <td><strong class=yes>yes</strong></td><!-- ibm -->
@@ -1896,7 +2000,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -1917,7 +2022,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -1935,16 +2041,22 @@
         </td>
         <td>
           <p>
-            <strong class="nosupport">No <code>role</code></strong>
+            If a <code>label</code> element is implicitly or explicitly associated with a labelable element,
+            <strong class="nosupport">no <code>role</code></strong>
           </p>
           <p>
-            global <code>aria-*</code> attributes
+            Otherwise, if the <code>label</code> is not associated with an element,
+            <strong>any <code>role</code></strong>, though <code>generic</code> SHOULD NOT be used.
+          </p>
+          <p>
+            Naming Prohibited if exposed as <code>generic</code>, or as another role which prohibits naming.
+            Otherwise, global <code>aria-*</code> attributes.
           </p>
         </td>
-        <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/label-test.html">label</a></td>
-        <td><strong class=yes>yes</strong></td><!-- validator -->
-        <td><strong class=yes>yes</strong></td><!-- arc -->
-        <td><strong class=yes>yes</strong></td><!-- ibm -->
+        <td><a href="https://w3c.github.io/html-aria/tests/label-element.html">label element</a></td>
+        <td><strong class=yes>yes</strong><br>- <a href="https://github.com/validator/validator/issues/1856">issue 1856</a></td><!-- validator -->
+        <td><strong class=yes>yes</strong><br>- <a href="https://github.com/ThePacielloGroup/WAI-ARIA-Usage/issues/84">issue 84</a></td><!-- arc -->
+        <td>not yet implemented<br>- <a href="https://github.com/IBMa/equal-access/issues/2335">issue 2335</a></td><!-- ibm -->
       </tr>
       <tr id="el-legend" tabindex="-1">
         <th>
@@ -1958,7 +2070,8 @@
             <strong class="nosupport">No <code>role</code></strong>
           </p>
           <p>
-            global <code>aria-*</code> attributes
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes.
           </p>
         </td>
         <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/legend-test.html">legend</a></td>
@@ -1971,30 +2084,37 @@
           <code>li</code>
         </th>
         <td>
-          <code>role=listitem</code>
+          <p>
+            If the `li` is a child of a list element 
+            (<a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, 
+            <a href="#el-menu">`menu`</a>)
+            <code>role=<a href="#index-aria-listitem">listitem</a></code>.
+          </p>
+          <p>
+            Otherwise, if the `li` is not a child of a list element it is exposed as 
+            a <code>role=<a href="#index-aria-generic">generic</a></code>.
+          </p>
         </td>
         <td>
           <p>
-            Roles:
-            <code>menuitem</code>,
-            <code>menuitemcheckbox</code>,
-            <code>menuitemradio</code>,
-            <code>option</code>,
-            <code>none</code>,
-            <code>presentation</code>,
-            <code>radio</code>,
-            <code>separator</code>,
-            <code>tab</code>
-            or <code>treeitem</code>
+            <strong class="nosupport">No <code>role</code></strong> other than <code><a href="#index-aria-listitem">listitem</a></code>, which is NOT RECOMMENDED,
+            if the parent list element has an implicit or explicit <code>list</code> role.
           </p>
           <p>
-            DPub Roles:
-            <code>doc-biblioentry</code>,
-            <code>doc-endnote</code>.
+            Otherwise, <strong>any <code>role</code></strong> if the parent list element does not expose an implicit or explicit <code>list</code> role.
+          </p>
+          <p>
+            See <a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, or
+            <a href="#el-menu">`menu`</a> for allowed roles for list elements.
           </p>
           <p>
             Global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
+          </p>
+          <p>
+            Authors SHOULD NOT use the following <a href="#docconformance-deprecated">deprecated</a> DPub Roles:
+            <code>doc-biblioentry</code>,
+            <code>doc-endnote</code>.
           </p>
         </td>
         <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/li-test.html">li</a></td>
@@ -2086,7 +2206,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -2105,7 +2226,6 @@
         <td>
           <p>
             Roles:
-            <code>directory</code>,
             <code>group</code>,
             <code>listbox</code>,
             <code>menu</code>,
@@ -2176,7 +2296,9 @@
           <p>
             Roles:
             <code>menu</code>,
-            <code>menubar</code>
+            <code>menubar</code>,
+            <code>none</code>,
+            <code>presentation</code>,
             or <code>tablist</code>.
           </p>
           <p>
@@ -2246,7 +2368,6 @@
         <td>
           <p>
             Roles:
-            <code>directory</code>,
             <code>group</code>,
             <code>listbox</code>,
             <code>menu</code>,
@@ -2355,7 +2476,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -2387,9 +2509,11 @@
          No corresponding role
         </td>
         <td>
-          <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+          <p><strong class="nosupport">No <code>role</code></strong></p>
+          <p>Authors MAY specify the <code>aria-hidden</code> attribute on the <code>picture</code> element.
+          Otherwise, no other allowed <code>aria-*</code> attributes.</p>
         </td>
-        <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/picture-test.html">picture</a></td>
+        <td><a href="https://w3c.github.io/html-aria/tests/aria-hidden-picture.html">aria-hidden on picture</a></td>
         <td><strong class=yes>yes</strong></td><!-- validator -->
         <td><strong class=yes>yes</strong></td><!-- arc -->
         <td><strong class=yes>yes</strong></td><!-- ibm -->
@@ -2406,7 +2530,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -2451,7 +2576,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -2472,7 +2598,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -2493,7 +2620,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -2528,14 +2656,15 @@
           <code>s</code>
         </th>
         <td>
-          No corresponding role
+          <code>role=deletion</code>
         </td>
         <td>
           <p>
-            <strong>Any</strong> <code>role</code>
+            <strong>Any</strong> <code>role</code>, though <code>deletion</code> is not recommended
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -2556,7 +2685,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -2580,6 +2710,29 @@
         <td><strong class=yes>yes</strong></td>
         <td><strong class=yes>yes</strong></td>
       </tr>
+      <tr id="el-search" tabindex="-1">
+        <th>
+          <code>search</code>
+        </th>
+        <td>
+          <code>role=search</code>
+        </td>
+        <td>
+          <p>
+            Roles:
+            <code>form</code>,
+            <code>group</code>,
+            <code>none</code>,
+            <code>presentation</code>,
+            or <code>region</code>.
+          </p>
+          <p>Global <code>aria-*</code> attributes and any <code>aria-*</code> attributes applicable to the allowed roles.</p>
+        </td>
+        <td><a href="https://github.com/w3c/html-aria/pull/401">search element PR (no dedicated test case yet)</a></td>
+        <td><span class="yes">yes</span></td><!-- validator -->
+        <td><span class="yes">yes</span></td><!-- arc -->
+        <td><span class="yes">yes</span></td><!-- ibm -->
+      </tr>
       <tr id="el-section" tabindex="-1">
         <th>
           <code>section</code>
@@ -2600,6 +2753,7 @@
             <code>dialog</code>,
             <code>document</code>,
             <code>feed</code>,
+            <code>group</code>,
             <code>log</code>,
             <code>main</code>,
             <code>marquee</code>,
@@ -2720,6 +2874,32 @@
           <br>
           test 2 - not yet implemented - <a href="https://github.com/IBMa/equal-access/issues/345">issue 345</a></td><!-- ibm -->
       </tr>
+      <tr id="el-selectedcontent" tabindex="-1">
+        <th>
+          <code>selectedcontent</code>
+        </th>
+        <td>
+          <code>role=generic</code>
+        </td>
+        <td>
+          <p>
+            If used as a valid descendant of a <code>select</code> element: <strong class="nosupport">no <code>role</code> or <code>aria-*</code> attributes</strong>
+          </p>
+          <p>
+            Otherwise, <strong>any <code>role</code></strong> if the element is used outside of its intended context as a child of the <code>button</code> part of a customizable <code>select</code> element, 
+            though <code>generic</code> is NOT RECOMMENDED.
+          </p>
+          <p>Naming Prohibited</p>
+          <p>
+            Otherwise, global <code>aria-*</code> attributes
+            and any <code>aria-*</code> attributes applicable to the allowed roles.
+          </p>
+        </td>
+        <td><a href="https://w3c.github.io/html-aria/tests/selectedcontent.html">selectedcontent</a></td>
+        <td><strong class=yes>yes</strong><br>- <a href="https://github.com/validator/validator/issues/1854">issue 1854</a></td><!-- validator -->
+        <td>in progress<br>- <a href="https://github.com/ThePacielloGroup/WAI-ARIA-Usage/issues/82">issue 82</a></td><!-- arc -->
+        <td>not yet implemented<br>- <a href="https://github.com/IBMa/equal-access/issues/2333">issue 2333</a></td><!-- ibm -->
+      </tr>
       <tr id="el-slot" tabindex="-1">
         <th>
           <code>slot</code>
@@ -2743,7 +2923,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -2779,7 +2960,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -2800,7 +2982,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -2858,7 +3041,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -2872,18 +3056,18 @@
           <code>summary</code>
         </th>
         <td>
-          <code>role=button</code>
+          No corresponding role
         </td>
         <td>
           <p>
-            <strong class="nosupport">No <code>role</code></strong>
+            <strong class="nosupport">No <code>role</code></strong> if summary for its parent <code>details</code> element. any global <code>aria-*</code> attributes and any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
-            any <code>aria-*</code> attributes applicable to the <code>button</code> role.
+            If not summary for its parent details element, global<code>aria-*</code> attributes, <code>aria-disabled</code>, and <code>aria-haspopup</code> attributes.
           </p>
         </td>
-        <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/summary-test.html">summary</a></td>
+        <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/summary-test.html">summary (legacy test)</a><br>
+          <a href="https://w3c.github.io/html-aria/tests/summary-allowances.html">summary allowances</a></td>
         <td><strong class=yes>yes</strong></td><!-- validator -->
         <td><strong class=yes>yes</strong> <br>- <a href="https://github.com/ThePacielloGroup/WAI-ARIA-Usage/issues/32">issue 32</a></td><!-- arc -->
         <td><strong class=yes>yes</strong></td><!-- ibm -->
@@ -2900,7 +3084,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -3041,7 +3226,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -3279,7 +3465,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -3298,7 +3485,6 @@
         <td>
           <p>
             Roles:
-            <code>directory</code>,
             <code>group</code>,
             <code>listbox</code>,
             <code>menu</code>,
@@ -3332,7 +3518,8 @@
             <strong>Any</strong> <code>role</code>
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
+            Naming Prohibited.
+            Otherwise, global <code>aria-*</code> attributes and
             any <code>aria-*</code> attributes applicable to the allowed roles.
           </p>
         </td>
@@ -3371,15 +3558,12 @@
         </td>
         <td>
           <p>
-            <strong>Any</strong> <code>role</code>
+            <code>none</code> or <code>presentation</code>.
           </p>
           <p>
-            Global <code>aria-*</code> attributes and
-            any <code>aria-*</code> attributes applicable to the allowed roles.
+            <code>aria-hidden</code>,
+            no other allowed global <code>aria-*</code> attributes.
           </p>
-          <div class="note">
-              NOTE: these rules will be updated in the next version of ARIA in HTML
-            </div>
         </td>
         <td><a href="https://thepaciellogroup.github.io/aria-test-builder/dist/testcases/wbr-test.html">wbr</a></td><!-- test case -->
         <td><strong class=yes>yes</strong></td><!-- validator -->
@@ -3425,18 +3609,19 @@
           <p>
             Use the <code>checked</code> attribute on any element that is
             allowed the <code>checked</code> attribute in HTML.
+            Use the <code>indeterminate</code> IDL attribute to indicate the "mixed" state for <code>input type=checkbox</code> elements.
           </p>
           <p>
-            Authors <em class="rfc2119">SHOULD NOT</em> use the <code>aria-checked</code> attribute on any element where the checkedness of the element can be in opposition to the current value of the <code>aria-checked</code> attribute.
+            Authors <em class="rfc2119">MUST NOT</em> use the <code>aria-checked</code> attribute on any element where the checkedness, or the indeterminate checked value of the element can be in opposition to the current value of the <code>aria-checked</code> attribute.
           </p>
           <p>
-            Authors <em class="rfc2119">MAY</em> use the <code>aria-checked</code> attribute on any other element with a WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr> role which allows the  attribute.
+            Authors <em class="rfc2119">MAY</em> use the <code>aria-checked</code> attribute on any other element with a WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr> role which allows the attribute.
           </p>
         </td>
         <td><a href="https://w3c.github.io/html-aria/tests/checked-test.html">checked (2 tests)</a></td>
         <td><strong class="yes">yes</strong><br>- <a href="https://github.com/validator/validator/issues/1122">issue 1122</a></td>
         <td><strong class=yes>yes</strong><br>- <a href="https://github.com/ThePacielloGroup/WAI-ARIA-Usage/issues/28">issue 28</a></td>
-        <td>not yet implemented<br>- <a href="https://github.com/IBMa/equal-access/issues/347">issue 347</a></td>
+        <td><strong class=yes>yes</strong><br>- <a href="https://github.com/IBMa/equal-access/issues/347">issue 347</a></td>
       </tr>
       <tr id="att-disabled" tabindex="-1">
         <th>
@@ -3473,10 +3658,10 @@
         </td>
         <td>
           <p>
-            Authors MAY use the <code>aria-hidden</code> attribute on any HTML element that allows global <code>aria-*</code> attributes, with the following exceptions:
+            Authors MAY use the <code>aria-hidden</code> attribute on any HTML element that allows global <code>aria-*</code> attributes, with the exception of focusable elements and the <a href="#el-body"><code>body</code></a> element.
           </p>
           <p>
-            Authors SHOULD NOT use the <code>aria-hidden="true"</code> attribute on any element which also has a <code>hidden</code> attribute.
+            It is generally NOT RECOMMENDED for authors to use <code>aria-hidden="true"</code> on any element which also has the <code>hidden</code> attribute specified. However, authors MUST NOT use <code>aria-hidden="true"</code> on any element which also has the <code>hidden</code> attribute specified in the <code>until-found</code> state.
           </p>
         </td>
         <td>
@@ -3775,5 +3960,6 @@
         <td><strong class="yes">yes</strong></td>
       </tr>
     </tbody>
+  </table>
 </body>
 </html>
