@@ -140,6 +140,10 @@ select:-moz-focusring {
   padding: 0;
 }
 
+select > button {
+  color: #000;
+}
+
 :focus:not([tabindex="-1"]) {
   outline: .25rem solid #aade87;
 }
@@ -398,4 +402,4 @@ code p {
   padding: 0px;
 }
 
-strong.question { font-family: "Roboto Slab", Cambria, Georgia, serif; color:#900;font-size:larger;font weight:bold}
+strong.question { font-family: "Roboto Slab", Cambria, Georgia, serif; color:#900;font-size:larger;font-weight:bold}
