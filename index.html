@@ -246,8 +246,8 @@
         attribute, allowing for an aural UI that will match the visual presentation of the control.
       </p>
       <p>
-        In the following example, a `button` element allows for a user to toggle the state of a 
-        setting within a web application. The `aria-pressed` attribute is used to 
+        In the following example, a `button` element allows for a user to toggle the state of a
+        setting within a web application. The `aria-pressed` attribute is used to
         augment the `button` element. When in the "pressed" state that information can be
         exposed to users of assistive technologies.
       </p>
@@ -255,40 +255,40 @@
       &lt;button aria-pressed=true>...&lt;/button>
       </pre>
       <p>
-        There are also situations where certain `aria-*` attributes are allowed for use on elements 
+        There are also situations where certain `aria-*` attributes are allowed for use on elements
         with specific `role`s, while the equivalent native attribute is currently not valid in HTML itself.
       </p>
       <p>
-        For instance, HTML has no direct concept of a disabled hyperlink (`a href` element). 
-        Constructs such as `&lt;a href="..." disabled&gt; ... &lt;/a&gt;` are not valid, 
-        and will not be conveyed to assistive technologies. 
+        For instance, HTML has no direct concept of a disabled hyperlink (`a href` element).
+        Constructs such as `&lt;a href="..." disabled&gt; ... &lt;/a&gt;` are not valid,
+        and will not be conveyed to assistive technologies.
       </p>
       <p>
         ARIA diverges from HTML in this regard and does allow for an `aria-disabled`
         attribute to be specified on an element with an explicit `role=link`. If an author were
         to specify an `aria-disabled=true` on an HTML hyperlink, user agents would not functionally
-        treat the hyperlink any differently (it would still be clickable/operable), however it 
+        treat the hyperlink any differently (it would still be clickable/operable), however it
         would be exposed to assistive technologies as being in the disabled state.
       </p>
       <p>
-        Similarly, while native HTML `option` elements that are descendants of a `select` can 
-        only be set as being `selected`, elements with an explicit `option` role can not only 
+        Similarly, while native HTML `option` elements that are descendants of a `select` can
+        only be set as being `selected`, elements with an explicit `option` role can not only
         allow the equivalent `aria-selected`, but also the `aria-checked` attribute, supporting
         widgets/constructs that go beyond the capabilities of a native `select` element.
       </p>
       <p>
-        Unfortunately, in these situations where ARIA and HTML have feature parity, but diverge 
-        in allowances, it can create for a misalignment in support, if not also user experiences. 
+        Unfortunately, in these situations where ARIA and HTML have feature parity, but diverge
+        in allowances, it can create for a misalignment in support, if not also user experiences.
         In situations where ARIA allows a feature not supported by HTML, it will often
-        be in the author's and ultimately the user's best interest to instead implement as a 
+        be in the author's and ultimately the user's best interest to instead implement as a
         fully custom ARIA widget.
       </p>
       <p>
         In the following example, a hyperlink needs to be communicated as being in the disabled
         state. HTML does not allow for the use of the `disabled` attribute on a hyperlink,
-        and using `aria-disabled=true` would communicate the hyperlink as being disabled to 
-        assistive technologies, but would not actually disable the element. The most effective way 
-        to both communicate and actually disable a hyperlink would be to remove the `href` from 
+        and using `aria-disabled=true` would communicate the hyperlink as being disabled to
+        assistive technologies, but would not actually disable the element. The most effective way
+        to both communicate and actually disable a hyperlink would be to remove the `href` from
         the [^a^] element, creating a placeholder. Then, ARIA can be applied to this
         placeholder link to communicate the element's intended role and state.
       </p>
@@ -312,16 +312,16 @@
         </p>
         <p>
           As an example, the following uses a `role=heading` on a [^button^] element. This is
-          not allowed, because the `button` element has default functionality that conflicts with user 
+          not allowed, because the `button` element has default functionality that conflicts with user
           expectations for the heading role.
         </p>
         <pre class="example HTML" title="Wrong role">
           &lt;button role="heading"&gt;search&lt;/button&gt;
         </pre>
         <p>
-          An author would need to take additional steps to ensure the default functionality and presentation of 
-          the `button` was removed, and even doing so may still not be enough to fully suppress the element's 
-          implicit features depending on how the user chooses to engage with the web page. E.g., by turning on 
+          An author would need to take additional steps to ensure the default functionality and presentation of
+          the `button` was removed, and even doing so may still not be enough to fully suppress the element's
+          implicit features depending on how the user chooses to engage with the web page. E.g., by turning on
           Windows high contrast themes, or viewing the web page in a browser's reader mode.
         </p>
       </section>
@@ -331,10 +331,10 @@
         </h3>
         <p>
           The following example illustrates a [^button^] element which has also been
-          provided an explicit `role=button`. Specifying this role is unnecessary, as a "button" 
+          provided an explicit `role=button`. Specifying this role is unnecessary, as a "button"
           element is already exposed with an implicit `button` role. In practice this particular
-          instance of redundancy will likely not have unforeseen side effects, other than 
-          unnecessarily making the markup more verbose, and incorrectly signaling to other authors 
+          instance of redundancy will likely not have unforeseen side effects, other than
+          unnecessarily making the markup more verbose, and incorrectly signaling to other authors
           that this practice is useful. Please review the section [[[#side-effects]]]
           for an example of where specifying unnecessary roles can be problematic.
         </p>
@@ -344,7 +344,7 @@
         </pre>
         <p>
           Similarly, the following uses a `role=group` on a [^fieldset^] element, and a `role=main` on a [^main^] element.
-          This is unnecessary, because the `fieldset` element is implicitly exposed as a `role=group`, as is the `main` element 
+          This is unnecessary, because the `fieldset` element is implicitly exposed as a `role=group`, as is the `main` element
           implicitly exposed as a `role=main`.
         </p>
         <pre class="HTML example" title="Redundant role on fieldset and main">
@@ -354,9 +354,9 @@
           &lt;main role="main">...&lt;/main>
         </pre>
         <p>
-          The following uses a `role=list` on an [^ul^] element. As the `ul` element has an implicit role of `list`, 
+          The following uses a `role=list` on an [^ul^] element. As the `ul` element has an implicit role of `list`,
           explicitly adding the role would generally be considered redundant. However, some user agents suppress a list's
-          implicit ARIA semantics if the list markers are removed from the visual presentation of the list items. 
+          implicit ARIA semantics if the list markers are removed from the visual presentation of the list items.
           Generally the redundant declaration of an element's implicit role would not be recommended, but in specific situations
           such as this, and where the role is necessary to expose, authors can explicitly add the role.
         </p>
@@ -403,8 +403,8 @@
           using the `generic` role as its intended purpose is for use by implementors of user agents.
         </p>
         <p>
-          In the following example, rather than using a `generic` role, authors are advised to use a `div` in 
-          place of the `article` element. If changing the HTML element is not possible, specifying a role of 
+          In the following example, rather than using a `generic` role, authors are advised to use a `div` in
+          place of the `article` element. If changing the HTML element is not possible, specifying a role of
           `presentation` or `none` would be acceptable alternatives to remove the implicit role of the `article`.
         </p>
         <pre class="HTML example" title="Do not specify elements as generic">
@@ -412,7 +412,7 @@
           &lt;article role="generic" ...>...&lt;/article>
         </pre>
         <p>
-          Additionally, ARIA specifically mentions in <a data-cite="wai-aria-1.2/#host_general_conflict">Conflicts with Host Language Semantics</a> 
+          Additionally, ARIA specifically mentions in <a data-cite="wai-aria-1.2/#host_general_conflict">Conflicts with Host Language Semantics</a>
           that if authors use both native HTML features for exposing states and properties as well as their ARIA counterparts, then
           the host language features take priority over the explicit ARIA attributes that are also used.
         </p>
@@ -437,12 +437,12 @@
         <p>
           For instance, in the following example an author has specified a role of `link` on a `div` element. While
           HTML allows for a hyperlink (exposed as a `role=link`) to be a descendant of a `p` element, the HTML parser does not
-          allow a `div` to be a descendant of a `p` element. 
+          allow a `div` to be a descendant of a `p` element.
         </p>
         <pre class="HTML example" title="Revised ARIA semantics with invalid HTML nesting">
           &lt;!-- Do not do this! -->
           &lt;p>
-            ... &lt;div role=link tabindex=0>...&lt;/div> ... 
+            ... &lt;div role=link tabindex=0>...&lt;/div> ...
           &lt;/p>
         </pre>
         <p>
@@ -451,10 +451,9 @@
         <pre class="HTML example" title="Unwanted rendered markup with valid alternative solution">
           &lt;!-- The previous example's markup will render as follows -->
           &lt;p>...&lt;/p>
-          &lt;div role=link tabindex=0>...&lt;/div> 
-          ... 
+          &lt;div role=link tabindex=0>...&lt;/div>
+          ...
           &lt;p>&lt;/p>
-          
           &lt;!-- Instead of a div, use a span. Spans are allowed descendants of p elements! -->
           &lt;p>
             ... &lt;span role=link tabindex=0>...&lt;/span> ...
@@ -472,21 +471,21 @@
         Document conformance requirements for use of ARIA attributes in HTML
       </h2>
       <p>
-        The following table provides normative per-element document conformance requirements for the 
-        use of ARIA markup in HTML documents. Additionally, it identifies the <a>implicit ARIA semantics</a> 
-        that apply to [=HTML elements=]. The <a>implicit ARIA semantics</a> of these elements are defined 
+        The following table provides normative per-element document conformance requirements for the
+        use of ARIA markup in HTML documents. Additionally, it identifies the <a>implicit ARIA semantics</a>
+        that apply to [=HTML elements=]. The <a>implicit ARIA semantics</a> of these elements are defined
         in [[html-aam-1.0|HTML AAM]].
       </p>
       <p>
-        Each language feature (element) in a cell in the first column implies the ARIA semantics 
-        (role, states, and properties) given in the cell in  the second column of the same row. 
+        Each language feature (element) in a cell in the first column implies the ARIA semantics
+        (role, states, and properties) given in the cell in  the second column of the same row.
         The third cell in each row defines the ARIA `role` values and `aria-*` attributes which authors MAY specify
         on the element. Where a cell in the third column includes the term <dfn><strong>Any</strong> `role`</dfn>
-        it indicates that any `role` value MAY be used on the element. However, 
-        it is NOT RECOMMENDED for authors to specify the implicit role of the element, the `generic` role, or a role 
-        <a href="#docconformance-deprecated">deprecated by ARIA</a> on these elements. 
-        If a cell in the third column includes the term <dfn><strong>No `role`</strong></dfn> it indicates 
-        that authors MUST NOT overwrite the implicit ARIA semantics, or native semantics of the HTML element. 
+        it indicates that any `role` value MAY be used on the element. However,
+        it is NOT RECOMMENDED for authors to specify the implicit role of the element, the `generic` role, or a role
+        <a href="#docconformance-deprecated">deprecated by ARIA</a> on these elements.
+        If a cell in the third column includes the term <dfn><strong>No `role`</strong></dfn> it indicates
+        that authors MUST NOT overwrite the implicit ARIA semantics, or native semantics of the HTML element.
       </p>
         <p>
           [[wai-aria-1.2|WAI-ARIA]] identifies roles which have 
