@@ -1,0 +1,38 @@
+{
+  "el-td": [
+    {
+      "description": "clarifies that the mention of 'ancestor table' was meant to mean 'nearest ancestor table'",
+      "pr": "563",
+      "type": "correction",
+      "difftype": "addition",
+      "status": "proposed",
+      "id": 1
+    },
+    {
+      "description": "Updates allowances for <code>td</code> and <code>th</code elements",
+      "pr": "563",
+      "type": "correction",
+      "difftype": "addition",
+      "status": "proposed",
+      "id": 2
+    }
+  ],
+  "el-th": [
+    {
+      "description": "clarifies that the mention of 'ancestor table' was meant to mean 'nearest ancestor table'",
+      "pr": "563",
+      "type": "correction",
+      "difftype": "addition",
+      "status": "proposed",
+      "id": 1
+    },
+    {
+      "description": "Updates allowances for <code>td</code> and <code>th</code elements",
+      "pr": "563",
+      "type": "correction",
+      "difftype": "addition",
+      "status": "proposed",
+      "id": 2
+    }
+  ]
+}
