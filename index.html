@@ -2389,13 +2389,24 @@
             </th>
             <td>
               <code>role=<a href="#index-aria-option">option</a></code>
+              <div class="note">
+                Not all platforms will map an `option` element to an 
+                `option` role.
+              </div>
             </td>
             <td>
               <p>
-                <a><strong class="nosupport">No `role`</strong></a> other than <code><a href="#index-aria-option">option</a></code>, which is NOT RECOMMENDED.
+                <a><strong class="nosupport">No `role`</strong></a>.
               </p>
+              <div class="note">
+                Not all platforms map `option` elements or the popup they
+                are slotted into consistently. Adjusting the role to align
+                to one platform can break the proper exposure of the elements
+                in other platforms. Particularly if the role is specified for
+                `option` elements in a customizable `select` element.
+              </div>
               <p>
-                Authors SHOULD NOT use the `aria-selected` attribute on the `option` element.
+                Authors MUST NOT use the `aria-selected` or `aria-checked` attribute on the `option` element.
               </p>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> and
