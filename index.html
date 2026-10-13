@@ -32,13 +32,14 @@
       github: "w3c/html-aria/",
       maxTocLevel: 2,
       shortName: "html-aria",
-      specStatus: "ED",
+      specStatus: "REC",
       group: "aria",
       wgPublicList: "public-aria",
       xref: true,
       errata: "https://github.com/w3c/html-aria/issues/",
     };
     </script>
+    <!-- <script src="https://www.w3.org/scripts/TR/2021/fixup.js" defer></script> -->
     <link rel="stylesheet" href="makeup.css">
   </head>
   <body data-cite="HTML WAI-ARIA INFRA">
@@ -57,6 +58,16 @@
         ARIA in HTML is an [[HTML]] specification module. Any HTML features, conformance requirements, or terms that this specification
         module makes reference to, but does not explicitly define, are defined by the [[HTML|HTML Standard]].
       </p>
+      <p>This update includes the following changes:</p>
+        <ul>
+          <li>
+            <div id="role-option-allowance" class="correction proposed">
+              <span class="marker">Proposed Correction 1:</span>
+                Added notes about role mappings and adjusted option allowance to remove the 'not recommended' for the option role.
+                Change "SHOULD NOT" use aria-selected to "MUST NOT" use aria-selected or aria-checked.
+            </div>
+          </li>
+        </ul>
     </section>
     <section>
       <h2 id="rules-wd">
@@ -2389,24 +2400,24 @@
             </th>
             <td>
               <code>role=<a href="#index-aria-option">option</a></code>
-              <div class="note">
+              <ins class="proposed" cite="#role-option-allowance"><div class="note">
                 Not all platforms will map an `option` element to an 
                 `option` role.
-              </div>
+              </div></ins>
             </td>
             <td>
               <p>
-                <a><strong class="nosupport">No `role`</strong></a>.
+                <a><strong class="nosupport">No `role`</strong></a> <del class="proposed" cite="#role-option-allowance"> other than <code><a href="#index-aria-option">option</a></code>, which is NOT RECOMMENDED</del>.
               </p>
-              <div class="note">
+              <ins class="proposed" cite="#role-option-allowance"><div class="note">
                 Not all platforms map `option` elements or the popup they
                 are slotted into consistently. Adjusting the role to align
                 to one platform can break the proper exposure of the elements
                 in other platforms. Particularly if the role is specified for
                 `option` elements in a customizable `select` element.
-              </div>
+              </div></ins>
               <p>
-                Authors MUST NOT use the `aria-selected` or `aria-checked` attribute on the `option` element.
+                Authors <del class="proposed" cite="#role-option-allowance">SHOULD</deL><ins class="proposed" cite="#role-option-allowance">MUST</ins> NOT use the `aria-selected` <ins class="proposed" cite="#role-option-allowance">or `aria-checked`</ins> attribute on the `option` element.
               </p>
               <p>
                 <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> and
